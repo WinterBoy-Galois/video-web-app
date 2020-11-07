@@ -1,0 +1,21 @@
+
+<script type="text/javascript" src="http://crypto-js.googlecode.com/files/2.0.0-crypto-sha1-hmac-pbkdf2-ofb-aes.js"></script>
+<script type="text/javascript" src="http://crypto-js.googlecode.com/files/2.0.0-sha256-min.js"></script>
+<script>
+
+var data = {'encrypted': '1', 'salt': 'dgHgCmEerk8PIPXMuliIJ2pXOkSRrzbA', 'data': '+y1/KcmRuapCg7ilcL2fYc0CWvOuO5hSzafjdfa0oGEPe9QEpuVCQ25QAai4QGyp9UKc49jHm718xUqxLc9c0pu+Jlsl2euaqbVvm+58B+cJDH8YsicZ/CDSctPOrlGADOzHip6nMWVHrwVaE0cgzSlu1p+QvRHB0WIRUtfJ0MNBtZGd6NQDDsJlNUsGD1x8LDrhR6gdrQmQjuPP4E3zWgTJQLmQ5x08XEnwaOKIw//p+74HkC8EEXwDFTA3IfQn6cyRDE335TD2X4JDnPyasQzUryhbqGmELZB3Rsg3RbGrlEHiLmb/CvtJvbfcOVEuNk3ndEZloRY3lvkCRB/YQj7gdUFHnyU3oJYkcvcutn0MbxjpEjt8+CXoQFjrq81Q/5NqDz+zFEr3YDLvpar3pNfu/GSbHuAOuIUWLtVmFEIKsoLDEPK3BkgLsqHUsvSgG+z5Qo1GILrDR0HPIoT0berq1ridOn9PdwP6v4U7/k/vZwshWyMZ3n3WU5p5s/99nbm/6WaP2dt0GdndCWOnGC/ch11xpBJlVSBNWDNleRZlKKRjylmn/aa1TuTWlndttGa4x622t0vN4wrvNnQWJPzO0BUjjEAjYm17VqRbjhVqOv4+nT4+NzDjxq7dQFRn994gZtxu44zQFHqjhbylfU4e3MkC8kfbESt2GR37Na+vkyrz3PQYgyM+RFfqVDZYe+x3hW16smdkHdrJGhP/RBack02dhOHiNcWtpVG9Hl3mBCTZYC2zTMVyTdqrw+5oLRmxqK7ilgxfBC7ABUjzhng72IcDPwh9Eo21ZOCVAO6eP4AFH1fBx42pubt952Mdc0mSkpp8DOp7vp2KdSlUiSKJNKKLE6rZ4MIWA/af99OlYuOOey9YTxbaj9mGVI/mJFkmqagpbVUp6KkFyS618q1Zy6gn+Wp8pZaeS/zlw7ya+qzZM6QjJDxnNBxKz6VNfSo+DVacJDP3C1uf1DboQpltDwwNsPinXlfkV7wXugr7iM5rsC6PSLmkyAguAWw1/TwS90rkZ30AhtuaXvShI1Xs582ygRbOoSho+0TmS7H+i56qX/puChGX6LCSPqaOOwOcJsQobkVq0AVzh5QTkjDXQ7qQ0dyO5c11eDzOaXRz3vkLFXFkIzw8Cb50BEMA8wwMmF75l5Lr6AzmcQS8uqlJpvhsgWQl2WHVTXFdVk4767XB9xQuAQUrXtEOQYHUHKXnv5olVzN+2WBdF4rctAgZbufFwQjdjxRzGXHVtBQ3vVNkgbblpiWVHfwD7V/b1iokjpXF9zr40NvA7Olb0zOecr2xYq/x0N8tKDsjpH8ovl2mhzjuVozKSMw9pCUW5xTK2IIy8ZAyV3cT4Is0oIbAMPXTrYL9eiJJpeqva7xcdJR15pui2BzrPv1n7is1MwwkLFEcv4UK1fa4gIGhl1hYik7JzRL2gStDJYmWlnhoTHGiK0bp+FpmL2deYTWt69GAUISRrrtoLi8SbXDHUlBNgBGT9KPaVpVHdUpyZXa4thjOIlfcaodqzha4YLeYPgP3Sf/l3RFE9aG0szFsV/o1eTjnJFrOY6icPlAUNL9KCwKXjOdK1ktUdFw4L9ZQPwNlZ2RKtXtZJnV58/wrOHEHELybSToOdsgfNAnjJ0csnuWhwppUrmC+gL0I0qhNjgv97DBT8AmSHwR+2MyfwFA87AJt4EvKC/Jiyc16STKD31gQN0VYoW7XFcO782W7'};
+
+
+var pw = "david";
+var salted_pw = pw + data.salt;
+var key = Crypto.SHA256(salted_pw, { asBytes: true });
+
+var plain = Crypto.AES.decrypt(data.data, key);
+
+// remove zero padding
+while (plain.charCodeAt(plain.length-1) == 0 ) {
+	plain = plain.substring(0, plain.length - 1);
+}
+
+console.log(JSON.parse(plain));
+</script>

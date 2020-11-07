@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	  <script src="https://code.jquery.com/jquery-git1.min.js"></script>
+	  <script>
+
+	  $(window).ready(function(){
+	  	function log(text){
+	  	$('.results').append(text + '<br>');
+	  }
+
+	  log('width ' + window.innerWidth);
+	  log('height ' + window.innerHeight);
+
+
+	  });
+
+	  
+
+	  </script>
+	<style>
+		.results {
+			color: green;
+		}
+
+
+
+		@media only screen and (min-width: 769px) {
+	    	.results {
+			color: red;
+		}
+		}
+
+	</style>
+	<script type="text/javascript"></script>
+</head>
+<body>
+
+	<div class = "results">
+	</div>
+
+</body>
+</html>

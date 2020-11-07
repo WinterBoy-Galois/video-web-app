@@ -1,0 +1,50 @@
+.vp_builder .tool_overlay.choose_color {
+	top:105px;
+
+    .vp_input_small {
+        width: 60%;
+    }
+
+    .swatch:nth-child(odd) {
+    	margin-right:25px;
+    }
+
+	.vp_or {
+		padding:10px 0px;
+		clear:both;
+		text-align: center;
+	}
+
+	.upload_field {
+		display: none;
+	}
+
+	.vp_learn_more {
+		font-size:10px;
+	}
+	
+	.vp_icon_chooser {
+
+		.vp_icon_background {
+			height:40px;
+			width:40px;
+			margin:20px 0px;
+			position: relative;
+			background-color: red;
+		}
+
+		.vp_icon_preview {
+			width:26px;
+			height: 26px;
+			position:absolute;
+			top:50%;
+			left:50%;
+			margin-left:-13px;
+			margin-top:-13px;
+			background-size: 26px 26px;
+			background-position: center center;
+		}
+	}
+	
+}
+

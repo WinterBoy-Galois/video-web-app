@@ -1,0 +1,16 @@
+{
+    "id": "individual-staff",
+    "name": "videopath staff account",
+    "group": "individual",
+    "payment_interval": "month",
+    "price": 0,
+    "currency": "EUR",
+    "currency_symbol": "&euro;",
+    "max_views_month": 10000000,
+    "max_videos": 9999,
+    "feature_upload": true,
+    "feature_endscreen": true,
+    "feature_vimeo": true,
+    "feature_dev": true,
+    "feature_advanced_settings": true
+}

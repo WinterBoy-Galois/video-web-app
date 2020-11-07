@@ -1,0 +1,17 @@
+
+.vp_form {
+
+	&.vp_loading {
+		opacity: 0.5;
+		pointer-events: none;
+	}
+
+	.vp_form_row {
+		margin:10px 0px;
+	}
+
+	.vp_button {
+		min-width:130px;
+	}
+
+}

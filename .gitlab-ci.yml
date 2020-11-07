@@ -1,0 +1,69 @@
+image: mwallasch/docker-ruby-node
+
+before_script:
+  - curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.32.0/install.sh | bash
+  - 'source ~/.bashrc && nvm install 9.4.0'
+  - npm install -g bower
+  - npm install -g grunt-cli
+  - ./install.sh
+
+cache:
+  paths:
+  - bower_modules
+  - node_modules
+
+stages:
+  - test
+  - deploy
+
+Build and Test:
+  type: test
+  script:
+    - grunt
+    - grunt test_unit
+    
+Deploy to Respective Branch:
+  type: deploy
+  script:
+    - pip install -r requirements.txt
+    - python deployment/deploy_player.py force
+    - python deployment/deploy_app.py force
+    - python deployment/deploy_embed_code.py force
+  except:
+    - master 
+
+Deploy Player to Production:
+  type: deploy
+  environment: production
+  script:
+    - pip install -r requirements.txt
+    - git config --global user.name "${GITLAB_USER_NAME}"
+    - git config --global user.email "${GITLAB_USER_EMAIL}"
+    - python deployment/deploy_player.py PRODUCTION force
+  only:
+    - master
+  when: manual
+
+Deploy App to Production:
+  type: deploy
+  environment: production
+  script:
+    - pip install -r requirements.txt
+    - git config --global user.name "${GITLAB_USER_NAME}"
+    - git config --global user.email "${GITLAB_USER_EMAIL}"
+    - python deployment/deploy_app.py PRODUCTION force
+  only:
+    - master
+  when: manual
+
+Deploy Embed Code to Production:
+  type: deploy
+  environment: production
+  script:
+    - pip install -r requirements.txt
+    - git config --global user.name "${GITLAB_USER_NAME}"
+    - git config --global user.email "${GITLAB_USER_EMAIL}"
+    - python deployment/deploy_embed_code.py PRODUCTION force
+  only:
+    - master
+  when: manual

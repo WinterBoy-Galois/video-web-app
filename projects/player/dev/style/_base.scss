@@ -1,0 +1,56 @@
+html {
+    @include absolute_fullsize();
+    background-color: black;
+    overflow: hidden; // needed to prevent drag scrolling
+}
+
+/* overall styles */
+body {
+    font-family: $font-family;
+    text-align: center;
+    background-color: black;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    @include absolute_fullsize();
+}
+
+/* vp logo general style */
+.vp_logo {
+    @include hide-text();
+    width: 86px;
+    height: 27px;
+    background-image: url('img/logo_player@2x.png');
+    background-size: 86px 27px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    .vp_light_bg & {
+        background-image: url('img/logo_player_dark@2x.png');
+    }
+}
+
+
+/* ipad fix */
+@media (orientation:landscape) and (width: 1024px) {
+    html.ipad.ios7 {
+        body {
+            position: fixed;
+            bottom: 0;
+            width:100%;
+            height: 672px !important;
+        }
+    }
+}
+
+/* small iphone landscape mode fix */
+@media (max-height: 420px) {
+    html.iphone {
+        position: fixed;
+        > body {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

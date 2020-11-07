@@ -1,0 +1,165 @@
+.vp_endscreen_edit_layout {
+    @include absolute_fullsize();
+
+    .vp_endscreen_view {
+        bottom: $ui_size;
+    }
+}
+
+.vp_endscreen_edit_controls {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    .vp_btn_group {
+        margin: 0;
+    }
+
+    .vp_btn {
+        margin-bottom: 0;
+    }
+
+    .vp_preview_button {
+        @extend .vp_btn_label;
+        @extend .vp_btn_lightblue;
+    }
+
+     .vp_done_button {
+        @extend .vp_btn_label;
+        @extend .vp_btn_green;
+    }
+}
+
+.vp_endscreen_edit {
+
+    .vp_color_block {
+        @extend .vp_btn_icon;
+        @extend .vp_btn_clear;
+        position: absolute;
+        top: $ui_margin;
+        right: $ui_margin;
+        left: auto;
+        opacity: 1;
+
+        .vp_color_button {
+            @extend .vp_btn_icon;
+            display: block;
+            background-color: $green;
+            border-radius: 2px;
+
+            &:before {
+                @extend .vp_ico_bucket;
+            }
+
+            .no-touch &:hover, .no-touch &:focus, &:active {
+                background-color: $green-active;
+            }
+        }
+
+        .sp-container {
+            visibility: hidden;
+            position: absolute;
+            right: 0;
+            left: auto;
+            top: 40px;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        &.vp_active .sp-container {
+            visibility: visible;
+            pointer-events: auto;
+            z-index: 10;
+        }
+    }
+
+    .vp_editable {
+        position: relative;
+        border: 1px dashed rgba($white, 0.6);
+        cursor: pointer;
+        @include box-sizing(content-box);
+        @include user-select(text);
+
+        &.vp_add_new {
+            > * {
+                display: none;
+            }
+
+            .vp_editable_empty {
+                display: block;
+            }
+        }
+
+        &.vp_editing {
+            cursor: auto;
+
+            .vp_editable_empty {
+                display: none;
+            }
+
+            p[contenteditable=true] {
+                display: block;
+            }
+        }
+
+        .vp_editable_empty {
+            display: none;
+        }
+    }
+
+    &.vp_light_bg {
+        .vp_editable {
+            border-color: rgba($black, 0.7);
+        }
+    }
+
+    .vp_title_block {
+        padding-bottom: $ui_margin;
+
+        h1 {
+            margin: 0;
+        }
+
+        .vp_title_content {
+            outline: none;
+        }
+    }
+
+    .vp_subtitle_block {
+        margin-bottom: $ui_margin_lg;
+        padding: ($ui_margin / 2) 0;
+
+        p {
+            margin: 0 auto;
+            outline: none;
+        }
+    }
+
+    .vp_cta_block {
+        margin: auto;
+
+        .vp_editable_empty {
+            line-height: 85px;
+        }
+
+        .vp_cta_button {
+            @extend .vp_margin_block;
+        }
+    }
+
+}
+
+.vp_endscreen_edit, .vp_endscreen_preview {
+    .vp_replay_button {
+        .no-touch &:hover, .no-touch &:focus, &:active {
+            opacity: 0.6;
+        }
+    }
+
+    .vp_minimal_buttons .vp_social_button {
+        .no-touch &:hover, .no-touch &:focus, &:active {
+            opacity: 0.4;
+        }
+    }
+}

@@ -1,0 +1,24 @@
+.vp_nav_bar {
+    @extend .vp_box_shadow;
+
+	position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+	min-width: $screen_md;
+	width: 100%;
+    height: $ui_size_xl;
+    line-height: $ui_size_xl;
+	background-color: white;
+    text-align: left;
+	z-index: 5;
+
+    @include pie-clearfix();
+
+    h1 {
+        margin: 0;
+        height: $ui_size_xl;
+        line-height: $ui_size_xl;
+    }
+}
+

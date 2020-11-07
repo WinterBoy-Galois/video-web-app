@@ -1,0 +1,33 @@
+@include keyframes(vp_loading_indicator_spin) {
+    100% {
+        @include rotate(360deg);
+    }
+}
+
+.vp_loading_indicator_new {
+
+	position: relative;
+	min-height:25px;
+	min-width:25px;
+
+	&.vp_expanded {
+		position:absolute;
+		top:0px;
+		bottom:0px;
+		left:0px;
+		right:0px;
+		background-color:rgba(255,255,255,0.5);
+	}
+
+	.vp_loading_indicator_coq {
+		@include animation(vp_loading_indicator_spin 2s linear infinite);
+		position: absolute;
+		top:50%;
+		left:50%;
+		width:25px;
+		height:25px;
+		margin-left:-12px;
+		margin-top:-12px;
+		background-image:url('img/components/loading_indicator.png');
+	}
+}

@@ -1,0 +1,38 @@
+.vp_plan_change {
+	text-align:center;
+	.vp_button {
+		margin:20px auto;
+		margin-bottom:10px;
+		display: block;
+		width:130px;
+	}
+
+	.vp_choose_plan {
+		color:#666;
+	}
+
+	.vp_payment_interval {
+		padding:20px;
+		width:46%;
+		float:left;
+		background-color:$lightgray;
+		border:2px solid #fff;
+		border-radius:5px;
+		margin:2%;
+		cursor:pointer;
+
+		h3 {
+			font-size:20px;
+			font-weight:bold;
+		}
+
+		&.vp_selected {
+			border-color:$blue;
+			background-color:rgba($lightblue,0.2);
+		}
+
+		&:hover:not(.vp_selected) {
+			background-color:rgba($lightblue,0.2);
+		}
+	}
+}

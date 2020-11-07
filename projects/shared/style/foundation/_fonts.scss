@@ -1,0 +1,13 @@
+@font-face {
+  font-family: 'Handlee';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Handlee Regular'), local('Handlee-Regular'), url(https://themes.googleusercontent.com/static/fonts/handlee/v3/lXdgF9zSHTlhzKRElEhHowLUuEpTyoUstqEm5AMlJo4.woff) format('woff');
+}
+
+/*
+*
+*	PT Sans, PT Serif and Source Sans in one request
+*
+*/
+@import url('https://fonts.googleapis.com/css?family=PT+Sans|PT+Serif|Source+Sans+Pro:300,400,600,300italic,400italic,600italic');

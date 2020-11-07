@@ -1,0 +1,139 @@
+{
+    "title": "Cooking Demo",
+    "subtitle": "",
+    "description": "Anna cooks a panzanella salad.",
+    "keywords": "",
+    "markers": [],
+    "custom_thumbnail": null,
+    "custom_logo": null,
+    "thumbnails": {
+        "normal": "//thumbs.videopath.com/m35T1YU0KHQ8ZEr28fKgM4sS0zfEOQW3/00002.jpg",
+        "large": "//thumbs.videopath.com/m35T1YU0KHQ8ZEr28fKgM4sS0zfEOQW3/00002-hd.jpg"
+    },
+    "ui_color_1": "#273a45",
+    "ui_color_2": "#ffffff",
+    "key": "rC60u1Op",
+    "theme": 1,
+    "ui_icon_link_target": "http://videopath.com",
+    "id": 2029406756,
+    "endscreen_url": "",
+    "endscreen_title": "",
+    "endscreen_subtitle": "Create your own interactive video",
+    "endscreen_background_color": "#32526e",
+    "endscreen_button_title": "Try videopath now",
+    "endscreen_button_color": "#ff6b57",
+    "endscreen_button_target": "http://videopath.com",
+    "interactivity_disabled": false,
+    "language": "en",
+    "branded": false,
+    "ui_enable_mobile_portrait": true,
+    "source": {
+        "aspect": 1.7777777777777777,
+        "duration": 0,
+        "service": "movingimages",
+        "service_identifier": {
+            "video_id": "-BNPey-_eWpKCkw82-UCWt",
+            "player_id": "9iwE5ZdDSWjjT-Qiese83d",
+            "non_flash": "597G7fRQ7Fhe99cC4fEDYp"
+        }
+    },
+    "markers":[  
+      {  
+         "id":1567836133,
+         "key":"zkgzxGZh",
+         "title":"Follow us on Twitter",
+         "time":55.8796680497925,
+         "video_revision":1035674416,
+         "contents":[  
+            {  
+               "type":"social",
+               "text":null,
+               "ordinal":0,
+               "data":"{\"service\":\"twitter\",\"service_id\":\"@Videopath\"}",
+               "title":"",
+               "image_url":"",
+               "url":"",
+               "id":466298508,
+               "marker":1567836133,
+               "key":"2zWQ9qkE",
+               "video_key":"wmq2XEQj"
+            }
+         ],
+         "overlay_height":-1,
+         "overlay_width":-1
+      },
+      {  
+         "id":1145238783,
+         "key":"PsKgsvVj",
+         "title":"How it Works",
+         "time":48.9294605809129,
+         "video_revision":1035674416,
+         "contents":[  
+            {  
+               "type":"text",
+               "text":"<p>With Videopath, it is easy for content creators to make interactive videos in minutes. To find out more about our tool and how it can be incorporated into your content marketing strategy, check out our tutorials and learn about Videopath.&nbsp;</p>",
+               "ordinal":0,
+               "data":"{}",
+               "title":"",
+               "image_url":"",
+               "url":"",
+               "id":754019207,
+               "marker":1145238783,
+               "key":"0isXgwIp",
+               "video_key":"wmq2XEQj"
+            },
+            {  
+               "type":"media",
+               "text":null,
+               "ordinal":2,
+               "data":"{\"original_url\":\"https://www.youtube.com/watch?v=kQMWfT20d-g\",\"service\":\"youtube\",\"service_id\":\"kQMWfT20d-g\"}",
+               "title":"",
+               "image_url":"",
+               "url":"",
+               "id":1251348381,
+               "marker":1145238783,
+               "key":"BPskbydj",
+               "video_key":"wmq2XEQj"
+            },
+            {  
+               "type":"simple_button",
+               "text":null,
+               "ordinal":2,
+               "data":"{\"title\":\"More tutorials\",\"color\":\"orange\",\"target_url\":\"http://www-stage.videopath.com/tutorial/\"}",
+               "title":"",
+               "image_url":"",
+               "url":"",
+               "id":1204843428,
+               "marker":1145238783,
+               "key":"q9BTVPD3",
+               "video_key":"wmq2XEQj"
+            }
+         ],
+         "overlay_height":-1,
+         "overlay_width":-1
+      },
+      {  
+         "id":470631957,
+         "key":"KiPh0X5Y",
+         "title":"Say it Quick",
+         "time":7.92323651452,
+         "video_revision":1035674416,
+         "contents":[  
+            {  
+               "type":"website",
+               "text":null,
+               "ordinal":0,
+               "data":"{}",
+               "title":"",
+               "image_url":"",
+               "url":"https://videopath.com/3-tips-to-boost-your-sales-with-video/",
+               "id":1906584685,
+               "marker":470631957,
+               "key":"cD7uK6fV",
+               "video_key":"wmq2XEQj"
+            }
+         ],
+         "overlay_height":-1,
+         "overlay_width":-1
+      }]
+}

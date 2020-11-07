@@ -1,0 +1,107 @@
+@import '../foundation';
+
+/*
+ * Engines page
+ */
+#vp_style .vp_app_containers_content {
+	position:absolute;
+	bottom:10px;
+	left:10px;
+	right:10px;
+	top:130px;
+	background:
+	radial-gradient(black 15%, transparent 16%) 0 0,
+	radial-gradient(black 15%, transparent 16%) 8px 8px,
+	radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+	radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+	background-color:#111;
+	background-size:8px 8px;
+	overflow:hidden;
+	border:2px dashed #eee;
+
+	&.vp_expanded {
+		top:0px;
+		bottom:0px;
+		right:0px;
+		left:0px;
+	}
+}
+
+#vp_style .vp_active {
+	color:$green;
+	text-decoration:none;
+}
+
+
+#vp_style .vp_env_controller,
+#vp_style .vp_state_controller {
+	position: absolute;
+	background-color:rgba(white, 1);
+	cursor:pointer;
+	width:80px;
+	height:40px;
+	padding:10px;
+
+	&.vp_open {
+		width:200px;
+		height:auto;
+	}
+}
+
+/*
+ * State controlling component
+ */
+#vp_style .vp_env_controller {
+	right:10px;
+	bottom:10px;
+	z-index:1000;
+}
+
+/*
+ * 	Env controlling component
+ */
+#vp_style .vp_state_controller {
+	right:100px;
+	bottom:10px;
+	z-index:500;
+}
+
+
+
+/*
+ * Engine controlling component
+ */
+#vp_style .vp_engine_controller {
+	position:absolute;
+	bottom:20px;
+	background-color:rgba(white, 0.8);
+	width:300px;
+	left:50%;
+	margin-left:-150px;
+	font-size:12px;
+	padding:10px;
+	border:2px solid $lightblue;
+	border-radius:2px;
+}
+
+
+#vp_style .vp_demo_playbar {
+	width:100%;
+	height:30px;
+	background-color:#eee;
+	position: relative;
+	.vp_play {
+		position: absolute;
+		left:0px;
+		top:0px;
+		background-color:$lightblue;
+		height:27px;
+	}
+	.vp_buffer {
+		position: absolute;
+		left:0px;
+		bottom:0px;
+		height:3px;
+		background-color:$darkblue;
+	}
+}

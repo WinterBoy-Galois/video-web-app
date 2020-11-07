@@ -1,0 +1,16 @@
+{
+    "freeze": true,
+    "immed": true,
+    "noarg": true,
+    "nonew": true,
+    "undef": true,
+
+    "eqnull": true,
+    "expr": true,
+
+    "browser": true,
+
+    "predef": ["define", "require", "console", "module",
+                "it", "describe", "beforeEach", "afterEach", "expect", "sinon"]
+}
+

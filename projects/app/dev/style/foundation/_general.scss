@@ -1,0 +1,115 @@
+body {
+	color:$blue;
+}
+
+.clear {
+	clear: both;
+}
+
+.error {
+	color:$red;
+}
+
+a > img{
+    border: 0;
+}
+
+#vp_app_content {
+	@extend .vp_fast_animations;
+	@include absolute_positioning(58px, 0px, 20px, 0px);
+	width: auto;
+	height: auto;
+	min-width: 512px;
+	overflow: auto;
+	overflow-x:hidden;
+	background-color: $lightgray;
+	.no_footer & {
+		bottom:0px;
+	}
+}
+
+.vp_no_navbar #vp_app_content {
+	top:0px;
+}
+
+#vp_app_content.fadingout {
+	opacity: 0;
+}
+
+.initial.working_outer {
+	height: 70%;
+}
+
+.text {
+	margin:0px auto;
+}
+
+/* olark */
+
+.no_olark #olark-wrapper {
+	display: none !important;
+}
+
+/* titles and subtitles */
+
+.title {
+    text-align: center;
+	h1 {
+		color: $blue;
+        border-bottom: 2px solid $blue;
+        padding: 0px 20px 10px 20px;
+        display: inline-block;
+        font-style: italic;
+	}
+}
+
+.subtitle {
+    text-align: left;
+    width: 420px;
+    margin:0px auto;
+    margin-top:25px;
+	h2 {
+		color: $blue;
+        display: inline-block;
+	}
+}
+
+.page_busy {
+	@extend .vp_fast_animations;
+	opacity: 0.2;
+	pointer-events:none;
+}
+
+#vp_app_content, .content {
+	@extend .vp_fast_animations;
+	&.hidden {
+		@extend .vp_no_animations;
+		opacity: 0;
+	}
+}
+
+// ===== Buttons =====
+.button {
+    @extend .vp_btn_label;
+    @extend .vp_btn_green;
+
+    &.lightblue {
+        @extend .vp_btn_lightblue;
+    }
+    &.blue {
+        @extend .vp_btn_blue;
+    }
+    &.red {
+        @extend .vp_btn_red;
+    }
+    &.orange {
+        @extend .vp_btn_orange;
+    }
+    &.red-outline {
+        @extend .vp_btn_red_outline;
+    }
+}
+
+.avatar-container img {
+    vertical-align: middle;
+}

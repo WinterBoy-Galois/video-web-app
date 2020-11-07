@@ -1,0 +1,57 @@
+.vp_content_blocks_edit {
+	position: relative;
+}
+
+.vp_marker_overlay_edit {
+    .vp_marker_overlay_main {
+        @extend .vp_container_fluid;
+        overflow-y:auto;
+        margin-top:10px;
+        margin-bottom:10px;
+
+        .vp_mobile & {
+            overflow-y: scroll;
+        }
+    }
+
+    // if in preview mode, remove margins
+    .vp_preview_wrapper .vp_marker_overlay_main {
+        margin:0;
+        padding: 0;
+    }
+
+    .vp_marker_overlay_header {
+        @extend .vp_row;
+        padding: 0;
+        border: 0;
+        width: auto;
+
+        .vp_title_edit_wrapper, .vp_time_edit_wrapper {
+            @extend .vp_form_group;
+            margin: 0;
+
+            input {
+                font-size: $font-size-h3;
+            }
+        }
+
+        .vp_title_edit_wrapper {
+            @extend .vp_col_xs_9;
+        }
+
+        .vp_time_edit_wrapper {
+            @extend .vp_col_xs_3;
+            input {
+                text-align: center;
+            }
+        }
+    }
+
+    .vp_preview_wrapper .vp_marker_overlay_header {
+        margin: 0 0 $ui_margin;
+        padding: 0 $ui_margin;
+    }
+}
+
+@import "toolbar";
+@import "block";

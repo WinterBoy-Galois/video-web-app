@@ -1,0 +1,134 @@
+@import '../foundation';
+
+/*
+ * Controls f
+ */
+
+.vp_controls_play {
+}
+
+/*
+ * Large buttons
+ */
+.vp_controls_play .vp_large_buttons {
+	z-index:0;
+	@include absoluteFullsize();
+	.vpp_loading_indicator {
+		@include absoluteCenter(60px, 60px);
+		@include transition(opacity 0.2s ease-in-out);
+	}
+	.vpp_control_button_play {
+		@include transition(opacity 0.2s ease-in-out);
+		@include absoluteCenter(180px, 120px);
+		&.vpp_medium {
+			@include absoluteCenter(120px, 80px);
+		}
+		&.vpp_small {
+			@include absoluteCenter(80px, 80px);
+		}
+		&.vpp_tiny {
+			@include absoluteCenter(60px, 60px);
+		}
+	}
+
+}
+
+/*
+ * Playbar and left buttons
+ */
+.vp_controls_play .vp_playbar_controls {
+	position: absolute;
+	top:0px;
+	bottom:0px;
+	z-index:10;
+
+
+	// children
+	& > div {
+		position: absolute;
+	}
+
+	& > div:nth-child(1) { // playbar
+		transition: transform 0.3s cubic-bezier(0.000, 0.000, 0.445, 1.1);
+		-webkit-transition: -webkit-transform 0.3s cubic-bezier(0.000, 0.000, 0.445, 1.1);
+		top: $BUTTON_SIZE + 2 * $UI_MARGIN_PLAYBAR;
+		bottom: $BUTTON_SIZE + 2 * $UI_MARGIN_PLAYBAR;
+	}
+	& > div:nth-child(2) { // top button
+		transition: transform 0.3s cubic-bezier(0.000, 0.000, 0.445, 1.1);
+		-webkit-transition: -webkit-transform 0.3s cubic-bezier(0.000, 0.000, 0.445, 1.1);
+		top: $UI_MARGIN_PLAYBAR;
+	}
+	& > div:nth-child(3) { // bottom button
+		transition: transform 0.3s cubic-bezier(0.000, 0.000, 0.445, 1.1);
+		-webkit-transition: -webkit-transform 0.3s cubic-bezier(0.000, 0.000, 0.445, 1.1);
+		bottom: $UI_MARGIN_PLAYBAR;
+	}
+}
+
+/*
+ * Markers
+ */
+.vp_controls_play .vpp_markers {
+	z-index:5;
+	position: absolute;
+	left:0px;
+	top:46px;
+	bottom:46px;
+	width:0px;
+
+	.vpp_click_helper {
+		position: absolute;
+		height:40px;
+	}
+
+	.vpp_marker {
+		transition: transform 0.3s cubic-bezier(0.000, 0.000, 0.445, 1.1), margin 0.1s cubic-bezier(0.000, 0.000, 0.445, 1.1);
+		-webkit-transition: -webkit-transform 0.3s cubic-bezier(0.000, 0.000, 0.445, 1.1), margin 0.1s cubic-bezier(0.000, 0.000, 0.445, 1.1);
+		position: absolute;
+	}
+
+}
+
+
+/*
+ *	 Mobile portrait markers
+ */
+.vp_controls_play .vpp_markers_mobile_portrait {
+	@include absoluteFullsize();
+
+	.vpp_markers_inner {
+		@include absolutePosition(1px, 0px, 30px, 0px);
+		overflow-x:auto;
+	}
+	
+	.vpp_branding {
+		@include absolutePosition(auto, 0px, 0px, 0px);
+		height:30px;
+		line-height:28px;
+		opacity: 0.8;
+		color:white;
+		text-align:center;
+	}
+}
+
+/*
+ * Right buttons
+ */
+.vp_controls_play .vp_right_buttons {
+	& > div {
+		right: 0px;
+		transition: transform 0.1s cubic-bezier(0.000, 0.000, 0.445, 1.1);
+		-webkit-transition: -webkit-transform 0.1s cubic-bezier(0.000, 0.000, 0.445, 1.1);
+		position: absolute;
+	}
+	& > div:nth-child(2) {
+		transition: transform 0.2s cubic-bezier(0.000, 0.000, 0.445, 1.1);
+		-webkit-transition: -webkit-transform 0.2s cubic-bezier(0.000, 0.000, 0.445, 1.1);
+	}
+	& > div:nth-child(3) {
+		transition: transform 0.3s cubic-bezier(0.000, 0.000, 0.445, 1.1);
+		-webkit-transition: -webkit-transform 0.3s cubic-bezier(0.000, 0.000, 0.445, 1.1);
+	}
+}
+

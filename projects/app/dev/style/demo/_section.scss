@@ -1,0 +1,35 @@
+.vp_demo_section_component {
+	max-width:720px;
+	margin:0px auto;
+
+	.vp_demo_section_content {
+		@include clearfix();
+		background-color:$lightgray;
+		padding:20px;
+	}
+}
+
+.vp_demo_section_component.vp_modals {
+	.vp_simple_modal {
+		max-width: 400px;
+		margin:10px auto;
+		text-align: center;
+	}
+}
+
+.vp_demo_section_component.vp_buttons {
+	.vp_button {
+		margin:10px;
+	}
+}
+
+
+.vp_demo_section_component.vp_misc {
+	.vp_progressbar {
+		margin:10px;
+	}
+	.vp_dropzone {
+		height:300px;
+		margin:10px;
+	}
+}

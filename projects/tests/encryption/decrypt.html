@@ -1,0 +1,15 @@
+
+<script type="text/javascript" src="http://crypto-js.googlecode.com/files/2.0.0-crypto-sha1-hmac-pbkdf2-ofb-aes.js"></script>
+<script type="text/javascript" src="http://crypto-js.googlecode.com/files/2.0.0-sha256-min.js"></script>
+<script>
+var pw = "david" + "dgHgCmEerk8PIPXMuliIJ2pXOkSRrzbA";
+var data = "FZtT53VaPq94ka/bkhRjOsgJt9FO3Cse+baRXoK6FmBGKhLH8WKFxHp2T7YDr0zSd/AemfmnXDL7ppRJbQO54tj+Uc0KNTjuKLPBHlev9CF/6xstif4SYW/31vHoFES3UP3qKaH9hcfVCZsdYLb/fET/dxcHyDFQpmJc4YQEKRzXdSuMPBvbYzoOMoEElu6F4M5A3KVxW8aDXis9zCWU/jIxeVMY4rzSjWc0IXjwbIZ/gOZcq5eqgziqKqW4pRI4mk85O89qJA48B2IAo6C7l2qs+rllTJvRB2YgaWYIUfAQMZqh2Uo0evzjyUTfKm0bnbYvxvmbo3ahza9EPdGOQ9hc/WRzEzr5GfV4TRTsNyjtahFDqztGts1b7DAPBp8Bp9jgl+EUT6wuyq1ETEKPFcldLRSO4xMUKN949t4eRO2R0nQLgXbjMShCYakqs0Zwmh7sw8KC/ESKDTNeNPCYVxVIUOy5XaKHFRM7FTya70MjpJRQX3A4p4rAr6KFjGNxgOG0GMtAJPKTg6Cb2fbSGUhCIjixBlE4aqJGpo1IxIyJNDJ6JHJwa5zHJp5JpwV6v8ymxHwoyJWtpLxF9aV4Rx8+E9qTUBIOXkvSxtacyNUxIu7PcPTnKFdvqqxltbO9Xlr4nQf5bmmdIDzmjNwPVkrh2dHN/tlQfps8etSMo9qMzC/HXqA/L5N0btJKTRoWAUkHNu2t2CMKSOJtRs2KxMWAO9LhH8qAnWFNKSNI4oOdwQ0tp59nlrIDWAnuPpnLh32DRrxdJc5/Ah9AyRCtHyrDK242FJPhG4bC/oBoBWAJ1Ga6m0DGY4IVbqK1++0JWjWURrT19FRmM8NZ7inKAH6VltOLR1wfTnDjN0j0Q4j7RXMsx4Cvwc4O5PIaobxNi38EaqwVrIdA/SVkKtlrhcGP8y3ndSV7JsUBFr5JE1jWVOonpUrYMhMEPWrVpirGQ/S8eRydcGiQ7CgCi0Ny0VrSmgTJL7cpHOlPt9MQucRlA43+Yth32BKqafY5nqqDX3+Yxf/eQqJhOhNh6zjoATJApxbpzVzIf60bDIzh+VV9HugbF2mt3u2qp/vR6DUhogtz+b2c3FEOQ2pq/IxgKzl6kzHnUlqoFc7dgHrG8o8jVcOYTo1+31gDW1EsoVpl1Q18JNJv+o5//67knCTfPsPEi0IMkC4hF5ilq96xHm4r8mdvuqt09Qj5qqh4ed2hBrssI8rf4mvCiqonmWVBoCqSDXn9YPWCXcbuPni1EaMmaOLh4LPupCYhBsPlcGGblT9R6Qenwd/XezZNsRDrudJ2OKEl5BioH1GusMCFKguXLCTYRbFEQyI7PRO0OIwBJodc5Q/wJxZYvKKN+RG46mv6VUFVRr3NTSsMN2LYlgA9kJqX2ZvG1scnRh/8J7zJ0COX8dC5M9urR0SZAfbR8TFbPJLLv4G/ywl61qBWdzk9pN3n4NiBEU3sPKDdM+mdEP+etGR7LLuv6CMVjicGGDlrLAYNUoK5uCc2Gpkk/aS1qRJqU/7P/V88pLnbV9lpWcSMFuEAd1DuN6LY7tV0fZ9xbK+vVr4wOI41MyT9E6Lpv0GPxHAXIz2oc5aKpELP6nWcW0DRo0f6eEbAh33wCECgNICOhUwrNXW0R8FV+W+QDyHHOZFKl2EoaoeYdf6zJj7DJZ8JCA9x81UPSjwYcEbIo2WjSGqA1khdMnj41BiJRX3JQ7PJ438QC2sOgM8C";
+var key = Crypto.SHA256(pw, { asBytes: true });
+console.log(key);
+
+var plain = Crypto.AES.decrypt(data, key);
+console.log(key);
+console.log("start== " + plain + " ==end");
+
+
+</script>

@@ -1,0 +1,23 @@
+.vp_section_title {
+	font-size:24px;
+	text-align: center;
+	margin-top:20px;
+	margin-bottom:10px;
+	& span {
+		background-color:white;
+		padding:5px 10px;
+	}
+}
+
+.vp_page_section {
+	position: relative;
+	border-radius:2px;
+	padding:10px 20px;
+	&.vp_background {
+		background-color: rgba($lightblue, 0.1);
+	}
+
+	.vp_clear {
+		clear:both;
+	}
+}

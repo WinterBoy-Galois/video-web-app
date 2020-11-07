@@ -1,0 +1,28 @@
+.sg_icons {
+    @extend .vp_row;
+    @extend .vp_no_list;
+    margin: 0;
+}
+
+
+.sg_icon {
+    @extend .vp_col_sm_3;
+
+    height: $ui_size;
+    line-height: $ui_size;
+
+    .sg_icon_label {
+
+        &:before {
+            @extend .vp_ico;
+        }
+
+        .no-touch &:hover {
+            color: $green;
+
+            &:before {
+                @extend .vp_ico_lg;
+            }
+        }
+    }
+}

@@ -1,0 +1,13 @@
+@import '../foundation';
+
+.vpp_social_feed {
+	position: relative;
+	iframe {
+		@include absoluteFullsize();
+	}
+}
+
+.vpp_social_feed.vpp_twitter iframe {
+	position: absolute !important;
+	width:100% !important;
+}

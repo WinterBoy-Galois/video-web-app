@@ -1,0 +1,11 @@
+.vp_simple_modal.vp_video {
+	background-color:black;
+	padding:0px;
+	width:700px;
+	height:393px;
+
+	@media all and (min-width: 1100px) and (min-height: 700px) {
+		width:1000px;
+		height:630px;
+	}
+}

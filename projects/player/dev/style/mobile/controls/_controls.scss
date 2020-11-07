@@ -1,0 +1,104 @@
+@import "startscreen";
+@import "playbar";
+@import "marker_menu";
+
+.vp_controls {
+
+    height: 100%;
+	@include transition(opacity 0.2s ease);
+
+	// logo in bottom right
+	.vp_logo {
+		position: absolute;
+		bottom: 6px;
+		right: 11px;
+	}
+}
+
+.vp_navigation_container {
+    @extend .vp_fast_animations;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    opacity: 0.8;
+
+    .vp_overlay_mode & {
+        opacity: 0.99;
+    }
+
+    .vp_marker {
+        @extend .vp_fast_animations;
+        position: absolute;
+        height: 0;
+        width: auto;
+        top: 50%;
+        left: $ui_size - 2px;
+        right: auto;
+
+        .vp_playing:not(.vp_play_controls) &,
+        .vp_show_marker_menu & {
+            left: $ui_margin - 2px;
+        }
+    }
+
+    .vp_marker_title {
+        @extend .vp_fast_animations;
+        display: block;
+        position: absolute;
+        top: -$ui_size;
+        width: 0;
+        height: $ui_size;
+        margin: auto;
+        padding: 0;
+        line-height: $ui_size;
+        background-color: $color_player_theme4;
+        overflow: hidden;
+
+        white-space: nowrap;
+        color: $white;
+        text-decoration: none;
+        font-size: $font-size-sm;
+    }
+
+    .vp_playing &.vp_show_marker,
+    .vp_playing.vp_play_controls & {
+        .vp_marker_title {
+            width: auto;
+            padding: 0 $ui_margin_lg;
+        }
+    }
+
+}
+
+.vp_content_controls_wrapper {
+    @extend .vp_fast_animations;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -$ui_size;
+    width: $ui_size;
+    height: $ui_size * 3 + $ui_margin * 2;
+    margin: auto;
+
+    .vp_content_controls {
+        height: $ui_size * 3 + $ui_margin * 2;
+    }
+
+    .vp_button + .vp_button {
+        margin-top: $ui_margin / 2;
+    }
+
+    .vp_button_close {
+        @include rotate(-180deg);
+    }
+
+    .vp_button_next {
+        @include rotate(90deg);
+    }
+
+    .vp_button_prev {
+        @include rotate(-90deg);
+    }
+}

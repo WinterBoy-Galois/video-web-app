@@ -1,0 +1,40 @@
+.vp_content_block_edit .vp_media  {
+    @extend .vp_form;
+
+	.vp_frame_wrapper {
+		display: block;
+		margin-top:5px;
+		height:100px;
+		iframe {
+			height:100%;
+			width:100%;
+		}
+	}
+
+
+	// vimeo and youtube
+	.vp_frame_wrapper.vp_media_youtube,
+	.vp_frame_wrapper.vp_media_vimeo,
+	.vp_frame_wrapper.vp_media_videopath  {
+		display: block;
+		height:300px; // about 16/9 if width is 460px
+	}
+
+	// soundcloud
+	.vp_frame_wrapper.vp_media_soundcloud {
+		display: block;
+		height:115px;
+	}
+
+	// instagram
+	.vp_frame_wrapper.vp_media_instagram {
+		display: block;
+		height: 620px;
+	}
+
+	// pin
+	.vp_frame_wrapper.vp_media_pinterest {
+		height: auto;
+	}
+}
+

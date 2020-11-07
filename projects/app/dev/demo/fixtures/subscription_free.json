@@ -1,0 +1,22 @@
+{
+	"current_period_start": "2016-01-01",
+	"current_period_end": "2016-02-01",
+	"current_month_views": 17643,
+	"plan": {
+      "id":"free-free",
+      "name":"Free",
+      "group":"free",
+      "payment_interval":"month",
+      "price":0,
+      "currency":"USD",
+      "currency_symbol":"$",
+      "max_views_month":2000,
+      "max_videos":9999,
+      "feature_upload":false,
+      "feature_endscreen":false,
+      "feature_vimeo":false,
+      "feature_dev":false,
+      "feature_advanced_settings":false
+	},
+	"pending_subscription": false
+}

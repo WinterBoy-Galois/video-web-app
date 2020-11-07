@@ -1,0 +1,31 @@
+
+
+
+.vp_icon {
+
+	/*
+ 	 * Map icon classes to char codes
+ 	 */
+	@each $icon_class in $icon_classes {
+		&.#{nth($icon_class, 1)}:before {
+			content:nth($icon_class, 2);
+		}
+	}
+
+	/*
+	 * Map color classes on to icons
+	 */
+	@each $color_class in $color_classes {
+		&.#{nth($color_class, 1)} {
+			color:nth($color_class, 2);
+		}
+	}
+
+	&.vp_clickable {
+		cursor: pointer;
+	}
+
+}
+
+
+

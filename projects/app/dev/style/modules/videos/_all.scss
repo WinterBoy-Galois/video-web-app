@@ -1,0 +1,62 @@
+@import "distribute.scss";
+@import "builder.scss";
+@import "builder_new.scss";
+
+@import "analytics.scss";
+@import "tools_overlay/tools_overlay";
+.upload .content.full {
+	overflow: hidden;
+}
+
+.upload .content {
+	position: absolute;
+	width: 100%;
+	top: 0px;
+	bottom: 0px;
+
+
+	.step_title {
+		text-align: center;
+		h1 {
+			border-bottom: 2px solid $blue;
+			color: $blue;
+			padding: 0px 20px 10px 20px;
+			display: inline-block;
+			font-style: italic;
+			font-family: 'PT Sans', sans-serif;
+			font-size: 26px;
+
+		}
+	}
+
+	.button.continue {
+		position: fixed;
+		right: 20px;
+		bottom: 40px;
+		margin:0px;
+	}
+
+}
+
+
+.upload {
+
+	.button.next {
+		position: absolute;
+		right: 11px;
+		bottom: 11px;
+	}
+
+	.button.previous {
+		position: absolute;
+		right: 122px;
+		bottom: 11px;
+	}
+
+	.title {
+		text-align: center;
+	}
+
+}
+
+

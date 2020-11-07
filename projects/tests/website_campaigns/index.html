@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Test</title>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js'></script>
+  <script>
+  /* jshint ignore:start */
+
+  var apiURL = "http://videopath-api-dev.herokuapp.com/v1/user/";
+
+  $(document).ready(function(){
+
+    var utm_vars = {
+      'utm_source': 'source',
+      'utm_campaign': 'name',
+      'utm_term': 'term',
+      'utm_medium': 'medium',
+      'utm_content': 'content'
+    };
+
+    var storageKey = 'vp_utm_params';
+
+    /*
+    * Get Object of URL Params
+    */
+    function getURLParams() {
+      try{
+        var search = location.search.substring(1);
+        return search?JSON.parse('{"' + search.replace(/&/g, '","').replace(/=/g,'":"') + '"}',
+                 function(key, value) { return key===""?value:decodeURIComponent(value) }):{};
+      } catch(_) {return{};}
+    }
+
+
+    /*
+    * Get campaign params from URL
+    */
+    function getCampaignParamsFromURL() {
+      var params = getURLParams(),
+        result = {};
+      for (key in utm_vars) {
+        var val = utm_vars[key];
+        if ( params[key])
+          result[val] = params[key];
+      }
+      return result;
+    }
+
+
+    /*
+    * Get previously stored params from storage
+    */
+    function getCampaignParamsFromStorage() {
+      try {
+        return JSON.parse(localStorage.getItem(storageKey)) || {};
+      } catch(_) {return{};}
+    }
+
+    function setCampaignParamsToStorage(params) {
+      try {
+        if (params.name ) {
+          localStorage.setItem(storageKey, JSON.stringify(params));
+        }
+      } catch(_){console.log('error');}
+    }
+
+    function saveCampaignParamsToStorageFromURL(){
+      var params = getCampaignParamsFromURL();
+      setCampaignParamsToStorage(params);
+    }
+
+    /*
+    * Check Storage and URL for params
+    */
+    function getValidCampaignParams() {
+      var urlParams = getCampaignParamsFromURL();
+      if (urlParams.name) {
+        return urlParams;
+      }
+
+      var storageParams = getCampaignParamsFromStorage();
+      if (storageParams.name) {
+        return storageParams;
+      }
+      return false;
+    }
+
+
+    /*
+    * Always save params to storage if available
+    */
+    saveCampaignParamsToStorageFromURL();
+
+
+  });
+
+  </script>
+</head>
+<body>
+<button class = "test">Test</button>
+<button class = "signup">Signup</button>
+
+</body>
+</html>
+

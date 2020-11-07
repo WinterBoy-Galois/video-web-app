@@ -1,0 +1,21 @@
+{
+    "id": 208860256,
+    "key": "c5lW06q4",
+    "title": "Facebook Stream",
+    "time": 102.426339285714,
+    "video_revision": 1285523136,
+    "contents": [{
+        "type": "social",
+        "text": null,
+        "ordinal": 0,
+        "data": "{\"service\":\"facebook-page\",\"service_id\":\"https://www.facebook.com/videopath?fref=ts\"}",
+        "title": "",
+        "image_url": "",
+        "url": "",
+        "id": 2131807627,
+        "marker": 208860266,
+        "key": "lAPJMQc8"
+    }],
+    "overlay_height": -1,
+    "overlay_width": -1
+}

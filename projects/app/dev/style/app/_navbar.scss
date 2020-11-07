@@ -1,0 +1,81 @@
+.vp_navbar {
+
+	@extend .vp_box_shadow;
+	background-color: #fff;
+    position: relative;
+    height: $ui_size_xl;
+    width: 100%;
+    z-index: 5;
+
+    // buttons right
+    div.vp_right {
+    	float:right;
+    	margin-top:8px;
+    }
+
+
+    // logo left
+    .vp_logo {
+    	background:url('img/logo_main.png') ;
+    	background-size: 175px 40px;
+    	width:175px;
+    	height:40px;
+        position: absolute;
+    	left:12px;
+    	top:9px;
+    	cursor:pointer;
+    }
+
+    // plan indicator
+    .vp_plan_icon {
+        position: absolute;
+        height: 70px;
+        width: 70px;
+        left:200px;
+        top:0px;
+        cursor:pointer
+    }
+
+    // main menu
+    .vp_main_menu {
+        display: inline-block;
+        position: relative;
+        ul {
+            padding:0px;
+            list-style: none;
+            position:absolute;
+            width:180px;
+            top:25px;
+            right:10px;
+            border-radius:2px;
+            background-color:$blue;
+            li {
+                color:white;
+                padding:10px;
+                .vp_icon {
+                    margin-right:7px;
+                    margin-left:3px;
+                }
+            }
+
+            li.vp_user {
+                text-align:center;
+                font-size: 12px;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+            li:not(.vp_user) {
+                text-align: left;
+                cursor:pointer;
+                &:hover {
+                    background-color:$lightblue;
+                }
+            }
+            li:last-child, li:nth-child(4) {
+                margin-top:15px;
+            }
+        }
+    }
+
+}

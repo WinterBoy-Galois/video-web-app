@@ -1,0 +1,18 @@
+#vp_app {
+	opacity: 0;
+	-webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+
+// react 
+@import 'modals.scss';
+@import 'simple_modal.scss';
+@import 'navbar.scss';
+
+// non - react
+@import 'page.scss';
+@import 'footer.scss';
+
+// old
+@import 'modals_old.scss';

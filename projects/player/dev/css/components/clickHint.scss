@@ -1,0 +1,38 @@
+/* 
+ * Handlee for click info
+ */
+@import url('https://fonts.googleapis.com/css?family=Handlee');
+
+
+@keyframes pulsate {
+    0% {transform: scale(1.0, 1.0);}
+    40% {transform: scale(1.0, 1.0);}
+    45% {transform: scale(1.1, 1.1);}
+    50% {transform: scale(1.0, 1.0);}
+    55% {transform: scale(1.1, 1.1);}
+    60% {transform: scale(1.0, 1.0);}
+    100% {transform: scale(1.0, 1.0);}
+}
+
+.vpp_click_hint {
+	position: relative;
+	font-family: 'Handlee';
+	font-size:34px;
+	color:black;
+	width:200px;
+	height:80px;
+	svg {
+		position: absolute;
+		width:60px;
+		left:0px;
+		top:30px;
+		filter: drop-shadow( -5px -5px 5px #000 );
+	}
+	span {
+		position:absolute;
+		left:50px;
+		text-shadow: 1px 1px 4px #000;
+		animation: pulsate 2s infinite ease-out;
+
+	}
+}

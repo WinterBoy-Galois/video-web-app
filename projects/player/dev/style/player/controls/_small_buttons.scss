@@ -1,0 +1,128 @@
+.vp_small_button {
+    @extend .vp_btn_icon;
+    position: absolute;
+
+    .vp_collapsed & {
+        background-image: none;
+        width: $vp_player_collapsed_controls_width;
+
+        &:before {
+            content: none;
+        }
+    }
+}
+
+.vp_playbutton {
+    @extend .vp_ico_play;
+    left: $vp_player_sidebar_spacing;
+    bottom: $vp_player_sidebar_spacing;
+
+    &.active {
+        @extend .vp_ico_pause;
+    }
+}
+
+.vp_favicon {
+    left: $vp_player_sidebar_spacing;
+    top: $vp_player_sidebar_spacing;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("img_new/logo_icon.png");
+    background-size: 26px 26px;
+}
+
+.vp_editing .vp_favicon {
+    top: $vp_player_sidebar_spacing + $vp_player_sidebar_editing_offset;
+}
+
+.vp_small_buttons_right {
+    @extend .vp_fast_animations_opacity;
+
+    position: absolute;
+    top: 0;
+    right: $ui_margin;
+    width: $vp_player_controls_width;
+    height: 3 * $vp_player_controls_width + 3 * $ui_margin;
+    line-height: 0;
+
+    .vp_collapsed & {
+        opacity: 0;
+
+        .vp_small_button {
+            width: $vp_player_controls_width;
+        }
+    }
+
+    .vp_small_button {
+        margin-top: $ui_margin;
+    }
+}
+
+.vp_fullscreen_button {
+    @extend .vp_ico_fullscreen;
+    position: relative;
+
+    &.active {
+        @extend .vp_ico_exit_fullscreen;
+    }
+}
+
+.vp_mute_button {
+    @extend .vp_ico_sound_mute;
+    position: relative;
+
+    &.active {
+        @extend .vp_ico_sound_volume;
+    }
+}
+
+.vp_add_marker_button {
+    @extend .vp_btn_icon;
+    @extend .vp_btn_orange;
+    @extend .vp_btn_fading;
+
+    position: absolute;
+    top: $ui_margin_thin;
+    left: $ui_margin_thin;
+
+    &:before {
+        @extend .vp_ico_circle_plus;
+        font-size: 1.4rem;
+    }
+}
+
+// this is also used by the overlay share buttons
+// if this is changed, please check there too!
+.vp_share_buttons {
+    position: absolute;
+    left: 0;
+    z-index: 50;
+
+    &.vp_hover {
+        height: 7 * $ui_size;
+
+        .vp_share_links {
+            height: 6 * $ui_size;
+            opacity: 1;
+        }
+    }
+
+    .vp_share_button {
+        @extend .vp_btn_icon;
+        @extend .vp_btn_clear;
+        @extend .vp_ico_player_share;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .vp_share_links {
+        @extend .vp_fast_animations;
+        position: absolute;
+        top: $ui_size;
+        width: $ui_size;
+        height: 0;
+        opacity: 0;
+        overflow: hidden;
+    }
+}

@@ -1,0 +1,15 @@
+[
+{
+	"name": "My Videos",
+	"id": 1,
+	"role": "owner",
+	"is_default_team": true,
+	"stats": {
+		"number_of_members": 1,
+		"number_of_videos": 6
+	},
+	"owner": {
+		"email": "dscharf@gmx.net"
+	}
+}
+]

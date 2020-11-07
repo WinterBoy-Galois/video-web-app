@@ -1,0 +1,8 @@
+// ui constants
+$vp_player_controls_width: $ui_size;
+$vp_player_collapsed_controls_width: $ui_margin;
+
+$vp_player_sidebar_spacing: $ui_margin_thin;
+$vp_player_sidebar_border_width: $ui_margin_thin;
+
+$vp_player_sidebar_editing_offset:$vp_player_controls_width + $vp_player_sidebar_spacing;

@@ -1,0 +1,23 @@
+.vp_simple_modal.vp_welcome {
+	width:575px;
+
+	.vp_start_image {
+		width:198px;
+        height:107px;
+        background-image:url('img/demo2.jpg');
+        background-size:198px 107px;
+        cursor:pointer
+	}
+
+	.vp_button_block {
+		text-align: center;
+	}
+
+	.vp_button_block > div {
+		vertical-align: middle;
+		display: inline-block;
+		margin:auto 20px;
+	}
+}
+
+

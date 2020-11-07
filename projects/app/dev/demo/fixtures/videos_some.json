@@ -1,0 +1,288 @@
+[{
+		"team": 1571309881,
+		"id": 1700051232,
+		"thumbnails": {
+			"large": "https://i.ytimg.com/vi/sCdeCOTTaSo/maxresdefault.jpg",
+			"normal": "https://i.ytimg.com/vi/sCdeCOTTaSo/maxresdefault.jpg"
+		},
+		"key": "bHcrmxqC",
+		"published": 1,
+		"created": "2015-12-07T17:26:22.003924",
+		"draft": 285870900,
+		"current_revision": 629283057,
+		"total_plays": 0,
+		"total_views": 0,
+		"revision_info": {
+			"marker_count": 1,
+			"draft_saved": "2015-12-09T12:06:33.710",
+			"title": "Videopath presentation at Microsoft Demo Day"
+		},
+		"url": "http://localhost:5000/v1/video/1700051232/",
+		"source": {
+			"id": 634080753,
+			"created": "2015-12-07T17:26:23.445464",
+			"modified": "2015-12-07T17:26:23.445516",
+			"key": "E5sSKDcA8xOvEmD6RVQlVgq12FOsUmdZ",
+			"status": "ok",
+			"service_identifier": "sCdeCOTTaSo",
+			"service": "youtube",
+			"duration": 349.0,
+			"aspect": 1.7777777777777777,
+			"description": "Videopath presentation at Microsoft Demo Day",
+			"thumbnail_small": "https://i.ytimg.com/vi/sCdeCOTTaSo/maxresdefault.jpg",
+			"thumbnail_large": "https://i.ytimg.com/vi/sCdeCOTTaSo/maxresdefault.jpg",
+			"file_mp4": "",
+			"file_webm": "",
+			"youtube_allow_clickthrough": false,
+			"notes": "",
+			"jpg_sequence_support": false,
+			"jpg_sequence_length": 0,
+			"jpg_sequence_base_url": "//az744831.vo.msecnd.net/e5sskdca8xovemd6rvqlvgq12fosumdz/"
+		}
+	}, {
+		"team": 1571309881,
+		"id": 622410882,
+		"thumbnails": {
+			"large": "https://i.ytimg.com/vi/hdSrT4yjS1g/sddefault.jpg",
+			"normal": "https://i.ytimg.com/vi/hdSrT4yjS1g/sddefault.jpg"
+		},
+		"key": "CiGrJPbo",
+		"published": 0,
+		"created": "2015-12-04T10:06:19.046558",
+		"draft": 1109996395,
+		"current_revision": null,
+		"total_plays": 0,
+		"total_views": 0,
+		"revision_info": {
+			"marker_count": 1,
+			"draft_saved": "2015-12-04T10:06:26.669",
+			"title": "REST+JSON API Design - Best Practices for Developers"
+		},
+		"url": "http://localhost:5000/v1/video/622410882/",
+		"source": {
+			"id": 462447981,
+			"created": "2015-12-04T10:06:20.404150",
+			"modified": "2015-12-04T10:06:20.404202",
+			"key": "sjztLMuLyxLONpTT6NBfahVdEUmc6OPZ",
+			"status": "ok",
+			"service_identifier": "hdSrT4yjS1g",
+			"service": "youtube",
+			"duration": 5038.0,
+			"aspect": 1.3343023255813953,
+			"description": "REST+JSON API Design - Best Practices for Developers",
+			"thumbnail_small": "https://i.ytimg.com/vi/hdSrT4yjS1g/sddefault.jpg",
+			"thumbnail_large": "https://i.ytimg.com/vi/hdSrT4yjS1g/sddefault.jpg",
+			"file_mp4": "",
+			"file_webm": "",
+			"youtube_allow_clickthrough": false,
+			"notes": "",
+			"jpg_sequence_support": false,
+			"jpg_sequence_length": 0,
+			"jpg_sequence_base_url": "//az744831.vo.msecnd.net/sjztlmulyxlonptt6nbfahvdeumc6opz/"
+		}
+	}, {
+		"team": 1571309881,
+		"id": 1124513314,
+		"thumbnails": {
+			"large": "http://brightcove.vo.llnwd.net/e1/pd/96980657001/96980657001_207574837001_commonRedpoll-still.jpg?pubId=4602926337001&videoId=4602980509001",
+			"normal": "http://brightcove.vo.llnwd.net/e1/pd/96980657001/96980657001_207574837001_commonRedpoll-still.jpg?pubId=4602926337001&videoId=4602980509001"
+		},
+		"key": "xKzWHlId",
+		"published": 0,
+		"created": "2015-11-16T17:14:44.370738",
+		"draft": 1580494305,
+		"current_revision": null,
+		"total_plays": 0,
+		"total_views": 0,
+		"revision_info": {
+			"marker_count": 4,
+			"draft_saved": "2015-12-03T11:43:47.916",
+			"title": "New Video"
+		},
+		"url": "http://localhost:5000/v1/video/1124513314/",
+		"source": {
+			"id": 539416540,
+			"created": "2015-11-16T17:14:46.231699",
+			"modified": "2015-11-16T17:14:46.231751",
+			"key": "EgPcvGc9jedis6P4R9GfVib2IDnLKL7O",
+			"status": "ok",
+			"service_identifier": "{\"player\": \"default\", \"account\": \"4602926337001\", \"video_id\": \"4602980509001\"}",
+			"service": "brightcove",
+			"duration": 29.96,
+			"aspect": 1.791044776119403,
+			"description": "",
+			"thumbnail_small": "http://brightcove.vo.llnwd.net/e1/pd/96980657001/96980657001_207574837001_commonRedpoll-still.jpg?pubId=4602926337001&videoId=4602980509001",
+			"thumbnail_large": "http://brightcove.vo.llnwd.net/e1/pd/96980657001/96980657001_207574837001_commonRedpoll-still.jpg?pubId=4602926337001&videoId=4602980509001",
+			"file_mp4": "",
+			"file_webm": "",
+			"youtube_allow_clickthrough": false,
+			"notes": "",
+			"jpg_sequence_support": false,
+			"jpg_sequence_length": 0,
+			"jpg_sequence_base_url": "//az744831.vo.msecnd.net/egpcvgc9jedis6p4r9gfvib2idnlkl7o/"
+		}
+	}, {
+		"team": 1571309881,
+		"id": 1845303957,
+		"thumbnails": {
+			"large": "https://i.ytimg.com/vi/t_0LSTMsCEg/sddefault.jpg",
+			"normal": "https://i.ytimg.com/vi/t_0LSTMsCEg/sddefault.jpg"
+		},
+		"key": "O4OksSzb",
+		"published": 1,
+		"created": "2015-11-16T11:20:29.792060",
+		"draft": 323719829,
+		"current_revision": 1900454986,
+		"total_plays": 0,
+		"total_views": 0,
+		"revision_info": {
+			"marker_count": 3,
+			"draft_saved": "2015-12-04T10:06:05.196",
+			"title": "1. What does content marketing mean at Clue ?"
+		},
+		"url": "http://localhost:5000/v1/video/1845303957/",
+		"source": {
+			"id": 2032260863,
+			"created": "2015-10-28T11:14:35.035801",
+			"modified": "2015-11-05T17:04:14.505010",
+			"key": "JIEJeax0WpE3mNywrs3J6Kmec0YYrjUE",
+			"status": "ok",
+			"service_identifier": "t_0LSTMsCEg",
+			"service": "youtube",
+			"duration": 47.0,
+			"aspect": 1.3333333333333333,
+			"description": "1. What does content marketing mean at Clue ?",
+			"thumbnail_small": "https://i.ytimg.com/vi/t_0LSTMsCEg/sddefault.jpg",
+			"thumbnail_large": "https://i.ytimg.com/vi/t_0LSTMsCEg/sddefault.jpg",
+			"file_mp4": "",
+			"file_webm": "",
+			"youtube_allow_clickthrough": false,
+			"notes": "",
+			"jpg_sequence_support": true,
+			"jpg_sequence_length": 1166,
+			"jpg_sequence_base_url": "//az744831.vo.msecnd.net/jiejeax0wpe3mnywrs3j6kmec0yyrjue/"
+		}
+	}, {
+		"team": 1571309881,
+		"id": 831427685,
+		"thumbnails": {
+			"large": "https://i.ytimg.com/vi/t_0LSTMsCEg/sddefault.jpg",
+			"normal": "https://i.ytimg.com/vi/t_0LSTMsCEg/sddefault.jpg"
+		},
+		"key": "szHnh8nx",
+		"published": 0,
+		"created": "2015-10-28T11:14:03.814404",
+		"draft": 1693492453,
+		"current_revision": null,
+		"total_plays": 0,
+		"total_views": 0,
+		"revision_info": {
+			"marker_count": 0,
+			"draft_saved": "2015-11-13T16:00:39.826",
+			"title": "1. What does content marketing mean at Clue ?"
+		},
+		"url": "http://localhost:5000/v1/video/831427685/",
+		"source": {
+			"id": 826847009,
+			"created": "2015-10-28T11:14:04.263422",
+			"modified": "2015-10-28T11:14:04.263476",
+			"key": "9Tk2fq2BB9kTrdr5hCK0oOKcNDhrUtpE",
+			"status": "ok",
+			"service_identifier": "t_0LSTMsCEg",
+			"service": "youtube",
+			"duration": 47.0,
+			"aspect": 1.3333333333333333,
+			"description": "1. What does content marketing mean at Clue ?",
+			"thumbnail_small": "https://i.ytimg.com/vi/t_0LSTMsCEg/sddefault.jpg",
+			"thumbnail_large": "https://i.ytimg.com/vi/t_0LSTMsCEg/sddefault.jpg",
+			"file_mp4": "",
+			"file_webm": "",
+			"youtube_allow_clickthrough": false,
+			"notes": "",
+			"jpg_sequence_support": false,
+			"jpg_sequence_length": 0,
+			"jpg_sequence_base_url": "//az744831.vo.msecnd.net/9tk2fq2bb9ktrdr5hck0ookcndhrutpe/"
+		}
+	}, {
+		"team": 1571309881,
+		"id": 1048254356,
+		"thumbnails": {
+			"large": "https://i.ytimg.com/vi/t_0LSTMsCEg/sddefault.jpg",
+			"normal": "https://i.ytimg.com/vi/t_0LSTMsCEg/sddefault.jpg"
+		},
+		"key": "hQ0vU94F",
+		"published": 0,
+		"created": "2015-10-28T10:49:03.697714",
+		"draft": 181613637,
+		"current_revision": null,
+		"total_plays": 0,
+		"total_views": 0,
+		"revision_info": {
+			"marker_count": 0,
+			"draft_saved": "2015-10-28T10:49:23.293",
+			"title": "1. What does content marketing mean at Clue ?"
+		},
+		"url": "http://localhost:5000/v1/video/1048254356/",
+		"source": {
+			"id": 268939327,
+			"created": "2015-10-28T10:49:04.372729",
+			"modified": "2015-10-28T10:49:04.372780",
+			"key": "ZaDy5DBMJctrfgL9O5Wpp64cBdY8m8Qg",
+			"status": "ok",
+			"service_identifier": "t_0LSTMsCEg",
+			"service": "youtube",
+			"duration": 47.0,
+			"aspect": 1.3333333333333333,
+			"description": "1. What does content marketing mean at Clue ?",
+			"thumbnail_small": "https://i.ytimg.com/vi/t_0LSTMsCEg/sddefault.jpg",
+			"thumbnail_large": "https://i.ytimg.com/vi/t_0LSTMsCEg/sddefault.jpg",
+			"file_mp4": "",
+			"file_webm": "",
+			"youtube_allow_clickthrough": false,
+			"notes": "",
+			"jpg_sequence_support": false,
+			"jpg_sequence_length": 0,
+			"jpg_sequence_base_url": "//az744831.vo.msecnd.net/zady5dbmjctrfgl9o5wpp64cbdy8m8qg/"
+		}
+	}, {
+		"team": 1571309881,
+		"id": 673699932,
+		"thumbnails": {
+			"large": "https://i.ytimg.com/vi/CovpUAzI6jY/maxresdefault.jpg",
+			"normal": "https://i.ytimg.com/vi/CovpUAzI6jY/maxresdefault.jpg"
+		},
+		"key": "jvxJ3fgx",
+		"published": 1,
+		"created": "2015-10-27T16:30:41.358149",
+		"draft": 775034985,
+		"current_revision": 714010947,
+		"total_plays": 0,
+		"total_views": 0,
+		"revision_info": {
+			"marker_count": 0,
+			"draft_saved": "2015-10-27T16:30:41.404",
+			"title": "New Video"
+		},
+		"url": "http://localhost:5000/v1/video/673699932/",
+		"source": {
+			"id": 2023927541,
+			"created": "2015-10-16T16:40:18.503524",
+			"modified": "2015-10-16T16:40:18.503577",
+			"key": "qwXySiDLwrX7Au0h4P6y4UC3immv9KLM",
+			"status": "ok",
+			"service_identifier": "CovpUAzI6jY",
+			"service": "youtube",
+			"duration": 32.0,
+			"aspect": 1.7777777777777777,
+			"description": "Videopath Sample Video",
+			"thumbnail_small": "https://i.ytimg.com/vi/CovpUAzI6jY/maxresdefault.jpg",
+			"thumbnail_large": "https://i.ytimg.com/vi/CovpUAzI6jY/maxresdefault.jpg",
+			"file_mp4": "",
+			"file_webm": "",
+			"youtube_allow_clickthrough": false,
+			"notes": "",
+			"jpg_sequence_support": false,
+			"jpg_sequence_length": 0,
+			"jpg_sequence_base_url": "//az744831.vo.msecnd.net/qwxysidlwrx7au0h4p6y4uc3immv9klm/"
+		}
+	}]

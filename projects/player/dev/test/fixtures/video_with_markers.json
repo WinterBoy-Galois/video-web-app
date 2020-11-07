@@ -1,0 +1,59 @@
+{
+    "id": 1,
+    "title": "Test Video",
+    "duration": 100,
+    "markers": [{
+        "id": 10,
+        "time": 15,
+        "contents": [{
+            "type": "text",
+            "id": 20
+        }, {
+            "type": "text",
+            "id": 30
+        }]
+    }, {
+        "id": 20,
+        "time": 30,
+        "contents": [{
+            "type": "text",
+            "id": 20
+        }, {
+            "type": "text",
+            "id": 30
+        }]
+    }, {
+        "id": 30,
+        "time": 45,
+        "contents": [{
+            "type": "website",
+            "id": 20
+        }]
+    }, {
+        "id": 40,
+        "time": 60,
+        "contents": [{
+            "type": "text",
+            "id": 20
+        }, {
+            "type": "text",
+            "id": 30
+        }]
+    }, {
+        "id": 50,
+        "time": 75,
+        "contents": [{
+            "type": "text",
+            "id": 20
+        }, {
+            "type": "text",
+            "id": 30
+        }]
+    }],
+    "source": {
+        "duration": 100,
+        "service": "videopath",
+        "file_mp4": "1234",
+        "file_webm": "1234"
+    }
+}

@@ -1,0 +1,22 @@
+{
+  "browser": true,
+  "esnext": true,
+  "globals": {
+  	"module": true,
+  	"require": true,
+  	"define": true,
+  	"console": true,
+    "describe": true,
+    "it": true,
+    "expect": true,
+    "beforeEach": true,
+    "afterEach": true,
+    "sinon": true
+  },
+  "globalstrict": true,
+  "strict": false,
+  "quotmark": false,
+  "undef": true,
+  "unused": true,
+  "expr": true
+}

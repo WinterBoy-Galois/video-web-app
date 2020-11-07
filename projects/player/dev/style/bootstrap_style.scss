@@ -1,0 +1,86 @@
+@import 'compass';
+@import '../../../shared/style/foundation/mixins';
+@import '../../../shared/style/foundation/animations';
+
+#vp_bootstrap {
+    background-color:black;
+    color:white;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size:12px;
+    @include transition(opacity 0.2s ease);
+
+    @include absolute_fullsize();
+    @include font-smoothing("none");
+
+    #vp_poster {
+        @include absolute_fullsize();
+        background-color:black;
+        z-index: 0;
+        background-size: cover;
+        background-position: center;
+        @include transition(opacity 0.2s ease);
+    }
+
+    #vp_playbutton {
+        @include absolute_centering(80px, 80px);
+        @include transition(opacity 0.2s ease, background-color 0.2s ease);
+        border-radius: 2px; 
+        background-color: black;
+
+        cursor:pointer;
+        z-index:10;
+        background-repeat: no-repeat;
+        background-position:center;
+
+        #vp_playbutton_icon {
+            position: absolute;
+            fill:#fff;
+            @include absolute_centering(40px, 40px);
+        }
+
+        @media only screen
+        and (min-width: 512px)
+        and (min-height: 512px) {
+            @include absolute_centering(120px, 80px);
+        }
+
+        @media only screen
+        and (min-width: 768px)
+        and (min-height: 768px)  {
+            @include absolute_centering(180px, 120px);
+            background-size:66px 66px;
+            #vp_playbutton_icon {
+                @include absolute_centering(66px, 66px);
+            }
+        }
+        
+    }
+
+    #vp_loader {
+        @include absolute_centering(25px, 25px);
+        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo4NzFCNzI2MDBFQkQxMUU1QTMwNkNERTc1NEQwMzEyMyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo4NzFCNzI2MTBFQkQxMUU1QTMwNkNERTc1NEQwMzEyMyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjgwMTE2REY1MEVCQTExRTVBMzA2Q0RFNzU0RDAzMTIzIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjgwMTE2REY2MEVCQTExRTVBMzA2Q0RFNzU0RDAzMTIzIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+mgAz5QAAAWdJREFUeNq8Vu1twyAQxVb+xyN4g7JB2KCM4BEyQkdwJ6g3qLMB3cDdwN2ATkAPCSRyOR9nR+qTnpSc7zjuC2hCCEoIDbTptweOUkMVnQjYAX24x5vQVrU7ojgjmZEGckL/bVowY0yp0YRtB+yBK7J7TCUKzaGULMA18JgJmSnXPVUifRFk47Wm0Kp/AI5kAl42dL+ArqjHQDRDxDdw4WpCtarHOS50J6IeV6yLDQfCSFfmABd+pZxopoOmjQ24FEmU90znjdnJzCgZZqFyAwuzRt+mItbQV2Ses23TxG4hbyB2yy/65gg9CmtOhRPUxKS0+JzrSk18quNDd9naEUGQOorYFlZEp/nknJoTqmkGrNugSytO8cdGbuMkz0XRLTPx5q4ZKqEfhTlyaT2FmpMY+o35/gN833sKX4vHQnkzRtknsQFdzEx5M7ojDwlD5N1JHxJSJ9T5ZKW2zY53V4dSskgN/wQYAJ1VNzUO8SRCAAAAAElFTkSuQmCC);
+        background-size:25px 25px;
+        background-repeat: no-repeat;
+        z-index:5;
+    }
+
+    #vp_status {
+        @include absolute_centering(150px, 40px);
+        margin-top:25px;
+        z-index: 5;
+        text-align: center;
+    }
+
+
+    /* helpers */
+    .vp_hidden {
+        opacity: 0;
+    }
+    .vp_rotating {
+        @include animation(vp_spin 2s linear infinite);
+    }
+    &.vp_touch_ready {
+        pointer-events:none;
+    }
+
+}

@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+<head>
+
+    <meta charset="UTF-8">
+
+    <!-- 
+        BOOTSTRAP CONFIGURATION BUILDER
+    -->
+    <script>
+        document.videopath = document.videopath || {};
+        document.videopath.player = document.videopath.player || {};
+        document.videopath.player.conf = {
+            video: false,
+            buttonColor: "#333333",
+            arrowColor: "#ffffff",
+            buttonColorHover: "#555555",
+            thumbnail: "",
+            srcURL: "scripts/"
+        };
+        var sentryURL = 'https://3de4221adac949f2ae3d3e8209496c50@app.getsentry.com/4610514';
+    </script>
+
+
+    <!-- 
+        TITLE AND META TAGS
+    -->
+    <title>{{ title }}</title>
+    <meta name="description" content="{{ description }}" />
+
+
+    <!-- 
+        IOS TAGS
+    -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name = "viewport" content = "width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+
+    <!-- Android Tags -->
+    <meta name="theme-color" content="{{ button_color }}">
+
+    <!-- 
+        OPEN GRAPH TAGS
+    -->
+    <meta property="og:title" content="{{ title }}"/>
+    <meta property="og:image" content="{{ thumb_urls.large }}"/>
+    <meta property="og:image:url" content="{{ thumb_urls.large }}"/>
+    <meta property="og:site_name" content="Videopath - interactive video made easy"/>
+    <meta property="og:description" content="{{ description | truncatewords:20 }}"/>
+    <meta property="og:url" content="{{ video_url }}"/>
+    <meta property="og:type" content="video.movie" />
+
+
+    <!-- 
+        OEMBED TAGS
+    -->
+    <link rel="alternate" type="application/json+oembed"
+        href="http://api.videopath.com/oembed?url={{ video_url | urlencode}}&format=json"
+        title="{{ title }}" />
+    <link rel="alternate" type="text/xml+oembed"
+        href="http://api.videopath.com/oembed?url={{ video_url | urlencode}}&format=xml"
+        title="{{ title }}" />
+    
+
+
+    <!-- 
+        ERROR REPORTING
+    -->
+    <script src="//cdn.ravenjs.com/1.1.22/jquery,native/raven.min.js"></script>
+    <script>
+        if ( window.location.href.indexOf('localhost') == -1 ) {
+            Raven.config(sentryURL, {
+              whitelistUrls: [/.*videopath.com.*/,/.*cloudfront.net.*/]
+            }).install();
+        }
+    </script>
+
+
+    <!-- 
+        STYLE SHEETS
+    -->
+    <!-- @exclude -->
+    <link rel="stylesheet" type="text/css" href="style/bootstrap_style.css" media="screen"/>
+    <!-- @endexclude -->
+    <style>
+        /* @include style/bootstrap_style.css */
+    </style>
+    
+
+    <!-- 
+        DEV LIBS
+    -->
+    <!-- @exclude -->
+    <script src="http://127.0.0.1:9000/livereload.js"></script>
+    <!-- @endexclude -->
+
+
+</head> 
+
+
+<body style="background-color:black">
+
+
+    <!-- 
+        APP AREA
+    -->
+    <div class = 'vp_player_app' id='vp_player_app'>
+        <div id = "vp_bootstrap">
+            <div id = "vp_poster" class = "vp_hidden"></div>
+            <div id = "vp_playbutton">
+                <svg id = "vp_playbutton_icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     width="50px" height="50px" viewBox="0 0 50 50" enable-background="new 0 0 50 50" xml:space="preserve">
+                    <g transform="scale(0.09765625 0.09765625)">
+                        <path d="M464.621,241.541c17.39,10.145,17.39,26.09,0,34.79L80.57,499.501c-17.39,10.15-31.885,1.45-31.885-17.39
+                            V37.2c0-18.845,14.495-27.535,31.885-17.395L464.621,241.541L464.621,241.541z"/>
+                    </g>
+                </svg>
+            </div>
+            <div id = "vp_loader" class = "vp_hidden"></div>
+            <div id = "vp_status"></div>
+        </div>
+    </div>
+
+
+    <!-- 
+        SEO CONTAINER
+    -->
+    <div class = "vp_seo" style = "display:none">
+    {% for marker in markers.all %}
+      <h1>{{marker.title}}</h1>
+      {% for content in marker.contents.all %}
+        <div>{{content.text | safe}}</div>
+      {% endfor %}
+    {% endfor %}
+    </div>
+
+
+    <!-- 
+        BOOTSTRAP SCRIPTS
+    -->
+    <!-- @exclude -->
+    <script src="scripts/bootstrap.js" async></script>
+    <!-- @endexclude -->
+    <script>
+        /* @include scripts/bootstrap.js */
+    </script>
+
+
+</body>
+</html>
+
+

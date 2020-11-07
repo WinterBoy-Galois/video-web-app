@@ -1,0 +1,32 @@
+.vp_builder .tool_overlay.end_screen {
+    position: fixed;
+	left: 0;
+	bottom: 0;
+	right: $builder_toolbar_width;
+	width: auto;
+    height: $ui_size;
+	border: 0;
+    padding: 0;
+	background-color: transparent;
+	text-align: center;
+    clear: both;
+
+    .button {
+        display: inline-block;
+        margin: 0 5px;
+        position: static;
+        width: $btn_width;
+    }
+}
+
+// the endscreen button modal
+.vp_endscreen_button_edit {
+
+    .vp_input_wrapper_color {
+        text-align: center;
+    }
+
+    .vp_cta_preview {
+        margin: (2 * $ui_margin_lg) 0;
+    }
+}

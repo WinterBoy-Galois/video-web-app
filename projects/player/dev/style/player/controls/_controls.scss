@@ -1,0 +1,15 @@
+@import "large_buttons";
+@import "playbar";
+@import "small_buttons";
+@import "password_view";
+
+.vp_controls {
+	@include transition(opacity 0.2s ease);
+
+	// logo in bottom right
+	.vp_logo {
+		position: absolute;
+		bottom: 6px;
+		right: 11px;
+	}
+}

@@ -1,0 +1,48 @@
+.vp_input {
+	text-align: left;
+	position: relative;
+
+	&.vp_text, &.vp_textarea, &.vp_password, &.vp_email, &.vp_select, &.vp_dateselect {
+		label {
+			margin-bottom:5px;
+			display: block;
+		}
+		&.vp_error {
+			input {
+				border-color:$red;
+			}
+		}
+	}
+
+	.vp_required {
+		color:$red;
+		margin-left:2px;
+		font-size:20px;
+	}
+
+
+	&.vp_checkbox {
+		input {
+			position: absolute;
+			height:30px;
+			left:0px;
+			top:0px;
+		}
+		label {
+			line-height: 30px;
+			height:40px;
+			margin-left:30px;
+			position: relative;
+    		top: 3px;
+		}
+		&.vp_error, &.vp_error a {
+			color:$red;
+		}
+	}
+
+	.vp_error_detail {
+		color:$red;
+	}
+
+	
+}

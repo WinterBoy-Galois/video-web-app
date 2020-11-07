@@ -1,0 +1,71 @@
+.vp_large_buttons {
+	@include absolute_fullsize();
+
+    // this is needed to capture mouse events on IE
+    background-image: url('img/transparent.png');
+}
+
+.vp_large_loading_indicator {
+    @include absolute_centering(150px, 150px);
+    @include transition(opacity 0.2s ease);
+    opacity:0.8;
+}
+
+
+.vp_large_play_button {
+    @extend .vp_ico;
+    @extend .vp_ico_play;
+    @include absolute_centering(80px, 80px);
+    @include transition(opacity 0.2s ease);
+    cursor: pointer;
+    background-color: $lightblue;
+    @include border-radius(3px);
+
+
+    // facebook play button ratio:
+    // left margin: 33px = 0.39
+    // play icon width: 23px = 0.28
+    // right margin: 28px = 0.33
+    // (but the button is very rounded, elipsic, so the impression is different)
+    &:before {
+        @include absolute_fullsize();
+        top: -2px;
+        right: -2px;
+        font-size: 50px;
+        width: 50px;
+        height: 50px;
+        margin: auto;
+    }
+
+    @media only screen
+    and (min-width: 512px)
+    and (min-height: 512px) {
+        @include absolute_centering(120px, 80px);
+    }
+
+    @media only screen
+    and (min-width: 768px)
+    and (min-height: 768px)  {
+        @include absolute_centering(180px, 120px);
+
+        &:before {
+            font-size: 80px;
+            width: 80px;
+            height: 80px;
+        }
+    }
+}
+
+
+// special case on youtube
+// we need to lift the large button background
+// up for about 100px to enable the user to
+// close ads on youtube
+$youtube_ad_fix_distance: 100px;
+
+.vp_large_buttons.vp_youtube_ad_fix {
+    bottom:$youtube_ad_fix_distance;
+    .vp_large_play_button, .vp_large_loading_indicator {
+        @include translateY($youtube_ad_fix_distance / 2);
+    }
+}

@@ -1,0 +1,31 @@
+@import '../foundation';
+
+.vpp_media {
+
+	margin:5px 0px;
+
+	// sc
+	&.vpp_soundcloud {
+		height:115px;
+		iframe {
+			height:115px;
+		}
+	}
+
+
+	//videos
+	&.vpp_videopath,
+	&.vpp_vimeo,
+	&.vpp_youtube {
+		.vpp_iframe_wrapper {
+			width:100%;
+			padding-bottom:56.25%;
+			position: relative;
+			iframe {
+				@include absoluteFullsize();
+			}	
+		}
+	}
+
+}
+

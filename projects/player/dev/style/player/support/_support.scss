@@ -1,0 +1,56 @@
+.vp_support_view {
+	@include absolute_fullsize();
+	background-color:black;
+
+	opacity:0.8;
+	/* IE 8 */
+  	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  	/* IE 5-7 */
+  	filter: alpha(opacity=80);
+
+	color:white;
+	h1,h4 {
+		position: absolute;
+		left:50%;
+		width:500px;
+		margin-left:-250px;
+	}
+
+	h1 {
+		bottom:50%;
+		margin-bottom:40px;
+	}
+	h4 {
+		top:50%;
+		margin-top:40px;
+	}
+	.vp_play {
+		@include absolute_centering(50px, 50px);
+		width:70px;
+		height:70px;
+		background-image:url("img_new/play_btn.png");
+		background-size: 70px 70px;
+	}
+
+	@media only screen and (max-width: 500px) {
+	    h1,h4 {
+			width:300px;
+			margin-left:-150px;
+		}
+	}
+
+	@media only screen and (max-width: 300px) {
+	    h1,h4 {
+			width:250px;
+			margin-left:-125;
+		}
+	} 
+
+	&.vp_minimal {
+		background-color:rgba(0,0,0,0);
+		.vp_play {
+			opacity: 0;
+		}
+	}
+}
+

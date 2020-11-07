@@ -1,0 +1,9 @@
+@import "endscreen_view";
+@import "endscreen_edit";
+@import "endscreen_view_custom";
+.vp_endscreen_container {
+	@include absolute_fullsize();
+	@include transition(opacity 0.2s ease);
+	z-index: 50;
+}
+

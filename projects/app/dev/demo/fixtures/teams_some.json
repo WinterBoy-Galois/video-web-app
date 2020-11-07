@@ -1,0 +1,117 @@
+[
+{
+	"name": "My Videos",
+	"id": 1,
+	"role": "owner",
+	"is_default_team": true,
+	"stats": {
+		"number_of_members": 1,
+		"number_of_videos": 6
+	},
+	"owner": {
+		"email": "dscharf@gmx.net"
+	}
+},
+{
+	"name": "Marketing (member)",
+	"id": 2,
+	"role": "editor",
+	"is_default_team": false,
+	"stats": {
+		"number_of_members": 12,
+		"number_of_videos": 9
+	},
+	"owner": {
+		"email": "dscharf@gmx.net"
+	},
+	"members": [{
+		"role": "editor",
+		"email": "dscharf1@gmx.net",
+		"created": "2015-08-07T17:35:06.702109"
+		},
+		{
+		"role": "admin",
+		"email": "dscharf2@gmx.net",
+		"created": "2014-12-07T17:35:06.702109"
+		},
+		{
+		"role": "admin",
+		"email": "dscharf3@gmx.net",
+		"created": "2015-12-01T17:35:06.702109"
+		},
+		{
+		"role": "editor",
+		"email": "dscharf4@gmx.net",
+		"created": "2015-10-07T17:35:06.702109"
+		}
+	]
+},
+{
+	"name": "Demos (Admin)",
+	"id": 3,
+	"role": "admin",
+	"is_default_team": false,
+	"stats": {
+		"number_of_members": 5,
+		"number_of_videos": 22
+	},
+	"owner": {
+		"email": "dscharf@gmx.net"
+	},
+	"members": [{
+		"role": "editor",
+		"email": "dscharf1@gmx.net",
+		"created": "2015-08-07T17:35:06.702109"
+		},
+		{
+		"role": "admin",
+		"email": "dscharf2@gmx.net",
+		"created": "2014-12-07T17:35:06.702109"
+		},
+		{
+		"role": "admin",
+		"email": "dscharf3@gmx.net",
+		"created": "2015-12-01T17:35:06.702109"
+		},
+		{
+		"role": "editor",
+		"email": "dscharf4@gmx.net",
+		"created": "2015-10-07T17:35:06.702109"
+		}
+	]
+},
+{
+	"name": "Sales Team (Owner)",
+	"id": 4,
+	"role": "owner",
+	"is_default_team": false,
+	"stats": {
+		"number_of_members": 8,
+		"number_of_videos": 6
+	},
+	"owner": {
+		"email": "dscharf@gmx.net"
+	},
+	"members": [{
+		"role": "editor",
+		"email": "dscharf1@gmx.net",
+		"created": "2015-08-07T17:35:06.702109"
+		},
+		{
+		"role": "admin",
+		"email": "dscharf2@gmx.net",
+		"created": "2014-12-07T17:35:06.702109"
+		},
+		{
+		"role": "admin",
+		"email": "dscharf3@gmx.net",
+		"created": "2015-12-01T17:35:06.702109"
+		},
+		{
+		"role": "editor",
+		"email": "dscharf4@gmx.net",
+		"created": "2015-10-07T17:35:06.702109"
+		}
+	]
+}
+]

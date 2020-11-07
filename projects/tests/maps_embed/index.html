@@ -1,0 +1,87 @@
+
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Maps test</title>
+
+
+  <script src="https://code.jquery.com/jquery-git1.min.js"></script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLmIRp_0JZDxWDGl8ZkIzmwT1W1NSOfLk&signed_in=true"></script>
+
+  <style>
+  	#maps_container {
+  		background-color: red;
+  		width:500px;
+      height:500px;
+  	}
+  </style>
+
+  <script type="text/javascript">
+    var map;
+    var marker;
+    function initialize() {
+
+
+
+      var mapOptions = {
+        center: { lat: 52.5167, lng: 13.3833},
+        zoom: 8
+      };
+       map = new google.maps.Map(document.getElementById('maps_container'),
+          mapOptions);
+
+  
+       google.maps.event.addListener(map, "bounds_changed", function(){
+        console.log("zoom");
+       });
+    }
+    $(document).ready(function(){
+      initialize();
+    });
+    // google.maps.event.addDomListener(window, 'load', initialize);
+
+    $(document).ready(function(){
+      $("button").click(function(){
+        var geocoder = new google.maps.Geocoder();
+        var address = $(".add").val();
+        
+        geocoder.geocode( { 'address': address}, function(results, status) {
+          if (status == google.maps.GeocoderStatus.OK) {
+            map.panTo(results[0].geometry.location);
+            $(".add").val(results[0].formatted_address);
+            if (marker) {
+              marker.setMap(null);
+            }
+            marker = new google.maps.Marker({
+                title: results[0].formatted_address,
+                map: map,
+                position: results[0].geometry.location,
+                animation: google.maps.Animation.DROP
+            });
+          } else {
+            alert("Geocode was not successful for the following reason: " + status);
+          }
+        });
+
+      });
+    });
+
+  </script>
+
+
+
+</head>
+
+
+<body>
+  <input class = "add" type="text"></input>
+  <button class = "submit">Submit</button>
+  <br /> <br />
+	<div id ="maps_container">
+	</div>
+</body>
+</html>
+

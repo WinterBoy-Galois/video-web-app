@@ -1,0 +1,10 @@
+@import '../foundation';
+
+.vpp_fader {
+	opacity: 1;
+	@include transition(opacity 0.2s ease-in-out); 
+}
+
+.vpp_fader_hidden {
+	opacity: 0;
+}

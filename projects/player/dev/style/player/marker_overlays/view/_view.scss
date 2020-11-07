@@ -1,0 +1,120 @@
+@import "website";
+@import "block_text";
+@import "block_media";
+@import "block_image";
+@import "block_social";
+@import "block_map";
+@import "block_email_collector";
+
+$border_width: 3px;
+$button_position: $ui_size + $border_width;
+
+// overall padding
+.vp_marker_overlay_view {
+	padding: $ui_margin;
+}
+
+// close button
+.vp_marker_overlay_view .vp_close_button {
+    @extend .vp_btn_icon;
+    @extend .vp_ico_x;
+    @include vp_btn_clear();
+    position: absolute;
+    top: -$border_width;
+    right: -$button_position;
+    cursor:pointer;
+    @media screen and (max-aspect-ratio: 1/1) {
+        top: -$button_position;
+        right: -$border_width;
+    }
+}
+
+// sharebuttons
+.vp_marker_overlay_view .vp_share_buttons {
+
+    @media screen and (max-aspect-ratio: 1/1) {
+        top: -$button_position;
+        right: $ui_size + $ui_margin;
+        left: auto;
+
+        &.vp_hover {
+            width: 7 * $ui_size;
+            height: $ui_size;
+
+            .vp_share_links {
+                width: 6 * $ui_size;
+                height: $ui_size;
+            }
+        }
+
+        .vp_share_links {
+            top: 0;
+            left: 0;
+            width: 0;
+            height: $ui_size;
+        }
+
+        .vp_share_widget {
+            width: 6 * $ui_size;
+        }
+
+        @media screen and (max-width: 330px) {
+            display: none;
+        }
+    }
+
+    @media screen and (min-aspect-ratio: 1/1) {
+        top: $ui_size + $ui_margin;
+        right: -$button_position;
+        left: auto;
+
+
+        @media screen and (max-height: 320px) {
+            display: none;
+        }
+    }
+}
+
+// for cta and website form submit
+.vp_submit_button {
+    @extend .vp_btn_label;
+    @extend .vp_btn_green;
+    display: table-cell;
+}
+
+.vp_marker_overlay_header {
+
+    position: relative;
+	width: 100%;
+	padding: 0 $ui_margin;
+	overflow-y: hidden;
+	overflow-x: visible;
+	text-align: left;
+
+	// different styles for small screen, such as on phone
+	@media only screen and (max-width: $screen_xs_max) {
+		height: $ui_size;
+        padding: 0 ($ui_margin / 2);
+		.vp_title {
+            font-size: $font-size-h2;
+
+            margin-top:0px;
+        }
+    }
+}
+
+.vp_content_block {
+	margin: $ui_margin_player_lg $ui_margin_lg;
+
+    h1 {
+        font-size:$font-size-h2;
+    }
+
+    h2 {
+        font-size:$font-size-h3;
+    }
+
+    h3 {
+        font-size:$font-size-h4;
+    }
+}

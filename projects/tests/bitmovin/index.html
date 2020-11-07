@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>
+         bitdash SDK
+      </title>
+      <meta charset="UTF-8"/>
+      <script type="text/javascript" src="https://bitmovin-a.akamaihd.net/bitdash/stable/bitdash.min.js"></script>
+      <style>
+         figure {
+         margin: 0;
+         padding: 0;
+         }
+         .container {
+         font-family: 'Dosis';
+         color:       white;
+         text-align:  center;
+         }
+         .container a {
+         color: white;
+         }
+         .container h1 {
+         font:          54px/66px 'Dosis';
+         margin-bottom: 22px;
+         line-height:   66px;
+         }
+         .container h2 {
+         font-weight:   normal;
+         margin-bottom: 36px;
+         line-height:   26px;
+         }
+         .player-wrapper {
+         width:        50%;
+         margin-right: auto;
+         margin-left:  auto;
+         box-shadow:   0 0 30px rgba(0,0,0,0.7);
+         }
+         #webserver-warning {
+         margin:           50px;
+         padding:          20px;
+         background-color: rgba(255,0,0,0.5);
+         display:          none;
+         }
+     	.clickable {
+     		text-align: center;
+     		text-decoration: underline;
+     		cursor: pointer;
+     	}
+      </style>
+   </head>
+
+   <body>
+
+    <div class="player-wrapper">
+       <div id="player"></div>
+    </div>
+
+    <!-- test controls -->
+    <br /> <br />
+    <div onClick='player.setVolume(1)' class='clickable'>Volume 0</div>
+    <div onClick='player.setVolume(100)' class='clickable'>Volume 100</div>
+
+      <script type="text/javascript">
+         
+         var player = bitdash('player');
+         
+         var conf = {
+           key:              '4b411f3c-ecb6-45be-9704-a9fd660932bd',
+           source: {
+             dash:           '//bitdash-a.akamaihd.net/content/MI201109210084_1/mpds/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.mpd',
+             hls:            '//bitdash-a.akamaihd.net/content/MI201109210084_1/m3u8s/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.m3u8',
+           },
+           style: {
+             width:          '100%',
+             // aspectratio:    '16:9',
+             controls:       false
+           },
+           events: {
+           		onReady: function(){console.log('ready'); },
+           		onVolumeChange: function() {console.log('volume change'); console.log(arguments);}
+           }
+         };
+         
+         player.setup(conf).then(function(value) {
+           // Success
+         }, function(reason) {
+           // Error!
+         });
+      </script>
+   </body>
+</html>

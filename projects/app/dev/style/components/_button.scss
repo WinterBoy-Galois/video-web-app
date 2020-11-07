@@ -1,0 +1,56 @@
+
+/*
+ * Default button component
+ */
+.vp_button {
+
+	// default vars
+	@extend .vp_fast_animations;
+	color: white;
+	display: inline-block;
+	box-sizing:border-box;
+
+	// sizes
+	height:40px;
+	line-height:40px;
+	padding:0px 10px;
+	border-radius:2px;
+	margin:0px 10px;
+
+	text-transform:uppercase;
+	font-weight: 500;
+	cursor:pointer;
+
+	
+	// regular style
+	&:not(.vp_outlined) {
+		@each $color_class in $color_classes {
+			&.#{nth($color_class, 1)} {
+				background-color:nth($color_class, 2);
+				&:hover {
+					background-color:nth($color_class, 3);
+				}
+			}
+		}
+	}
+
+	&.vp_outlined {
+		@each $color_class in $color_classes {
+			&.#{nth($color_class, 1)} {
+				border: 2px solid nth($color_class, 2);
+				color: nth($color_class, 2);
+				line-height: 36px;
+				&:hover {
+					color:white;
+					background-color:nth($color_class, 3);
+					border: 2px solid nth($color_class, 3);
+				}
+			}
+		}
+	}	
+
+	&:not(.vp_icon_button) .vp_icon {
+		margin-right:10px;
+	}
+	
+}

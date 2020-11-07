@@ -1,0 +1,71 @@
+.vp_content_block_edit.vp_simple_button {
+
+    .vp_simple_button {
+        @extend .vp_form;
+    }
+
+	.vp_input_wrapper_title {
+		margin-right:210px;
+	}
+
+	.vp_input_wrapper_url{
+		margin: $ui_margin 0 0;
+	}
+
+	.vp_button_wrapper {
+        @extend .vp_margin_block_lg;
+	}
+
+	.vp_color_swatch, .vp_color_button {
+        float: right;
+        margin: 0 ($ui_margin / 2);
+        width: $ui_size;
+        height: $ui_size;
+        background-color: $green;
+        cursor: pointer;
+        opacity: 0.6;
+
+        &:first-child {
+            margin-right: 0;
+        }
+
+        &.green {
+            background-color: $green;
+        }
+        &.blue {
+            background-color: $blue;
+        }
+        &.red {
+            background-color: $red;
+        }
+        &.orange {
+            background-color: $orange;
+        }
+
+        &.selected {
+            opacity: 1;
+            border: 1px solid $darkblue;
+        }
+    }
+
+    .vp_color_button {
+        opacity: 1;
+        border: 1px solid $gray;
+    }
+
+    .vp_color_chooser_wrapper {
+        position: relative;
+    }
+
+    .sp-container {
+        display: none;
+        position: absolute;
+        right: $ui_size + $ui_margin;
+        left: auto;
+        border-color: $gray;
+
+        &.vp_active {
+            display: block;
+        }
+    }
+}

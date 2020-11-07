@@ -1,0 +1,10 @@
+.vp_poster {
+	@include absolute_fullsize();
+	@include transition(opacity 0.2s ease);
+	background-color:black;
+	pointer-events:none;
+
+	img {
+		@include transition(opacity 0.2s ease);
+	}
+}

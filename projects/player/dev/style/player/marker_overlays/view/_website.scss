@@ -1,0 +1,72 @@
+.vp_marker_overlay_website {
+	@include absolute_positioning(0px,0px,0px,0px);
+	overflow:hidden;
+
+	.vp_info {
+		@extend .vp_fast_animations;
+
+		position:absolute;
+		height:40px;
+		bottom:0px;
+		left:0px;
+		right:0px;
+		background-color:white;
+		line-height: 40px;
+		opacity: 0.9;
+		pointer-events:none;
+		font-size:14px;
+		z-index: 10;
+		border-top:1px solid lightgray;
+
+        span {
+            display: inline-block;
+            position: relative;
+            top:-5px;
+        }
+        .vp_spinning_coq_big {
+            position:relative;
+            top:5px;
+            left:-3px;
+            height:30px;
+            width:30px;
+        }
+
+        &.vp_done {
+        	bottom:-40px;
+        }
+	}
+
+	.vp_frame_wrapper {
+		@include absolute_positioning(0px,0px,0px,0px);
+        -webkit-overflow-scrolling: touch;
+	}
+
+	.vp_frame {
+		position:relative;
+		width: 100%;
+		height:100%;
+	}
+}
+
+// special fix for loader on iphone
+// as it seems to scroll with the iframe
+.iphone .vp_marker_overlay_website .vp_info {
+	top:0px;
+	border:0px;
+	border-bottom:1px solid lightgray;
+	&.vp_done {
+		top:-30px;
+		opacity: 0;
+	}
+}
+
+// for ios devices we need this special
+// statement to keep the iframe scrollable
+.vp_mobile .vp_marker_overlay_website {
+	-webkit-overflow-scrolling: touch;
+	overflow:scroll;
+	.vp_frame {
+		-webkit-overflow-scrolling: touch;
+		overflow:scroll;
+	}
+}

@@ -1,0 +1,22 @@
+{
+	"current_period_start": "2016-01-01",
+	"current_period_end": "2016-02-01",
+	"current_month_views": 17643,
+	"plan": {
+		"id": "201412-pro-plus-monthly",
+		"name": "Professional Plus Monthly",
+		"group": "pro-plus",
+		"payment_interval": "month",
+		"price": 34900,
+		"currency": "EUR",
+		"currency_symbol": "&euro;",
+		"max_views_month": 10000000,
+		"max_videos": 9999,
+		"feature_upload": false,
+		"feature_endscreen": true,
+		"feature_vimeo": true,
+		"feature_dev": false,
+		"feature_advanced_settings": true
+	},
+	"pending_subscription": false
+}

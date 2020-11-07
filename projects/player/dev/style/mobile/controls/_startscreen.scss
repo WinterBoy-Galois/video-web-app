@@ -1,0 +1,146 @@
+%large_button {
+    width: $ui_size_xl;
+    height: $ui_size_xl;
+
+    &:before {
+        font-size: $font-size-h1;
+    }
+}
+
+.vp_startscreen {
+	@include absolute_fullsize();
+	opacity:0.8;
+
+    &:after {
+        @extend .vp_fast_animations;
+        @include absolute_fullsize();
+
+        content: ' ';
+        background-color: $color_player_theme6;
+        z-index: -1;
+        opacity: 0.6;
+
+        .vp_playing & {
+            opacity: 0;
+        }
+    }
+
+    > *:not(.vp_pause_button) {
+        @extend .vp_fast_animations;
+        opacity: 0.99;
+
+        .vp_playing & {
+            @extend .vp_hidden;
+        }
+    }
+
+    .vp_video_title {
+        @extend .vp_fast_animations;
+        position: absolute;
+        width: 80%;
+        top: $ui_margin_lg;
+        left: 0;
+        right: 0;
+        margin: auto;
+        color: $white;
+        text-shadow: 0 1px 1px $black;
+        text-align: center;
+
+        .vp_show_marker_menu & {
+            @extend .vp_hidden;
+        }
+    }
+
+    .vp_pause_button {
+        @include absolute_centering($ui_size_xl, $ui_size_xl);
+        @extend .vp_ico_pause;
+        @extend %large_button;
+        @extend .vp_hidden;
+
+        .vp_play_controls.vp_playing & {
+            opacity: 0.6 !important;
+            pointer-events: auto;
+        }
+    }
+
+    .vp_share_links {
+        position: absolute;
+        top: 2 * $ui_size;
+        left: -$ui_margin * 2;
+        right: 0;
+        width: 8 * $ui_size;
+        margin: auto;
+    }
+
+    .vp_social_button {
+        background-color: $color_player_theme5;
+    }
+
+    .vp_social_button + .vp_social_button{
+        margin-left: $ui_margin;
+    }
+
+    .vp_fullscreen_button {
+        @extend .vp_ico_fullscreen;
+        position: absolute;
+        top: $ui_margin;
+        right: $ui_margin;
+
+        &.vp_active {
+            @extend .vp_ico_exit_fullscreen;
+        }
+    }
+
+    .vp_loading_indicator {
+        @include absolute_centering(150px, 150px);
+        @include transition(opacity 0.2s ease);
+    }
+
+}
+
+
+.vp_startscreen_controls {
+    @include absolute_centering($ui_size_xl * 3 + $ui_margin_lg * 3, $ui_size_xl);
+
+    .vp_button {
+        @extend %large_button;
+    }
+
+    .vp_button + .vp_button {
+        margin-left: $ui_margin_lg;
+    }
+
+    .vp_menu_button {
+        @extend .vp_ico_menu;
+    }
+    .vp_play_button {
+        @extend .vp_ico_play;
+    }
+    .vp_share_button {
+        @extend .vp_ico_player_share;
+    }
+
+    .vp_show_marker_menu & {
+        left: 200px + $ui_size;
+        margin-left: 0;
+        .vp_share_button {
+            @extend .vp_hidden;
+        }
+    }
+}
+
+
+// special case on youtube
+// we need to lift the large button background
+// up for about 100px to enable the user to
+// close ads on youtube
+
+// TODO: Reenable this if needed
+/* $youtube_ad_fix_distance: 100px; */
+
+/* .vp_startscreen.vp_youtube_ad_fix { */
+    /* bottom:$youtube_ad_fix_distance; */
+    /* .vp_play_button, .vp_loading_indicator { */
+        /* @include transform (translateY($youtube_ad_fix_distance / 2)); */
+    /* } */
+/* } */

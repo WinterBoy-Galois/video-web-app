@@ -1,0 +1,55 @@
+
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Twitter test</title>
+  <script src="https://code.jquery.com/jquery-git1.min.js"></script>
+
+  <style>
+  	iframe {
+      width: 500px;
+      height: 500px;
+      border:0px;
+    }
+    html{
+      background-color: green;
+    }
+  </style>
+
+
+
+<body>
+
+
+<!--<iframe src = "http://www.tripadvisor.com/" sandbox = "allow-forms allow-popups allow-same-origin allow-scripts allow-same-origin allow-pointer-lock">
+</iframe>-->
+
+<iframe src = "/tests/capco_tests/forwarding_frame.html">
+
+</iframe>
+
+  <script>
+
+  function preventUnload() {
+    return 'you are an idiot!';
+  };
+  //$(window).bind('beforeunload', preventUnload);
+
+
+
+  $(".b1").click(function(){
+    $(window).bind('beforeunload', preventUnload);
+  });
+
+  $(".b2").click(function(){
+    $(window).unbind('beforeunload', preventUnload);
+  });
+
+  </script>
+
+</body>
+</html>
+

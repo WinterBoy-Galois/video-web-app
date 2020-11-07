@@ -1,0 +1,23 @@
+@import '../foundation';
+
+/*
+ * iOS fixes so player scales properly on all sizes
+ */
+html.vpp_ios {
+    position: fixed;
+    > body {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+    }
+    div {
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+.vpp_player {
+	@include absoluteFullsize();
+	background-color:black;
+	overflow:hidden;
+}

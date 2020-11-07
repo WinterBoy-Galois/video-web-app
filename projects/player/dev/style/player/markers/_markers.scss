@@ -1,0 +1,45 @@
+@import "marker";
+@import "info_arrow";
+
+.vp_markers.vp_collapsed {
+	@include translateX(-$vp_player_controls_width + 10px);
+}
+
+.vp_markers {
+	position: absolute;
+	left: $vp_player_controls_width + $vp_player_sidebar_spacing;
+	top: $vp_player_controls_width + $vp_player_sidebar_spacing * 4;
+	bottom: 46px; // seems to work...
+	width: 250px;
+	@include transition(alpha 0.2s ease);
+	@include transition(transform 0.2s ease);
+	opacity:0.5;
+	pointer-events:none;
+	&.vp_active {
+		opacity: 1;
+		pointer-events:auto;
+	}
+	// this is needed to capture mouse events on IE
+    background-image: url('img/transparent.png');
+}
+
+.vp_add_marker_wrapper {
+	@include absolute_fullsize();
+}
+
+.vp_add_marker_drag_container {
+	@include absolute_fullsize();
+	top:-200px;
+}
+
+.vp_markers.vp_editing {
+	top: $vp_player_sidebar_editing_offset + $vp_player_controls_width + $vp_player_sidebar_spacing * 4;	
+}
+
+.vp_markers_snap_target {
+	position:absolute;
+	top:-150px;
+	bottom:-150px;
+	left:0px;
+}
+

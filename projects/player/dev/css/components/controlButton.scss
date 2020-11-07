@@ -1,0 +1,33 @@
+@import '../foundation';
+
+.vpp_control_button {
+	@include transition(background-color 0.1s ease-in-out); 
+	cursor:pointer;
+	position:relative;
+	display: inline-block;
+	width:$BUTTON_SIZE;
+	height:$BUTTON_SIZE;
+
+	.vpp_icon {
+		@include absoluteCenter(24px,24px);
+		transition: transform 0.3s cubic-bezier(0.140, 0.175, 0.420, 1.350);
+	}
+
+	.vpp_custom_icon {
+		@include absoluteCenter(26px,26px);
+		transition: transform 0.3s cubic-bezier(0.140, 0.175, 0.420, 1.350);
+		border:0px;
+	}
+
+	&.vpp_highlighted {
+		.vpp_icon {
+			@include transform (scale(1.1));
+		}
+	}
+
+	&.vpp_down {
+		.vpp_icon {
+			@include transform (scale(1.3));
+		}
+	}
+}

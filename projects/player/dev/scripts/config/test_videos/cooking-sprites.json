@@ -1,0 +1,11 @@
+{
+	"source": {
+        "aspect": 1.777777777,
+        "duration": 110,
+        "service": "sprites",
+        "allow_youtube_clickthrough": false,
+        "sprite_support":true,
+        "sprite_length":2890,
+        "sprite_base_url":"//az744831.vo.msecnd.net/cookingsprites/"
+    }
+}

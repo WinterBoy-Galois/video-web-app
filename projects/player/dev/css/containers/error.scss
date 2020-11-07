@@ -1,0 +1,18 @@
+@import '../foundation';
+
+.vpp_error {
+	@include absoluteFullsize();
+	background-color:black;
+	color:#eee;
+	letter-spacing:1px;
+	text-align:center;
+	.vpp_inner {
+		@include absoluteCenter(300px, 120px);
+	}
+	.vpp_logo {
+		position: absolute;
+		bottom:0px;
+		left:50%;
+		margin-left:-50px;
+	}
+}

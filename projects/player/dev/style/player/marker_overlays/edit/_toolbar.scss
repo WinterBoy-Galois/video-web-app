@@ -1,0 +1,101 @@
+$marker_toolbar_width: 80px;
+$edit_tool_icon_size: $marker_toolbar_width - 2 * $ui_margin;
+
+.vp_toolbar {
+	position:absolute;
+	right: -($marker_toolbar_width + $ui_margin);
+	width: $marker_toolbar_width;
+	height: 100%;
+}
+
+.vp_tools {
+	@include absolute_positioning(50px, 0, 100px, 0);
+	@include transform-origin(0%,50%);
+	@extend .vp_fast_animations_ease;
+
+	background-color:white;
+	overflow-y: auto;
+	overflow-x: hidden;
+
+	&.vp_folded {
+		@include rotateY( 90deg, 1000px );
+		opacity: 0;  
+	}
+}
+
+.vp_edit_tool {
+	margin: $ui_margin;
+	height: $edit_tool_icon_size;
+	width: $edit_tool_icon_size;
+	cursor: move;
+	border: 1px dashed $darkblue;
+	color: $darkblue;
+	background-color: white;
+	background-size: ($edit_tool_icon_size - $ui_margin) ($edit_tool_icon_size - $ui_margin);
+    background-position: center center;
+    background-repeat: no-repeat;
+    z-index: 200;
+	&.vp_text {
+        background-image:url('img_new/add_text.svg');
+	}
+	&.vp_image {
+        background-image:url('img_new/add_image.svg');
+	}
+	&.vp_media {
+        background-image:url('img_new/add_media.svg');
+	}
+	&.vp_simple_button {
+        background-image:url('img_new/add_button.svg');
+	}
+	&.vp_website {
+        background-image:url('img_new/add_website.svg');
+	}
+	&.vp_social {
+        background-image:url('img_new/add_social.svg');
+	}
+	&.vp_map {
+        background-image:url('img_new/add_map.svg');
+	}
+
+	&.vp_email_collector {
+        background-image:url('img_new/add_email_collector.svg');
+	}
+
+
+	&.vp_tool_disabled {
+		opacity: 0.5;
+		cursor: auto;
+	} 
+}
+
+
+.vp_toolbar {
+	// buttons
+	.vp_preview_button,
+	.vp_delete_button,
+	.vp_save_button {
+        @extend .vp_btn_label;
+        position: absolute;
+        left: 0;
+        border-radius: 0;
+        font-size: $font-size;
+        width: $marker_toolbar_width;
+        min-width: $marker_toolbar_width;
+	}
+	.vp_delete_button {
+        @extend .vp_btn_red_outline;
+        background-color: white;
+        border: 0;
+	}
+	.vp_preview_button {
+        @extend .vp_btn_lightblue;
+		bottom: 50px;
+	}
+	.vp_save_button {
+        @extend .vp_btn_green;
+		bottom: 0px;
+	}
+}
+
+
+

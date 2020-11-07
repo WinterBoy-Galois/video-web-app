@@ -1,0 +1,35 @@
+{
+    "title": "Cooking Demo",
+    "subtitle": "",
+    "description": "Anna cooks a panzanella salad.",
+    "keywords": "",
+    "markers": [],
+    "custom_thumbnail": null,
+    "custom_logo": null,
+    "thumbnails": {
+        "normal": "//thumbs.videopath.com/m35T1YU0KHQ8ZEr28fKgM4sS0zfEOQW3/00002.jpg",
+        "large": "//thumbs.videopath.com/m35T1YU0KHQ8ZEr28fKgM4sS0zfEOQW3/00002-hd.jpg"
+    },
+    "ui_color_1": "#273a45",
+    "ui_color_2": "#ffffff",
+    "key": "rC60u1Op",
+    "theme": 1,
+    "ui_icon_link_target": "http://videopath.com",
+    "id": 2029406756,
+    "endscreen_url": "",
+    "endscreen_title": "",
+    "endscreen_subtitle": "Create your own interactive video",
+    "endscreen_background_color": "#32526e",
+    "endscreen_button_title": "Try videopath now",
+    "endscreen_button_color": "#ff6b57",
+    "endscreen_button_target": "http://videopath.com",
+    "interactivity_disabled": false,
+    "language": "en",
+    "branded": false,
+    "source": {
+        "aspect": 1.7777777777777777,
+        "duration": 110,
+        "service": "wistia",
+        "service_identifier": "1gaiqzxu03"
+    }
+}

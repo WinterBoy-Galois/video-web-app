@@ -1,0 +1,179 @@
+{{#ui_font_marker}}
+@font-face {
+	font-family: "custom-font-markers";
+	src: url("{{{ui_font_marker}}}") format('woff');
+}
+{{/ui_font_marker}}
+
+{{#ui_font_overlay_titles}}
+@font-face {
+	font-family: "custom-font-overlay-titles";
+	src: url("{{{ui_font_overlay_titles}}}") format('woff');
+}
+{{/ui_font_overlay_titles}}
+
+{{#ui_font_overlay_text}}
+@font-face {
+	font-family: "custom-font-overlay-text";
+	src: url("{{{ui_font_overlay_text}}}") format('woff');
+}
+{{/ui_font_overlay_text}}
+
+/*  playbar  */
+.vp_bar {
+	border-color: {{ ui_color_playbar_outline }} !important;
+	background-color: {{ ui_color_playbar_background }} !important;
+}
+
+.vp_bar .vp_progress {
+	background-color:{{ui_color_playbar_progress}} !important;
+}
+
+.vp_bar .vp_buffer {
+	background-color:{{ui_color_playbar_buffer}} !important;
+}
+
+.vp_indicator {
+	background-color:{{ui_color_playbar_indicators}} !important;
+}
+
+.vp_indicator_inner {
+	background-color:{{ui_color_playbar_indicators}} !important;
+}
+
+.vp_bar .vp_time {
+	color:{{ui_color_playbar_indicators}} !important;
+}
+
+.vp_scrubber {
+	background-color:{{ui_color_playbar_indicators}} !important;
+}
+
+/*  buttons  */
+
+.vp_small_button,
+.vp_large_play_button,
+#vp_playbutton {
+	background-color: {{ ui_color_button_background}} !important;
+	color: {{ui_color_button_text}} !important;
+}
+
+/* social buttons */
+.vp_social_button,
+.vp_share_buttons .vp_share_button {
+	color:{{ui_color_button_text}} !important;
+}
+
+.no-touch .vp_small_button:hover,
+.no-touch .vp_small_button:focus,
+.vp_small_button:active,
+.no-touch .vp_large_play_button:hover,
+.no-touch .vp_large_play_button:focus,
+.vp_large_play_button:active,
+#vp_playbutton:hover {
+	background-color:{{ui_color_button_highlight_background}} !important;
+	color:{{ui_color_button_highlight_text}} !important;
+}
+
+/* overlays */
+
+.vp_marker_overlays_content .vp_content_wrapper {
+	border-color:{{ui_color_overlay_outline}} !important;
+}
+
+/* markers regular */
+
+.vp_marker_wrapper .vp_marker_inner {
+	background-color:{{ui_color_marker_background}} !important;
+	border-color:{{ ui_color_marker_outline }} !important;
+}
+
+.vp_marker_wrapper .vp_tip_stroke {
+	stroke:{{ui_color_marker_outline}} !important;
+}
+
+.vp_marker_wrapper .vp_tip_fill {
+	fill:{{ui_color_marker_background}} !important;
+}
+
+.vp_marker_wrapper .vp_title {
+	color:{{ui_color_marker_text}};
+}
+
+/* markers highlighted */
+
+.no-touch .vp_marker_wrapper:hover .vp_marker_inner,
+.no-touch .vp_marker_wrapper:focus .vp_marker_inner,
+.vp_marker_wrapper:active .vp_marker_inner,
+.vp_marker_wrapper.vp_opened .vp_marker_inner,
+.vp_marker_wrapper.vp_current .vp_marker_inner,
+.vp_marker_wrapper.vp_shifted .vp_marker_inner {
+	background-color:{{ui_color_marker_highlight_background}} !important;
+	border-color:{{ ui_color_marker_highlight_outline }} !important;
+}
+
+.no-touch .vp_marker_wrapper:hover .vp_tip_stroke,
+.no-touch .vp_marker_wrapper:focus .vp_tip_stroke,
+.vp_marker_wrapper:active .vp_tip_stroke,
+.vp_marker_wrapper.vp_opened .vp_tip_stroke,
+.vp_marker_wrapper.vp_current .vp_tip_stroke,
+.vp_marker_wrapper.vp_shifted .vp_tip_stroke {
+	stroke:{{ui_color_marker_highlight_outline}} !important;
+}
+
+.no-touch .vp_marker_wrapper:hover .vp_tip_fill,
+.no-touch .vp_marker_wrapper:focus .vp_tip_fill,
+.vp_marker_wrapper:active .vp_tip_fill,
+.vp_marker_wrapper.vp_opened .vp_tip_fill,
+.vp_marker_wrapper.vp_current .vp_tip_fill,
+.vp_marker_wrapper.vp_shifted .vp_tip_fill   {
+	fill:{{ui_color_marker_highlight_background}} !important;
+}
+
+.no-touch .vp_marker_wrapper:hover .vp_title,
+.no-touch .vp_marker_wrapper:focus .vp_title,
+.vp_marker_wrapper:active .vp_title,
+.vp_marker_wrapper.vp_opened .vp_title,
+.vp_marker_wrapper.vp_current .vp_title,
+.vp_marker_wrapper.vp_shifted .vp_title   {
+	color:{{ui_color_marker_highlight_text}};
+}
+
+/* disable endscreen logo */
+.vp_endscreen_view .vp_footer_block .vp_label {
+	display: none;
+}
+
+/* other */
+.vp_info_arrow .txt {
+	color:{{ui_click_hint_color}} !important;
+}
+
+/* custom overlay fonts */
+/* For overlay content standard typography look for $font-family-player in /shared/style/foundation/_variables.scss*/
+
+{{#isTitleUrlValid}}
+.vp_marker_overlay_view .vp_title {
+    font-family: "custom-font-overlay-title", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+{{/isTitleUrlValid}}
+
+{{#ui_font_overlay_text}}
+
+.vp_marker_overlay_view .vp_marker_overlay_content,
+.vp_marker_overlay_view h1.vp_overlay_title,
+.vp_marker_overlay_view .vp_marker_overlay_content h1,
+.vp_marker_overlay_view .vp_marker_overlay_content h2,
+.vp_marker_overlay_view .vp_marker_overlay_content h3,
+.vp_marker_overlay_view .vp_marker_overlay_content h4,
+.vp_marker_overlay_view .vp_marker_overlay_content h5,
+.vp_marker_overlay_view .vp_marker_overlay_content h6 {
+    font-family: "custom-font-overlay-text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+{{/ui_font_overlay_text}}
+
+{{#ui_font_marker}}
+.vp_marker, .vp_title {
+    font-family: "custom-font-markers", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+{{/ui_font_marker}}

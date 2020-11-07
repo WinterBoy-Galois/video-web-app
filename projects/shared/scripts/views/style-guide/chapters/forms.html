@@ -1,0 +1,65 @@
+<div>
+    <p>
+        The markup for form fields is inspired by bootstrap.
+        See their <a href="http://getbootstrap.com/css/#forms">form-groups</a>
+        and <a href="http://getbootstrap.com/components/#input-groups">input-groups</a>.
+    </p>
+    <h3>A standard text input group with label</h3>
+    <form class="vp_form">
+        <div class="vp_form_group">
+            <label for="input1">E-Mail or Username</label>
+            <input id = "test_input1" type="text" name="input1"/>
+            <p class="vp_error_msg">some error msg</p>
+        </div>
+        <div class="vp_form_group vp_invalid">
+            <label for="input2">E-Mail or Username</label>
+            <input id = "test_input2" type="text" name="input2"/>
+            <p class="vp_error_msg">this input is invalid!</p>
+        </div>
+        <div class="vp_form_group">
+            <label class="vp_checkbox_group">
+                <input type="checkbox" checked/>
+                <span class="vp_label_text">A Formgroup with a checkbox</span>
+            </label>
+        </div>
+    </form>
+    <h3>Diverse input groups</h3>
+    <form class="vp_form">
+        <div class="vp_form_group">
+            <label for="input3">Input with max lenght indictor</label>
+            <div class="vp_input_group">
+                <input id = "test_input3" type="text" name="input3" maxlength="30"/>
+            </div>
+        </div>
+        <div class="vp_form_group">
+            <label for="input7">Input with max lenght indictor</label>
+            <div class="vp_input_group">
+                <input id = "test_input7" type="text" name="input7"/>
+                <span class="vp_tooltip_icon"></span>
+            </div>
+        </div>
+        <div class="vp_form_group">
+            <label for="input4">Input group with button</label>
+            <div class="vp_input_group">
+                <input id = "test_input4" type="text" name="input4"/>
+                <a href="" class="vp_btn_label vp_btn_green">push me</a>
+            </div>
+        </div>
+        <div class="vp_form_group">
+            <label for="input5">Input group with icon button</label>
+            <div class="vp_input_group">
+                <input id = "test_input5" type="text" name="input5"/>
+                <a href="" class="vp_btn_icon vp_ico_flag"></a>
+            </div>
+        </div>
+        <div class="vp_form_group">
+            <label for="input6">mix and match all</label>
+            <div class="vp_input_group">
+                <input id = "test_input6" type="text" name="input6" maxlength="30"/>
+                <span class="vp_tooltip_icon"></span>
+                <a href="" class="vp_btn_icon vp_ico_videopath"></a>
+                <a href="" class="vp_btn_label vp_btn_green">push me</a>
+            </div>
+        </div>
+    </form>
+</div>

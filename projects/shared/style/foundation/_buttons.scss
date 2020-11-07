@@ -1,0 +1,307 @@
+@mixin basic_button_style() {
+	@extend .vp_fast_animations;
+    display: inline-block;
+	cursor: pointer;
+	color: $white;
+    text-decoration: none;
+
+    .no-touch &:hover, &:active, &:focus {
+        color: $white;
+    }
+}
+
+.vp_btn {
+    @include basic_button_style();
+}
+
+// ===== Buttons with a Label =====
+
+%btn_label_base {
+    @extend .vp_btn_gray;
+    @include font_smoothing();
+    @include basic_button_style();
+    font-family: $font-family;
+    font-weight: 500;
+	text-transform: uppercase;
+	text-align: center;
+    letter-spacing: 0;
+    white-space: nowrap;
+}
+
+.vp_btn_label {
+    @extend %btn_label_base;
+    min-width: $btn_width;
+	height: $ui_size;
+	line-height: $ui_size;
+    padding: 0 $ui_margin;
+	border-radius: 2px;
+}
+
+.vp_btn_label_lg {
+    @extend %btn_label_base;
+    min-width: $btn_width_xl;
+    height: $ui_size_xl;
+    line-height: $ui_size_xl;
+    padding: 0 ($ui_size_xl / 2);
+    font-size: $font-size-h3;
+    border-radius: 3px;
+
+    @media only screen and (max-width: $screen_sm_max) {
+        min-width: $btn_width_lg;
+        height: $ui_size;
+        line-height: $ui_size;
+        padding: 0 ($ui_size / 2);
+        font-size: $font-size-h4;
+    }
+}
+
+.vp_btn_label_sm {
+    @extend .vp_btn_label;
+    height: $ui_size_sm;
+    line-height: $ui_size_sm;
+}
+
+@media only screen and (max-width: $screen_xs_max) {
+    .vp_btn_label_lg, .vp_btn_label {
+        font-size: $font-size;
+        padding: 0 $ui_margin;
+    }
+}
+
+
+// ===== Buttons with icon =====
+
+.vp_btn_icon {
+    @include basic_button_style();
+    position: relative;
+	width: $ui_size;
+	height: $ui_size;
+    margin-left: 0;
+    line-height: $ui_size;
+	background-color: #222;
+
+    .no-touch &:hover, &:active, .no-touch &:focus {
+        background-color: #666;
+    }
+
+    &:before {
+        @extend .vp_ico;
+        @extend .vp_ico_standalone;
+        @extend .vp_ico_lg;
+        color: inherit;
+    }
+}
+
+.vp_btn_icon_sm {
+    width: $ui_size_sm;
+    height: $ui_size_sm;
+    line-height: $ui_size_sm;
+
+    &:before {
+        font-size: $icon-font-size;
+    }
+}
+
+
+.vp_btn_icon_head {
+    @extend .vp_ico;
+    @include basic_button_style();
+    width: $ui_size;
+    font-size: $icon-font-size-xl;
+    color: $blue;
+    text-align: center;
+    .no-touch &:hover {
+        color: $blue_active;
+    }
+}
+
+
+// ===== Button styles =====
+
+// button shadow
+
+.vp_btn_shadow {
+    border-bottom: $btn_border_height #444 solid;
+}
+
+// transparent buttons
+
+@mixin vp_btn_clear() {
+    background-color: transparent;
+
+    .no-touch &:hover,
+    .no-touch &:focus,
+    &:active {
+        background-color: transparent;
+    }
+
+    .vp_light_bg &,
+    .no-touch .vp_light_bg &:hover,
+    .no-touch .vp_light_bg &:focus,
+    .vp_light_bg &:active {
+        color: $black;
+    }
+}
+
+.vp_btn_clear {
+    @include vp_btn_clear();
+}
+
+// button colors
+
+.vp_btn_gray {
+	background-color: $gray;
+    border-color: $gray_active;
+
+    .no-touch &:hover, &:active, &:focus {
+        background-color: $gray_active;
+        border-color: $gray;
+    }
+}
+
+.vp_btn_green {
+    background-color: $green;
+    border-color: $green_active;
+
+    .no-touch &:hover, &:active, &:focus {
+        background-color: $green_active;
+        border-color: $green;
+    }
+}
+
+.vp_btn_red {
+	background-color: $red;
+    border-color: $red_active;
+
+    .no-touch &:hover, &:active, &:focus {
+        background-color: $red_active;
+        border-color: $red;
+    }
+}
+
+.vp_btn_orange {
+	background-color: $orange;
+    border-color: $orange_active;
+
+    .no-touch &:hover, &:active, &:focus {
+        background-color: $orange_active;
+        border-color: $orange;
+    }
+}
+
+.vp_btn_lightblue {
+	background-color: $lightblue;
+    border-color: $lightblue_active;
+
+    .no-touch &:hover, &:active, &:focus {
+        background-color: $lightblue_active;
+        border-color: $lightblue;
+    }
+}
+
+.vp_btn_blue {
+	background-color: $blue;
+    border-color: $blue_active;
+
+    .no-touch &:hover, &:active, &:focus {
+        background-color: $blue_active;
+        border-color: $blue;
+    }
+}
+
+// outline button
+
+.vp_btn_red_outline {
+	border: 2px solid $red;
+	color: $red;
+	background-color: transparent;
+
+    .no-touch &:hover, &:active, &:focus {
+        background-color: $red;
+        color:white;
+    }
+}
+
+// hover opacity
+
+.vp_btn_fading {
+	opacity: 0.8;
+
+    .no-touch &:hover, &:active, &:focus {
+        opacity: 1;
+    }
+}
+
+.vp_btn_fading_strong {
+	opacity: 0.4;
+
+    .no-touch &:hover, &:active, &:focus {
+        opacity: 0.7;
+    }
+}
+
+
+// share buttons
+
+.vp_btn_share {
+    @extend .vp_btn_icon;
+    @include vp_btn_clear();
+
+    &.facebook {
+        @extend .vp_ico_social_facebook;
+        .no-touch &:hover, &:active, &:focus {
+            background-color: $color_facebook;
+        }
+    }
+    &.twitter {
+        @extend .vp_ico_social_twitter;
+        .no-touch &:hover, &:active, &:focus {
+            background-color: $color_twitter;
+        }
+    }
+    &.gplus {
+        @extend .vp_ico_social_gplus;
+        .no-touch &:hover, &:active, &:focus {
+            background-color: $color_gplus;
+        }
+    }
+    &.email {
+        @extend .vp_ico_social_email;
+    }
+    &.link {
+        @extend .vp_ico_social_link;
+    }
+    &.embed {
+        @extend .vp_ico_social_embed;
+    }
+
+    .no-touch &:hover, &:active, &:focus {
+        background-color: $lightblue;
+    }
+
+    .minimal_buttons &, .vp_minimal_buttons & {
+        @extend .vp_btn_icon_sm;
+        @extend .vp_btn_fading_strong;
+        .no-touch &:hover, &:active, &:focus {
+            background-color: transparent;
+        }
+    }
+}
+
+
+// ===== Button groups =====
+
+.vp_btn_group {
+    padding: 0;
+    list-style: none;
+
+    li {
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+    }
+
+    .vp_btn {
+        margin: $ui_margin ($ui_margin / 2);
+    }
+}

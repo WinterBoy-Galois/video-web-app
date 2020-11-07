@@ -1,0 +1,112 @@
+.vp_playbar {
+
+	.vp_bar {
+		@include transition(width 0.2s ease);
+		position: absolute;
+		width: $vp_player_controls_width;
+		left: $vp_player_sidebar_spacing;
+		top: $vp_player_controls_width + $vp_player_sidebar_spacing * 2;
+		bottom: $vp_player_controls_width + $vp_player_sidebar_spacing * 2;
+        border: 3px solid $color_player_theme5;
+        background-color: $color_player_theme5;
+        opacity: 0.8;
+
+		.vp_collapsed & {
+			width: $vp_player_collapsed_controls_width;
+			.vp_time {
+				display: none;
+			}
+		}
+
+		.vp_progress,
+		.vp_buffer,
+		.vp_scrubber {
+			@include transition(opacity 0.2s ease);
+			position: absolute;
+			width: 100%;
+		}
+
+		.vp_progress {
+			background-color: $color_player_theme3;
+			border:0px;
+			margin:0px;
+        }
+
+		.vp_buffer {
+			background-color: $color_player_theme4;
+		}
+
+		.vp_scrubber {
+			background-color: $color_player_theme1;
+			height: 1px;
+			opacity: 0;
+		}
+
+		.vp_capture_mouse {
+			@include absolute_fullsize();
+		}
+        // display scrubber if mouse over bar
+        .no-touch &:hover,
+        &:active {
+            .vp_scrubber {
+                opacity: 1;
+            }
+        }
+	}
+
+
+	.vp_knob {
+		position: absolute;
+		left:-3px;
+		right:-3px;
+		.vp_time {
+			position: absolute;
+			width: 100%;
+			top:3px;
+			color:white;
+			font-size: 11px;
+		}
+		.vp_knob_inner {
+			position:relative;
+			width: 100%;
+			background-color:$blue;
+			height:30px;
+			top:-15px;
+			border-top:1px solid white;
+			border-bottom:1px solid white;
+			display: none;
+		}
+		&.vp_show_knob {
+			.vp_knob_inner {
+				display: block;
+			}
+			.vp_time {
+				top:-8px;
+			}
+		}
+	}
+
+
+	.vp_indicator{
+		pointer-events:none;
+		position:absolute;
+		width: 100%;
+		height:1px;
+		background-color:white;
+		opacity: 0.9;
+		.vp_indicator_inner {
+			position:relative;
+			left:-1px;
+			top:-3px;
+			margin:0 auto;
+			width: 7px;
+			height: 7px;
+			background-color:white;
+			@include rotate(45deg);
+		}
+	}
+}
+
+.vp_editing .vp_bar {
+	top: $vp_player_sidebar_editing_offset + $vp_player_controls_width + $vp_player_sidebar_spacing * 2;
+}

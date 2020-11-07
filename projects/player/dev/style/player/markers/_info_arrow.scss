@@ -1,0 +1,39 @@
+.vp_info_arrow {
+    @extend .vp_fast_animations;
+    position: absolute;
+	left: 80px;
+	width: 300px;
+	font-family: 'Handlee';
+	color:white;
+	font-size: 32px;
+	text-shadow: 1px 1px 4px #000000;
+    @include translateY(-55px);
+    z-index: 40;
+
+	.arrow {
+		width: 77px;
+		height: 32px;
+		background-image:url("img/pointer.png");
+		background-size: 77px 32px;
+		display: inline-block;
+		float:left;
+		margin-top: 9px;
+	}
+	.txt {
+		display: inline-block;
+		float:left;
+		position: relative;
+		left: -7px;
+		top: 7px;
+	}
+}
+
+.vp_info_arrow.vp_drag {
+	width:350px;
+	pointer-events:none;
+	.arrow {
+		background-image:url("img/pointer2.png");
+		background-size: 77px 32px;
+	}
+
+}

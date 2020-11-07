@@ -1,0 +1,131 @@
+Meeting Feb 19th 2016
+------
+Two big Topics
+* How to display markers correctly on a small screen
+* How to display overlays nicely on big screens, especially if there is not much content or the overlay is narrow (like the social streams)
+
+Ideas for markers as they are
+* Don't open all of the markers at the same time even on large screens. The idea is to show semi-collapsed marker which would then unfold if the mouse actually goes in to the marker area (To be tested)
+* Think about icons on markers, it's unclear though how much valuable information these transport. Might be a nice idea though combined with the first point
+
+Alternative Marker layouts on small screens
+* Two different Layouts for Landscape and Portrait mode?
+* On Portrait have Video show at top and content slide in from the bottom? Might make the view very crowded...
+* Make the timeline horizontal?
+* Have the markers run next to each other in the then horizontal timeline area (as described by Anthony)
+
+Ideas for overlays on all screen:
+* Slide in from the side or from the bottom, depending on the exact format of the screen. E.g. Portrait slide in from bottom, landscape slide in from right.
+
+
+
+Player 
+------
+
+* General
+** Open in new tab on mobile devices
+
+* Priority Tasks
+** Custom logo linking to our website, should not
+** Release Branded player
+
+* General
+** Update loader
+
+* Markers
+** Customisable Markershapes
+** Custom Marker shapes
+** Declump markers
+
+* Overlays
+** Research on overlay editing vs. partnering
+** Make desiging on the overlay more failsafe 
+** Shrink if not much content
+** Check out woodwing inception
+** Test Website preloading 
+** Gifs in image block
+** Make fotos load nicer
+
+* Overlay Content
+** Maps
+** LinkedIn?
+** Code block?
+** Pictures link out
+** Flickr
+** Photogallery
+** Shrink fonts when overlay gets smaller
+
+* Engine
+** Better iOS playback
+
+* Playbar
+** Snap do diamond on timeline
+** Play from beginning (can't quite click beginning of timeline)
+** Fix vertical lines, maybe 2px line
+** Nicer animations
+
+* Overlays
+** Center overlays on small screens (including buttons)
+
+* Large things
+** 
+
+* Endscreen
+** Think about having same editing options as marker overlays (except videos, websites and social)
+** Add back 'powered by videopath'
+
+* General
+** Share buttons below 
+** Always allow annotations
+** Add our own videopath signup sheet
+** Add watermark on bottom right back in
+** More Coloroptions
+** Check playback on tablets, windows, mac etc.
+** Disable share buttons on iOS
+
+* iOS
+** Remove share buttons on endscreen for iOS
+
+* Ideas
+** Always center video around pre-selected position
+
+* Tracking 
+** Review all the tracking
+
+App
+---
+
+* Share screen
+** Make as overlay
+** Customize play button color and size
+** Border color
+
+
+* General 
+** Gif thumbnail
+** Have a theme / appearance for the videos
+** 
+
+
+* Dashboard
+** Move search to top right
+** make photos fade in nicer in video blocks
+
+
+* Analytics
+** Add selector for different metrics 
+** Fix look & feel
+** Add google analytics settings to this screen
+
+
+* Edit Screen
+** Reorganize sidebar
+** Better loading indication 
+** 
+
+
+Embed Code
+----------
+Disable fullsceen button when video in lightbox?
+
+…

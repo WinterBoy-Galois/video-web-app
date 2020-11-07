@@ -1,0 +1,29 @@
+#chapter_typography > .sg_chapter_content {
+    width: $container_sm;
+
+    article:first-child {
+        header, h3 {
+            margin-top: 0;
+        }
+    }
+
+    header {
+        @extend .vp_margin_block_lg;
+        color: $green;
+        border-bottom: 2px solid $green;
+    }
+
+    .sg_example_page_header {
+        text-align: center;
+        border: none;
+    }
+
+    .sg_small {
+        font-size: $font-size-sm;
+    }
+
+    .sg_big {
+        font-size: $font-size-lg;
+    }
+}
+

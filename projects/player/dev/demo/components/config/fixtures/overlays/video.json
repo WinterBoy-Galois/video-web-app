@@ -1,0 +1,54 @@
+{
+    "id": 546721254,
+    "key": "9kYBnizV",
+    "title": "Media - Video",
+    "time": 40.8549107142857,
+    "video_revision": 1285523136,
+    "contents": [{
+        "type": "media",
+        "text": null,
+        "ordinal": 1,
+        "data": "{\"original_url\":\"https://www.youtube.com/watch?v=1ppwnd8Up60\",\"service\":\"youtube\",\"service_id\":\"1ppwnd8Up60\"}",
+        "title": "",
+        "image_url": "",
+        "url": "",
+        "id": 1438389890,
+        "marker": 546721254,
+        "key": "pbgWzjiu"
+    }, {
+        "type": "text",
+        "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id dapibus felis. Donec nec auctor odio, et cursus dolor. Curabitur varius at turpis vitae consequat. Suspendisse iaculis a erat et feugiat. Aenean vehicula posuere rhoncus.&nbsp;</p>",
+        "ordinal": 0,
+        "data": "{}",
+        "title": "",
+        "image_url": "",
+        "url": "",
+        "id": 2104009297,
+        "marker": 546721254,
+        "key": "nIsm1OsP"
+    }, {
+        "type": "text",
+        "text": "<p>Nunc eget augue quis mauris rhoncus placerat quis lobortis mauris. In euismod sit amet risus vitae pretium. Sed porttitor nec felis non egestas. Cras enim dui, tempus et urna eget, fermentum molestie neque.</p>",
+        "ordinal": 2,
+        "data": "{}",
+        "title": "",
+        "image_url": "",
+        "url": "",
+        "id": 436408223,
+        "marker": 546721254,
+        "key": "EAy8T72U"
+    }, {
+        "type": "media",
+        "text": null,
+        "ordinal": 3,
+        "data": "{\"original_url\":\"https://vimeo.com/12682532\",\"service\":\"vimeo\",\"service_id\":\"12682532\"}",
+        "title": "",
+        "image_url": "",
+        "url": "",
+        "id": 1784362693,
+        "marker": 546721254,
+        "key": "saMJGhCj"
+    }],
+    "overlay_height": -1,
+    "overlay_width": -1
+}

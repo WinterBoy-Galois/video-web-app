@@ -1,0 +1,32 @@
+{
+    "username": "huesforalice",
+    "email": "huesforalice@gmail.com",
+    "id": 125,
+    "plan": {
+        "subscribable": true,
+        "feature_theme": true,
+        "feature_brightcove": false,
+        "feature_custom_hosting": true,
+        "group": "pro-plus",
+        "price_gbp": 29900,
+        "feature_dev": false,
+        "id": "201412-pro-plus-monthly",
+        "feature_advanced_settings": true,
+        "feature_upload": false,
+        "feature_endscreen": true,
+        "feature_own_hosting": false,
+        "feature_vimeo": true,
+        "payment_interval": "month",
+        "max_views_month": 10000000,
+        "price_usd": 39900,
+        "feature_wistia": true,
+        "name": "Professional Plus Monthly",
+        "default": false,
+        "value": 150,
+        "max_videos": 9999,
+        "feature_custom_analytics": true,
+        "feature_icon": true,
+        "price_eur": 34900
+    },
+    "url": "http://localhost:8000/v1/user/125/"
+}

@@ -1,0 +1,14 @@
+.vp_content_block_map {
+	.vp_map_wrapper {
+		width:100%;
+		position: relative;
+		padding-bottom:70%;
+		.vp_gmap {
+			position:absolute;
+			top:0;
+			left:0;
+			width: 100%;
+			height: 100%;
+		}
+	}
+}

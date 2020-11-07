@@ -1,0 +1,26 @@
+.vp_hidden {
+	opacity: 0 !important;
+	pointer-events: none;
+}
+
+.vp_removed {
+	display: none !important;
+}
+
+.vp_no_interaction {
+	pointer-events: none;
+}
+
+.vp_disabled {
+	pointer-events: none;
+	opacity: 0.5;
+}
+
+
+// loading indicator
+.vp_loading_indicator_wrapper {
+	@include absolute_fullsize();
+	position: fixed;
+	background-color:rgba(248, 248, 248, 0.5);
+	z-index:10;
+}

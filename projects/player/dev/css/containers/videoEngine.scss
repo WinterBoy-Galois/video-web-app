@@ -1,0 +1,66 @@
+@import '../foundation';
+
+.vp_engine {
+	width:100%;
+	height:100%;
+	position:relative;
+	overflow:hidden;
+	.vp_engine_resizer {
+		position:absolute;
+		left:0px;
+		top:0px;
+		right:0px;
+		bottom:0px;
+	}
+}
+
+.vp_engine_youtube,
+.vp_engine_vimeo,
+.vp_engine_dummy,
+.vp_engine_wistia,
+.vp_engine_brightcove,
+.vp_engine_native,
+.vp_engine_sprites,
+.vp_engine_kaltura,
+.vp_engine_ooyala,
+.vpp_engine_movingimages,
+.vpp_engine_bitmovin {
+	@include absoluteFullsize();
+	z-index:0;
+}
+
+/*
+ * native
+ */
+.vp_engine_native {
+
+	.vp_engine_native_video_container {
+		position: relative;
+	}
+
+	.vp_engine_native_video_container video {
+		width:100%;
+		height:100%;
+	}
+}
+
+/*
+ * Brightcove
+ */
+
+.vp_engine_brightcove #brightcove {
+	height:100%;
+	width:100%;
+}
+
+/*
+ * Sprites
+ */
+.vp_engine_sprites {
+	audio {
+		display: none;
+	}
+	.vp_sprite {
+		@include absoluteFullsize();
+	}
+}

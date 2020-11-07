@@ -1,0 +1,51 @@
+
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Player js test</title>
+ <script type="text/javascript" src="//cdn.embed.ly/player-0.0.11.min.js"></script>
+
+ <style>
+  iframe {
+    width: 600px;
+    height: 400px;
+  }
+ </style>
+</head>
+
+
+
+<body>
+
+
+<script type="">
+var iframe = document.createElement('iframe');
+iframe.src = 'http://player-dev.videopath.com/develop/?v=cooking';
+document.body.appendChild(iframe);
+
+var player = new playerjs.Player(iframe);
+
+player.on("ready", function(){
+  console.log("ready");
+});
+
+function getInfo(){
+    console.log("Paused: " + player.getPaused());
+}
+
+</script>
+
+
+
+<button onClick="player.play();">Play</button>
+<button onClick="player.pause();">Pause</button>
+<button onClick="getInfo();">Info</button>
+
+
+
+</body>
+</html>
+

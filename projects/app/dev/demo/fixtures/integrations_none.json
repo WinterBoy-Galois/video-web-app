@@ -1,0 +1,28 @@
+[{
+	"description": "Use Vimeo to host your videos",
+	"title": "Vimeo",
+	"configured": false,
+	"oauth2_endpoint": "https://api.vimeo.com/oauth/authorize?scope=private&state=1+76e448819f44219fe79e55831cc65c96ace5afbc0f45daafadb65d52&redirect_uri=http%3A%2F%2F127.0.0.1%3A5000%2Foauth%2Freceive%2Fvimeo%2F&response_type=code&client_id=adb6f55f8df1db3aa1d9bca6a0c50f707cb186e3",
+	"credentials": false,
+	"id": "vimeo"
+}, {
+	"description": "Use Brightcove to host your videos",
+	"title": "Brightcove",
+	"configured": false,
+	"oauth2_endpoint": "",
+	"credentials": [{
+		"name": "Brightcove Client ID",
+		"id": "client_id"
+	}, {
+		"name": "Brightcove Client Secret",
+		"id": "client_secret"
+	}],
+	"id": "brightcove"
+}, {
+	"description": "Use Mailchimp to capture your viewers email addresses.",
+	"title": "Mailchimp",
+	"configured": false,
+	"oauth2_endpoint": "https://login.mailchimp.com/oauth2/authorize?state=1+76e448819f44219fe79e55831cc65c96ace5afbc0f45daafadb65d52&redirect_uri=http%3A%2F%2F127.0.0.1%3A5000%2Foauth%2Freceive%2Fmailchimp%2F&response_type=code&client_id=351116972183",
+	"credentials": false,
+	"id": "mailchimp"
+}]

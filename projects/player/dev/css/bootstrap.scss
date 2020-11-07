@@ -1,0 +1,105 @@
+@import 'bourbon';
+@import 'foundation';
+
+
+*, *:after, *:before {
+    @include box-sizing(border-box);
+}
+
+/*
+ * Main
+ */
+#vpp_bootstrap {
+	@include absoluteFullsize();
+	@include transition(opacity 0.2s ease-in-out); 
+	background-color:black;
+	overflow:hidden;
+	z-index:9999;
+}
+
+
+/*
+ * Poster
+ */
+#vpp_bootstrap_poster {
+	@include absoluteFullsize();
+	@include transition(opacity 0.2s ease-in-out); 
+	opacity: 0;
+}
+
+/*
+ * Loader
+ */
+#vpp_loading_indicator {
+	@include absoluteCenter(60px, 60px);
+	@include transition(opacity 0.2s ease-in-out); 
+	opacity: 0;
+	.vpp_cube div {
+		background-color: black;
+	}
+}
+
+/*
+ * Message
+ */
+#vpp_bootstrap_message {
+	position: absolute;
+	bottom:50%;
+	left:10px;
+	right:10px;
+	font-family: Helvetica, Arial, sans-serif;
+	color:white;
+	text-align:center;
+	background-color:rgba(0,0,0,0.8);
+	padding:10px;
+	line-height:1.5;
+}
+
+/*
+ * Play button
+ */
+#vpp_bootstrap_playbutton {
+	@include transition(opacity 0.2s ease-in-out);
+	cursor:pointer;
+	background-color:black;
+
+	// size button and icon
+	@include absoluteCenter(60px, 60px);
+	span {
+		@include absoluteCenter(30px, 30px);
+	}
+
+	@media all and (min-height: 400px) and (min-width: 400px) {
+		@include absoluteCenter(80px, 80px);
+		span {
+			@include absoluteCenter(40px, 40px);
+		}
+	}
+
+	@media all and (min-height: 512px) and (min-width: 512px) {
+		@include absoluteCenter(120px, 80px);
+		span {
+			@include absoluteCenter(40px, 40px);
+		}
+	}
+
+	@media all and (min-height: 768px) and (min-width: 768px) {
+		@include absoluteCenter(180px, 120px);
+		span {
+			@include absoluteCenter(60px, 60px);
+		}
+	}
+
+	span {
+		transition: transform 0.3s cubic-bezier(0.140, 0.175, 0.420, 1.350);
+	}
+
+	&:hover span {
+		@include transform (scale(1.1));
+	}
+
+	path {
+		fill:#ffffff;
+	}
+}
+

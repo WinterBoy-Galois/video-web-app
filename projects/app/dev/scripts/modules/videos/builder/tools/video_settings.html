@@ -1,0 +1,63 @@
+<div class = "tool_overlay video_info">
+	<h1>Video Info</h1>
+	<form class="vp_form">
+		<div class="vp_form_group">
+            <label for="title">Video Title</span></label>
+            <div class="vp_input_group">
+                <input class="title" type="text" name="title">
+            </div>
+        </div>
+		<div class="vp_form_group">
+			<label for="description">Description <span class="info_bubble" title="This will appear on Facebook when sharing."></span></label>
+            <textarea cols="40" rows="5" class = "description" placeholder="Add a description for your video"></textarea>
+		</div>
+		<div class="vp_form_group">
+			<label for="tags">Tags <span class="info_bubble" title="This will appear on Facebook when sharing."></span></label>
+            <textarea cols="40" rows="3" class = "tags" placeholder="Add tags"></textarea>
+        </div>
+    </form>
+    <div class = "vp_settings">
+	    <h1>Settings</h1>
+	    <form class="vp_form">
+	    	<div class="vp_form_group">
+	            <label for="custom_tracking_code">Custom Google Analytics tracking code <span class="info_bubble" title="Enter your own tracking code for better insights"></label>
+	            <div class="vp_input_group">
+	                <input class="custom_tracking_code" type="text" name="custom_tracking_code" placeholder="UA-123456-78">
+	            </div>
+	        </div>
+	        <div class="vp_form_group">
+	            <label for="video_password">Video Password <span class="info_bubble" title="Video will be encrypted and protected by this password."></label>
+	            <div class="vp_input_group">
+	                <input class="video_password" type="password" name="password_field" placeholder="Your password">
+	            </div>
+	        </div>
+			<div class="vp_form_group vp_checkbox">
+				<label class="vp_checkbox_group">
+		            <input class = "disable_share_buttons" type="checkbox">
+		            <span class="vp_label_text">Disable all sharing buttons <span class="info_bubble" title="Disables the sharing options on the player and the overlays."></span></label>
+		        </label>
+		    </div>
+			<div class="vp_form_group vp_checkbox">
+		        <label class="vp_checkbox_group">
+		            <input class = "equal_marker_lenghts" type="checkbox">
+		            <span class="vp_label_text">Fixed marker length <span class="info_bubble" title="Makes all markers a fixed length regardless of the content size."></span></label>
+		        </label>
+	        </div>
+	        <div class="vp_form_group vp_checkbox">
+		        <label class="vp_checkbox_group">
+		            <input class = "fit_video" type="checkbox">
+		            <span class="vp_label_text">Always fit video <span class="info_bubble" title="Makes the whole video always display within the player"></span></label>
+		        </label>
+	        </div>
+	        <div class="vp_form_group vp_checkbox">
+		        <label class="vp_checkbox_group">
+		            <input class = "continuous_playback" type="checkbox">
+		            <span class="vp_label_text">Continuous Playback <span class="info_bubble" title="Video will continue playing when a marker is opened by the user."></span></label>
+		        </label>
+	        </div>
+	    </form>
+    </div>
+    <div class = "button green done">
+		Done
+	</div>
+</div>

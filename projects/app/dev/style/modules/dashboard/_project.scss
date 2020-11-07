@@ -1,0 +1,523 @@
+.dashboard .project {
+    @extend .vp_fast_animations;
+    box-shadow: 0px 0px 2px #DDD;
+    width: 270px;
+    height: 250px;    
+    float: left;
+    background-color: white;
+    margin: 10px;
+    position: relative;
+    .video_inner {
+        position: absolute;
+        top: 5px;
+        bottom: 5px;
+        left: 5px;
+        right: 5px;
+        background-color: #f8f8f8;
+        overflow: hidden;
+    }
+    .mobile_enabled {
+        width:16px;
+        height: 20px;
+        position: absolute;
+        right:10px;
+        bottom:30px;
+    }
+    h1 {
+        font-size: 16px;
+        font-weight: normal;
+        margin-bottom: 5px;
+        max-height: 47px;
+        overflow: hidden;
+        margin-top: 0px;
+        letter-spacing: 1px;
+        padding-top: 5px;
+    }
+    .img_container {
+        @extend .vp_fast_animations;
+        cursor: pointer;
+        width: 210px;
+        height: 130px;
+        overflow: hidden;
+        background-size: cover;
+        position: relative;
+        background-color: white;
+        background-position: center center;
+        opacity: 0.9;
+        .unpublished {
+            width: 65px;
+            height: 63px;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            display: none;
+            background-image: url('img/dashboard_unpublished.png');
+            background-size: 65px 63px;
+        }
+        .working {
+            display: none;
+            margin-top: -47px;
+        }
+    }
+    .title_top {
+        @extend .vp_fast_animations_ease;
+        cursor: pointer;
+        font-size: 16px;
+        position: absolute;
+        top: 0px;
+        width: 210px;
+        height: 130px;
+        background-color: rgba($blue, 0.7);
+        color: white;
+        .title {
+            padding: 0 10px;
+            padding-top: 30px;
+        }
+        opacity: 0;
+    }
+    .info_container {
+        color: $blue;
+        text-align: left;
+        font-size: 12px;
+        padding: 5px 10px;
+        overflow: hidden;
+        max-height: 97px;
+    }
+    .date {
+        position: absolute;
+        height: 25px;
+        left: 10px;
+        right: 10px;
+        bottom: 25px;
+        line-height: 25px;
+        text-align: left;
+        font-size: 12px;
+    }
+    .button.menu {
+        opacity: 0.5;
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        background-color: white;
+        width: 25px;
+        height: 25px;
+        color: $darkblue;
+        .vp_icon, // for new react Icon component
+        .vp_ico { // old
+            position: relative;
+            top: -7px;
+            left: 1px;
+        }
+    }
+    .button_container {
+        @extend .vp_fast_animations_ease;
+        position: absolute;
+        height: 120px;
+        width: 100%;
+        top: 260px;
+        background-color: $blue;
+        .button {
+            float: left;
+            width: 105px;
+            height: 60px;
+            background-color: $blue;
+            border-radius: 0px;
+            position: relative;
+            text-transform: none;
+            .icon {
+                width: 25px;
+                height: 25px;
+                background-image: url("img/dashboard_control_icons.png");
+                background-size: 125px 50px;
+                position: absolute;
+                top: 10px;
+                left: 40px;
+            }
+            .title {
+                font-weight: normal;
+                position: absolute;
+                top: 25px;
+                width: 100%;
+                font-size: 12px;
+            }
+        }
+        .button:hover {
+            background-color: $lightblue;
+            color: $blue;
+        }
+        .button.view {
+            .icon {
+                background-position: -25px -25px;
+            }
+        }
+        .button.view:hover {
+            .icon {
+                background-position: -25px 0px;
+            }
+        }
+        .button.edit {
+            .icon {
+                background-position: -50px -25px;
+            }
+        }
+        .button.edit:hover {
+            .icon {
+                background-position: -50px -0px;
+            }
+        }
+        .button.share {
+            .icon {
+                background-position: -75px -25px;
+            }
+        }
+        .button.share:hover {
+            .icon {
+                background-position: -75px -0px;
+            }
+        }
+        .button.analytics {
+            .icon {
+                background-position: -100px -25px;
+            }
+        }
+        .button.analytics:hover {
+            .icon {
+                background-position: -100px 0px;
+            }
+        }
+    }
+    .stats_container {
+        position: absolute;
+        height: 25px;
+        left: 10px;
+        right: 10px;
+        bottom: 0px;
+        border-top: 1px solid #d1d6dc;
+        line-height: 27px;
+        .item {
+            float: left;
+            width: 62px;
+            .icon {
+                margin-top: 4px;
+                margin-right: 3px;
+                float: left;
+                height: 17px;
+                width: 20px;
+                background-image: url('img/dashboard_info_icons.png');
+                background-size: 60px 17px;
+            }
+            .value {
+                text-align: left;
+                font-size: 12px;
+                color: $blue;
+            }
+        }
+        .item.markers {
+            .icon {
+                background-position: -20px 0px;
+            }
+        }
+        .item.duration {
+            .icon {
+                background-position: -40px 0px;
+            }
+        }
+    }
+    &.error,
+    &.processing,
+    &.waiting,
+    &.uploading {
+        .working {
+            display: block;
+        }
+    }
+    &.waiting .working {
+        .coq_small,
+        .coq_big {
+            animation: none;
+            -webkit-animation: none;
+        }
+    }
+    &.error {
+        .coq_small,
+        .coq_big {
+            display: none;
+        }
+        .working_title {
+            color: $red;
+            top: 85px;
+        }
+        .working {
+            background-size: 80px 400px;
+            background-position: 0px -160px;
+            width: 80px;
+            height: 80px;
+            margin-left: -40px;
+        }
+    }
+    // Button fix, reset some foundation button styles
+    .button {
+        min-width: 0;
+        padding: 0;
+    }
+
+    .video_list {
+        width: 100%;
+        padding-top: 8px;
+    }
+    
+    .videolist_check {
+        float: left;
+        width: 5%;        
+        display: inline-block;
+    }
+
+    .videolist_boxwrapper {
+        vertical-align: middle;
+    }
+
+    input.list_checkbox {
+        width: 20px;
+        height: 60px;
+    }
+    
+    .videolist_block {
+        padding-bottom: 8px;
+        float: left;
+        width: 95%;
+        border-bottom: solid 1px gray;
+    }
+    
+    .videolist_thumbnail {
+        float: left;
+        height: 66px;
+        width: 15%;
+        min-width: 66px;
+    }
+
+    .videolist_img {
+        width: 120px;
+        height: 66px;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+
+    .videolist_imghover {
+        cursor: pointer;
+        position: absolute;
+        width: 120px;
+        height: 66px;
+    }
+
+    .videolist_imghover:hover {
+        background: url('img/listproject_hover.png');
+        -webkit-background-size: 120px 66px;
+        -moz-background-size: 120px 66px;
+        -o-background-size: 120px 66px;
+        background-size: 120px 66px;
+    }
+    
+    .videolist_projectname {
+        float: left;
+        width: 13%;
+        overflow-wrap: anywhere;
+    }
+    
+    .videolist_title {
+        float: left;
+        width: 27%;
+        overflow-wrap: anywhere;
+    }
+    
+    .videolist_creation{
+        float: left;
+        width: 14%;
+    }
+    
+    .videolist_privacy{
+        float: left;
+        width: 7%;
+    }
+    
+    .videolist_status{
+        float: left;
+        width: 8%;
+    }
+
+    .listvalue {
+        vertical-align: middle;
+        height: 66px;
+        display: table-cell;
+        padding-right: 8px;
+    }
+}
+
+.dashboard .project:hover,
+.dashboard .project.active {
+    .button_container {
+        top: 130px;
+        opacity: 1;
+    }
+    .img_container {
+        opacity: 1;
+    }
+    .title_top {
+        opacity: 1;
+    }
+    .button.menu {
+        opacity: 0.75;
+    }
+    .button.menu:hover {
+        opacity: 1;
+    }
+}
+
+.dashboard .project.menu_open .button.menu {
+    opacity: 1;
+}
+
+.dashboard .project.unpublished {
+    .button.share {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+    .unpublished {
+        display: block;
+    }
+}
+
+
+/* context menu */
+
+.video_context_menu {
+    text-align: center;
+    background-color: white;
+    position: absolute;
+    left: 10px;
+    top: 33px;
+    padding: 5px 10px;
+    border-radius: 3px;
+    z-index: 1000;
+    h4 {
+        margin-top: 5px;
+    }
+    .button {
+        position: relative;
+        background-color: $lightgray;
+        color: $darkgray;
+        margin: 5px 0px;
+        width: 180px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 12px;
+        border: 1px solid $gray;
+        .vp_ico {
+            position: absolute;
+            left: 5px;
+            top: 5px;
+        }
+    }
+    .button.red {
+        margin-top: 30px;
+        background-color: $red;
+        color: white;
+    }
+}
+
+.project_context_menu {
+    text-align: center;
+    background-color: white;
+    position: absolute;
+    left: 20px;
+    top: 33px;
+    padding: 5px 10px;
+    border-radius: 3px;
+    z-index: 1000;
+    h4 {
+        margin-top: 5px;
+    }
+    .button {
+        position: relative;
+        background-color: $lightgray;
+        color: $darkgray;
+        margin: 5px 0px;
+        width: 210px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 12px;
+        border: 1px solid $gray;
+        .vp_ico {
+            position: absolute;
+            left: 5px;
+            top: 5px;
+        }
+
+    }
+    .button.red {
+        margin-top: 15px;
+        background-color: $red;
+        color: white;
+    }
+
+    .vp_ico_arrow_after:after {
+        content: "\e095";
+    }
+
+    .modify_submenu {
+        display: none;
+        position: absolute;
+        left: 10px;
+        top: 39px;
+
+        .button {
+            margin: 0;
+            border-color: black;
+        }
+    }
+
+    .vp_img_editproject {
+        background-image: url('img/modify_project.png');
+        width: 18px;
+        height: 18px;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+
+    .modifysetting:hover .vp_img_editproject {
+        background-image: url('img/modify_project_hover.png');
+    }
+
+    .vp_img_updownarrow {
+        background-image: url('img/updown_arrows.png');
+        width: 18px;
+        height: 18px;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        right: 5px;
+        left: unset;
+    }
+
+    .modifysetting:hover .vp_img_updownarrow {
+        background-image: url('img/updown_arrows_hover.png');
+    }
+
+    .vp_img_addvideo {
+        background-image: url('img/add_video.png');
+        width: 18px;
+        height: 18px;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+
+    .btn_addvideo:hover .vp_img_addvideo {
+        background-image: url('img/add_video_hover.png');
+    }
+}

@@ -1,0 +1,201 @@
+<<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+
+	<style>
+
+	body {
+		margin:0px;
+		padding: 0px;
+	}
+	
+	/*
+	*	BG
+	*/
+	.background {
+		background-color:black;
+		position: fixed;
+		top:0px;
+		left:0px;
+		right:0px;
+		bottom:0px;
+	}
+	
+
+	/*
+	*	Content
+	*/
+	.content_container {
+		position: absolute;
+		margin:0px auto;
+		height: 100%;
+		width:100%;
+	}
+	
+	/*
+	*	Video
+	*/
+	.video {
+		background-color: red;
+		z-index: 10;
+		opacity: 0.5;
+		top:100px;
+		padding-bottom:56%;
+		margin-top:0px;
+	}
+
+	.video_wrapper {
+		background-color: orange;
+	}
+	
+	/*
+	* Logo
+	*/	
+	.logo {
+		width:200px;
+		height:80px;
+		background-color: green;
+	}
+	
+	/*
+	*	Signup Form
+	*/
+	.signup_form {
+		width:300px;
+		height:470px;
+		background-color:yellow;
+	}
+	
+	/*
+	* Title
+	*/
+	.title {
+		color:white;
+		text-align: center;
+		font-size:35px;
+		vertical-align: middle;
+	}
+
+
+	@media all and (min-width: 0px) and (min-height: 0px) {
+		
+		.logo, .signup_form, .title, .video_wrapper {
+			position: relative;
+			z-index: 10;
+		}
+		.logo {
+			margin:15px auto;
+		}
+
+		.signup_form {
+			margin:15px auto;
+		}
+		.video_wrapper {
+			width:95%;
+			margin-bottom:30px;
+			margin:0px auto;
+		}
+
+	}
+
+	@media all and (min-width: 768px) and (min-height: 480px) {
+		
+		.logo, .signup_form, .title, .video_wrapper {
+			position: absolute;
+			z-index: 10;
+			margin:0px;
+		}
+
+		.content_container {
+			width:768px;
+			height:480px;
+			top:50%;
+			left:50%;
+			margin-top:-240px;
+			margin-left:-380px;
+		}
+		.signup_form {
+			top:15px;
+			right:15px;
+		}
+		.video_wrapper {
+			width:430px;
+			top:150px;
+		}
+		.title {
+			top:15px;
+			width:430px;
+		}
+		.logo {
+			top:15px;
+			right:70px;
+		}
+	}
+
+	@media all and (min-width: 1024px) and (min-height: 560px) {
+		.content_container {
+			width:1024px;
+			height:560px;
+			margin-top:-280px;
+			margin-left:-512px;
+		}
+		.signup_form {
+			top:100px;
+		}
+		.video_wrapper {
+			width:690px;
+			top:100px;
+		}
+		.title {
+			width:690px;
+		}
+	}
+
+	@media all and (min-width: 1280px) and (min-height: 650px) {
+		.content_container {
+			width:1280px;
+			height:650px;
+			margin-top:-325px;
+			margin-left:-640px;
+		}
+		.video_wrapper {
+			width:950px;
+		}
+		.title {
+			width:950px;
+		}
+	}
+
+	
+
+	</style>
+	
+
+</head>
+<body>
+
+
+<div class = 'content_container'>
+	<div class = 'logo'>
+	</div>
+	<div class = 'title'>
+		Make interactive video magic with this easy and powerful tool.
+	</div>
+	<div class = 'signup_form'>
+	</div>
+	<div class = 'video_wrapper'>
+		<div class = 'video'>
+		</div>
+	</div>
+	
+	
+</div>
+<div class = 'background'>
+</div>
+
+
+
+</body>
+</html>

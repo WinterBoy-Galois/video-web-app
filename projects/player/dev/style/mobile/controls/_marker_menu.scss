@@ -1,0 +1,78 @@
+.vp_marker_menu_wrapper {
+    position: absolute;
+    @extend .vp_fast_animations;
+    top: $ui_margin_lg;
+    bottom: $ui_margin_lg;
+    left: $ui_size - 2px;
+    width: 0;
+    margin: 0;
+    border: 2px solid $color_player_theme2;
+    border-left: 0;
+
+    overflow-x: hidden;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    /* undo custom touch restrictions to make overlay content scrollable */
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    -webkit-user-drag: auto;
+    -ms-content-zooming: none;
+
+    .vp_playing & {
+        @extend .vp_hidden;
+    }
+
+    .vp_show_marker_menu & {
+        width: 200px;
+        left: $ui_margin_lg - 2px;
+        overflow-y: scroll;
+    }
+
+    .vp_marker_list {
+        margin: 0;
+        padding: 0;
+    }
+
+    .vp_marker_item {
+        list-style: none;
+        display: block;
+        height: $ui_size;
+        line-height: $ui_size;
+        margin: 0;
+        color: $color_player_theme1;
+        clear: both;
+
+        -webkit-user-drag: auto;
+        -ms-touch-action: pan-y;
+        touch-action: pan-y;
+
+
+        .vp_marker_selector {
+            @include ellipsis();
+            display: inline-block;
+            width: 80%;
+            height: 100%;
+            padding-left: $ui_margin;
+            text-align: left;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .vp_marker_time {
+            display: inline-block;
+            width: 20%;
+            height: 100%;
+            padding-right: $ui_margin;
+            font-size: $font-size-sm;
+            text-decoration: none;
+            color: inherit;
+            text-align: right;
+            float: right;
+
+        }
+    }
+
+    .vp_marker_item + .vp_marker_item {
+        border-top: 1px solid $color_player_theme1;
+    }
+}

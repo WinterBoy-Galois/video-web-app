@@ -1,0 +1,271 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"/>
+<title></title>
+<script type="text/javascript" src="https://www.springlane.de/out/springlane/src/js/libs/jquery.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+
+    	$(".playerBtn.btn3").click(function(){
+    		parent.postMessage("reload","*");
+    	});
+
+        var fixContentSize = function() {
+            var wHeight = $(window).height(),
+                    wWidth = $(window).width(),
+                    factor = 1,
+                    proportion = 0.756, contentElem = $("#content"), heightDiff = 0, contentHeight;
+            if(wWidth/wHeight > proportion) {
+                factor = (proportion * wHeight) / wWidth;
+            }
+            factor *= 100;
+            if (factor > 90) {
+               factor = 95;
+            }
+            contentElem.css("width", factor+"%")
+            contentHeight = contentElem.outerHeight();
+            while(contentHeight + 30 > wHeight && factor > 1) {
+                factor -= 1;
+                contentElem.css("width", factor+"%")
+                contentHeight = contentElem.outerHeight();
+            }
+            contentElem.css("margin-top", "0");
+            heightDiff = $(window).height() - ($(window).width()*factor/100)/proportion;
+            if(heightDiff > 30) {
+                heightDiff /= 2;
+                heightDiff -= 15;
+                contentElem.css("margin-top", heightDiff);
+            } else {
+                contentElem.css("margin-top", "0");
+            }
+            contentElem.removeClass("hidden");
+        }
+        fixContentSize();
+        $( window ).resize(function() {
+            fixContentSize();
+        })
+    });
+</script>
+<style>
+    body#springlaneStyle {
+        margin: 0px;
+        padding: 0px;
+        background-color: #fff;
+        font-family:Verdana, Geneva, sans-serif; color: #3f382f; font-size: 1em; line-height:21px; border:none;
+        background-color: #e8e8e8;
+        font-weight: bold;
+        overflow: hidden;
+    }
+    body#springlaneStyle a {
+        color: #333334;
+    }
+    #springlaneStyle #content {
+        width: 95%;
+        position: relative;
+        margin: 0 auto;
+    }
+    #springlaneStyle .playerTitle {
+        width: 100%;
+        position: relative;
+        float: left;
+        font-size: 45%;
+        font-size: 2.0vm;
+        font-size: 2.0vmin;
+
+        line-height: 100%;
+        margin: 5% 0 0 0;
+        text-align: center;
+        padding-bottom: 3.5%;
+    }
+    #springlaneStyle .playerText {
+        width: 100%;
+        position: relative;
+        float: left;
+        font-size: 35%;
+        font-size: 1.8vm;
+        font-size: 1.8vmin;
+        line-height: 100%;
+        text-align: center;
+        padding: 2.5% 0 2.5% 0;
+        border-top: 2px solid #b5b5b5;
+    }
+    #springlaneStyle .playerSmallText {
+        width: 100%;
+        position: relative;
+        float: left;
+        font-size: 0.8em;
+        font-size: 1.5vm;
+        font-size: 1.5vmin;
+        line-height: 100%;
+        text-align: center;
+        padding: 2.5% 0 1.5% 0;
+        border-top: 2px solid #b5b5b5;
+    }
+    #springlaneStyle .playerBtn {
+        top: 0;
+        float: left;
+        width: 17%;
+    }
+    #springlaneStyle .btn1 {
+        margin: 5% 5% 0 18%;
+    }
+    #springlaneStyle .btn2 {
+        margin: 5% 5% 0 0;
+    }
+    #springlaneStyle .btn3 {
+        left: 74%;
+        margin: 5% 18% 0 0;
+    }
+    #springlaneStyle .clear {
+        clear: both;
+    }
+    #springlaneStyle .products {
+        float: left;
+        width: 100%;
+        margin-bottom: 2.5%;
+    }
+    #springlaneStyle .videos {
+        float: left;
+        width: 100%;
+        margin-bottom: 2.5%;
+    }
+    #springlaneStyle .socIcons {
+        float: left;
+        width: 60%;
+        margin-bottom: 2.5%;
+    }
+    #springlaneStyle .productElem {
+        width: 23%;
+        margin-right: 2.5%;
+        position: relative;
+        float: left;
+        overflow: hidden;
+    }
+    #springlaneStyle .video {
+        width: 48.5%;
+        margin-right: 2.5%;
+        position: relative;
+        float: left;
+        overflow: hidden;
+    }
+    #springlaneStyle .video.last {
+        margin-right: 0;
+    }
+    #springlaneStyle .videoImg {
+        width: 100%;
+    }
+    #springlaneStyle .productImg {
+        width: 100%;
+    }
+    #springlaneStyle .productElem.last {
+        margin-right: 0;
+    }
+    #springlaneStyle .productTitle {
+        position: absolute;
+        bottom: 6%;
+        width: 10px;
+        font-size: 60%;
+        font-size: 1.2vm;
+        font-size: 1.2vmin;
+        line-height: 100%;
+        width: 90%;
+        text-align: center;
+        margin: 0 5% 0 5%;
+    }
+    #springlaneStyle .playBtn {
+        position: absolute;
+        left: 34%;
+        width: 33%;
+        top: 25%;
+    }
+    #springlaneStyle .socIcon {
+        width: 8.8%;
+        float: left;
+    }
+    #springlaneStyle .socIcon1 {
+        margin: 0 3% 0 33.4%;
+    }
+    #springlaneStyle .socIcon2 {
+        margin: 0 3% 0 0;
+    }
+    #springlaneStyle .logo {
+        position: relative;
+        margin-top: 3%;
+    }
+    #springlaneStyle .leftLogo {
+        float: left;
+        width: 20%;
+    }
+    #springlaneStyle .rightLogo {
+        float: right;
+        width: 15%;
+    }
+    .whiteBlock {
+        position: relative;
+        width: 100%;
+        height: 20px;
+        background-color: #fff;
+        padding-top: 10%;
+    }
+    .hidden {
+        visibility: hidden;
+    }
+</style>
+</head>
+
+<body id="springlaneStyle">
+    <div id="content" class="hidden">
+        <a href="#"><img class="btn1 playerBtn" src="btn1.png"/></a>
+        <a href="#"><img class="btn2 playerBtn" src="btn2.png"/></a>
+        <a href="#"><img class="btn3 playerBtn" src="btn3.png"/></a>
+        <div class="playerTitle">Apple Pie – Klassischer amerikanischer Apfelkuchen</div>
+        <div class="playerText">Passende Produkte aus unserem Shop:</div>
+        <div class="products">
+            <a href="#" class="productElem">
+                <img class="productImg" src="https://d215811tr6tp45.cloudfront.net/out/pictures/generated/product/1/448_510_80/600802_norman-coppenhagen-schssel-krenit-25-cm_0001_da.jpg"/>
+                <div class="whiteBlock"></div>
+                <div class="productTitle">Schüssel Krenit orange 25 cm</div>
+            </a>
+            <a href="#" class="productElem">
+                <img class="productImg" src="https://d215811tr6tp45.cloudfront.net/out/pictures/generated/product/1/448_510_80/660304_sagaform_servier-set-taste_0001_js.jpg"/>
+                <div class="whiteBlock"></div>
+                <div class="productTitle">Servier Set Taste</div>
+            </a>
+            <a href="#" class="productElem">
+                <img class="productImg" src="https://d215811tr6tp45.cloudfront.net/out/pictures/generated/product/1/448_510_80/310114_menu-pfeffer-undsalztumblersfinde2-tlg._0001.jpg"/>
+                <div class="whiteBlock"></div>
+                <div class="productTitle">Pfeffer- und Salz Tumblers Fine 2-tlg.</div>
+            </a>
+            <a href="#" class="productElem last">
+                <img class="productImg" src="https://d215811tr6tp45.cloudfront.net/out/pictures/generated/product/1/448_510_80/660099_zak-designs-serviertablett-fulla-mit-10-lffeln-schwarz--wei_0001.jpg"/>
+                <div class="whiteBlock"></div>
+                <div class="productTitle">Serviertablett Fulla mit 10 Löffeln schwarz / weiß</div>
+            </a>
+        </div>
+        <div class="playerText">Weitere Videos</div>
+        <div class="videos">
+            <a href="#" class="video">
+                <img class="videoImg" src="video1.jpg">
+                <img class="playBtn" src="play-btn.png"/>
+            </a>
+            <a href="#" class="video last">
+                <img class="videoImg" src="video2.jpg">
+                <img class="playBtn" src="play-btn.png"/>
+            </a>
+        </div>
+        <div class="playerSmallText">Finden Sie uns auch bei</div>
+        <img class="leftLogo logo" src="logo.png"/>
+        <div class="socIcons">
+            <a href="https://www.facebook.com/springlane.de"><img class="socIcon socIcon1" src="soc-icon1.png"/></a>
+            <a href="https://plus.google.com/+SpringlaneDe/posts"><img class="socIcon socIcon2" src="soc-icon2.png"/></a>
+            <a href="http://www.youtube.com/user/SpringlaneDE"><img class="socIcon socIcon3" src="soc-icon3.png"/></a>
+        </div>
+        <a href="http://www.videopath.com/" target="_blank"><img class="rightLogo logo" src="built-with-videopath.png"/></a>
+        <div class="clear"></div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	  <script src="https://code.jquery.com/jquery-git1.min.js"></script>
+	  <script>
+
+	  $(window).ready(function(){
+	  	function log(text){
+	  	$('.results').append(text + '<br>');
+	  }
+
+	  //log('width ' + window.innerWidth);
+	  //log('height ' + window.innerHeight);
+
+
+	  });
+
+	  
+
+	  </script>
+	<style>
+
+
+		
+
+		body, iframe {
+			position: absolute;
+			left:0px;
+			bottom:0px;
+			top:0px;
+			right:0px;
+			margin:0px;
+			width:100%;
+			height:100%;
+		};
+
+	</style>
+	<script type="text/javascript"></script>
+</head>
+<body>
+
+	<div class = "results">
+	</div>
+	<iframe src = 'inner.html'>
+	</iframe>
+
+</body>
+</html>

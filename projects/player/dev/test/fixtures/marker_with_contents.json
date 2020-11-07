@@ -1,0 +1,20 @@
+{
+    "id": 10,
+    "time": 15,
+    "title": "some title",
+    "contents": [{
+            "id": 20,
+            "type": "text"
+        }, {
+            "id": 30,
+            "type": "media"
+        }, {
+            "id": 40,
+            "type": "image"
+        }, {
+            "id": 50,
+            "type": "simple_button"
+        }
+
+    ]
+}

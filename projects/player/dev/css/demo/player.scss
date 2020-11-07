@@ -1,0 +1,37 @@
+@import '../foundation';
+
+body {
+	background-color:black;
+}
+
+.vpp_menu {
+	@include absoluteFullsize();
+	text-align:center;
+	color:white;
+	overflow-y:scroll;
+	.vpp_button {
+		background-color:$blue;
+		display: inline-block;
+		cursor: pointer;
+		height:40px;
+		line-height: 40px;
+		padding:0px 10px;
+		border-radius:4px;
+	}
+
+	table {
+		margin:0px auto;
+		td:first-child {
+			text-align: right;
+			padding: 0px 10px;
+			vertical-align: middle;
+		}
+		tr {
+			border-bottom: 1px solid #555;
+		}
+	}
+	.vpp_info {
+		font-size:12px;
+		color:#aaa;
+	}
+}

@@ -1,0 +1,50 @@
+.vp_demo_section_content {
+	max-width:512px;
+	background-color:#eee;
+	max-width: 720px;
+    margin: 0px auto;
+    padding:20px;
+}
+
+/*
+ *	 Playbars
+ */
+.vp_demo_section_content {
+	.vpp_playbar_vertical {
+		height:300px;
+		display:inline-block;
+	}
+	.vpp_icon {
+		display: inline-block;
+	}
+
+	.vpp_loading_indicator {
+		display: inline-block;
+		margin:10px;
+	}
+
+	.vpp_playbar_vertical,
+	.vpp_control_button,
+	.vpp_marker {
+		margin:10px;
+		display:inline-block;
+	}
+
+	.vpp_playbar_horizontal {
+		margin:20px;
+	}
+
+	.vpp_share_buttons {
+		margin:10px;
+		display:inline-block;
+		.vp_control_button {
+			margin:0px;
+		}
+	}
+
+	.vpp_social_feed {
+		height:700px;
+		width:500px;
+		margin:0px auto;
+	}
+}

@@ -1,0 +1,107 @@
+/*
+ * Style for confirm and alert modals
+ */
+.vp_simple_modal {
+	background-color:white;
+	padding:20px;
+	min-width:300px;
+
+
+	// colors
+	border:3px solid;
+	border-radius:2px;
+	border-color: transparent;
+	position: relative;
+
+	.vp_close_button {
+		@include transition(background-color 0.2s ease);
+
+		width:20px;
+		height:20px;
+		line-height: 14px;
+		font-weight: bold;
+		border:2px solid $gray;
+
+		background-color:white;
+		position: absolute;
+		top:-10px;
+		right:-10px;
+		border-radius: 10px;
+		cursor:pointer;
+
+		&:hover {
+			background-color:$gray;
+		}
+	}
+
+	.vp_buttons {
+		margin-top:10px;
+	}
+
+	h2 {
+		margin:0px;
+	}
+
+	.vp_icon {
+		font-size:40px;
+		margin-bottom:10px;
+	}
+
+	.vp_text {
+		font-size: 18px;
+		margin:20px 0px;
+	}
+
+	.vp_buttons {
+		margin-top:30px;
+	}
+
+	.vp_buttons .vp_button {
+		min-width: 100px;
+	}
+
+
+	&.vp_color_green {
+		border-color:$green;
+		h2 {
+			color: $green;
+		}
+	}
+
+	&.vp_color_blue {
+		border-color:$blue;
+		h2 {
+			color: $blue;
+		}
+	}
+
+	&.vp_color_lightblue {
+		border-color:$lightblue;
+		h2 {
+			color: $blue;
+		}
+	}
+
+	&.vp_color_red {
+		border-color:$red;
+		h2 {
+			color: $red;
+		}
+	}
+
+	&.vp_color_orange {
+		border-color:$orange;
+		h2 {
+			color: $orange;
+		}
+	}
+
+}
+
+/*
+ * 
+ */
+
+ .vp_alert_modal {
+ 	width: 400px;
+ }

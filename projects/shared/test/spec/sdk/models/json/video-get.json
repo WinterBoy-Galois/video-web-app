@@ -1,0 +1,32 @@
+{
+    "id": 522686874,
+    "thumbnails": {
+        "large": "https://i.ytimg.com/vi/cmGEi7-XYsM/maxresdefault.jpg",
+        "normal": "https://i.ytimg.com/vi/cmGEi7-XYsM/maxresdefault.jpg"
+    },
+    "key": "OGR92abW",
+    "published": 1,
+    "created": "2015-09-07T17:04:46.727116",
+    "draft": 1957577257,
+    "current_revision": 1123493945,
+    "total_plays": 3,
+    "total_views": 0,
+    "revision_info": {
+        "marker_count": 4,
+        "draft_saved": "2015-09-22T10:16:10.245",
+        "title": "How to apply Lip & Cheek Stain - The Body Shop - Beauty With Heart"
+    },
+    "url": "http://localhost:8000/v1/video/522686874/",
+    "source": {
+        "status": "ok",
+        "aspect": 1.77777777778,
+        "service": "youtube",
+        "thumbnail_large": "https://i.ytimg.com/vi/cmGEi7-XYsM/maxresdefault.jpg",
+        "duration": 70.0,
+        "allow_youtube_clickthrough": false,
+        "file_mp4": "",
+        "thumbnail_small": "https://i.ytimg.com/vi/cmGEi7-XYsM/maxresdefault.jpg",
+        "file_webm": "",
+        "service_identifier": "cmGEi7-XYsM"
+    }
+}

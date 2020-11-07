@@ -1,0 +1,149 @@
+@import "compass/css3/filter";
+
+.vp_simple_modal.vp_create_video {
+	width:600px;
+
+	.vp_hint {
+		font-size:12px;
+		p {
+			margin:0px;
+			margin-top:10px;
+		}
+	}
+	.vp_inner {
+		@include transition(width 0.5s ease, height 0.5s ease);
+		overflow: hidden;
+	}
+}
+
+/*
+ * Selector
+ */
+.vp_simple_modal.vp_create_video .vp_selector {
+	margin-top:30px;
+	padding: 25px 0px;
+	background-color: rgba($lightblue, 0.2);
+
+	.vp_item {
+		@include transition(opacity 0.2s ease, background-color 0.2s ease);
+		@include filter(grayscale(10%));
+		opacity: 0.8;
+
+		position: relative;
+		display: inline-block;
+		width:150px;
+		height:90px;
+		margin:0px 15px;
+		background-image:url('img/upload_logos.png');
+		background-repeat:no-repeat;
+		cursor: pointer;
+
+		&.vp_no_access {
+			opacity: 0.5;
+
+		}
+
+		&:hover {
+			@include filter(grayscale(0%));
+			opacity: 1;
+			color:black;
+		}
+
+		&.vp_vimeo {
+			background-position:-150px 0px;
+		}
+
+		&.vp_wistia {
+			background-position:-300px 0px;
+		}
+
+		&.vp_movingimage {
+			background-position:-900px 0px;
+		}
+
+		&.vp_brightcove {
+			background-position:-450px 0px;
+		}
+
+		&.vp_upload {
+			background-position:-600px 0px;
+		}
+
+		&.vp_custom_hosting {
+			background-position:-750px 0px;
+		}
+
+
+		label {
+			position: absolute;
+			bottom:10px;
+			left:0px;
+			right:0px;
+			height:10px;
+			line-height: 10px;  
+		}
+
+	}
+
+}
+
+/*
+ * Upgrade message
+ */
+.vp_simple_modal.vp_create_video .vp_upgrade {
+	background-color: rgba($lightblue, 0.2);
+	margin:30px auto;
+	padding:20px 50px;
+	width:400px;
+}
+
+/*
+ * Import from service 
+ */
+.vp_simple_modal.vp_create_video .vp_service,
+.vp_simple_modal.vp_create_video .vp_custom_hosting_form {
+	margin:30px auto;
+	padding:20px 50px;
+	background-color: rgba($lightblue, 0.2);
+}
+
+/*
+ * Upload
+ */
+.vp_simple_modal.vp_create_video .vp_upload_form {
+	height:210px;
+	.vp_dropzone {
+		width:400px;
+		height:200px;
+		margin:20px auto;
+	}
+	.vp_progressbar {
+		width:400px;
+		margin:20px auto;
+	}
+}	
+
+/*
+ * Custom Hosting
+ */
+.vp_simple_modal.vp_create_video .vp_custom_hosting_form {
+	label {
+		font-size: 12px;
+	}
+	.vp_text {
+		margin:0px;
+	}
+	.vp_form .vp_form_row:nth-child(3),
+	.vp_form .vp_form_row:nth-child(4),
+	.vp_form .vp_form_row:nth-child(5) {
+		width:100px;
+		float:left;
+		margin-right:10px;
+	}
+
+	.vp_form .vp_form_row:nth-child(5) {
+		width:150px;
+		float:right;
+	}
+
+}

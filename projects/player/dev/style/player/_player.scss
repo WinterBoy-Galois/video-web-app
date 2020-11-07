@@ -1,0 +1,27 @@
+@import "constants";
+@import "controls/controls";
+@import "poster/poster";
+@import "endscreen/endscreen";
+@import "markers/markers";
+@import "marker_overlays/marker_overlays";
+@import "support/support";
+
+.vp_player {
+
+	@include absolute_fullsize();
+
+	.vp_engine_wrapper {
+		@include absolute_fullsize();
+		background-color: black;
+	}
+
+	.vp_poster_wrapper {
+		@include absolute_fullsize();
+		pointer-events:none;
+	}
+}
+
+.vp_player_app {
+	@include absolute_fullsize();
+	overflow:hidden;
+}

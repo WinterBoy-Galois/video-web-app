@@ -1,0 +1,62 @@
+
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>File upload</title>
+
+
+  <script src="https://code.jquery.com/jquery-git1.min.js"></script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLmIRp_0JZDxWDGl8ZkIzmwT1W1NSOfLk&signed_in=true"></script>
+
+  <style>
+  	#maps_container {
+  		background-color: red;
+  		width:500px;
+      height:500px;
+  	}
+  </style>
+
+  <script type="text/javascript">
+
+  	$(document).ready(function(){
+
+
+  		//
+  		$(".submit").click(function(){
+  			var file = $(".file").prop("files")[0];
+
+  			var formdata = new FormData();
+  			formdata.append('one', 'two');
+  			formdata.append('three', 'four');
+        	formdata.append( 'file', file );
+
+  			$.ajax({
+  				url:'http://localhost:8000/v1/icon/',
+  				type: 'POST',
+  				data:formdata,
+  				contentType: false,
+  				processData: false,
+  				cache: false
+  			});
+
+  		})
+
+
+  	});
+
+  </script>
+
+
+
+</head>
+
+
+<body>
+  <input class = "file" type="file" />
+  <input class = "submit" type="submit" />
+</body>
+</html>
+

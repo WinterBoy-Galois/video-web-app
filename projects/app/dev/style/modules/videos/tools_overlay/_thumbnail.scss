@@ -1,0 +1,73 @@
+.vp_builder .tool_overlay.thumbnail {
+	height: auto;
+	top:35px;
+	.thumb {
+		height: 100px;
+		width: 125px;
+		position: relative;
+		float:left;
+		.img {
+			position: absolute;
+			left: 5px;
+			top: 5px;
+			right: 5px;
+			bottom: 5px;
+			background-size: cover;
+
+		}
+		border:1px solid white;
+		opacity:0.7;
+		cursor: pointer;
+	}
+
+	.thumb.selected {
+		border: 1px dashed $green;
+		opacity: 1;
+	}
+
+	.thumbs_container {
+		max-height: 300px;
+		overflow: auto;
+		margin-bottom: 65px;
+	}
+	.upload_own, .delete_thumb {
+		display: block;
+		position: absolute;
+		width: 130px;
+		height: 40px;
+		line-height: 40px;
+		right: 5px;
+		bottom: 10px;
+		text-align: center;
+		text-decoration: underline;
+		cursor: pointer;
+	}
+	.upload_field {
+		position:absolute;
+		top:-5000px;
+	}
+
+	.own {
+		.custom_thumb {
+			margin:0px auto;
+			margin-bottom: 60px;
+			width: 200px;
+			height: 112px;
+			background-position: center center;
+			background-size: cover;
+		}
+
+		.loading_small  {
+			display: none;
+		}
+		&.loading {
+			height: 200px;
+			.loading_small  {
+				display: block;
+			}
+			.inner {
+				display: none;
+			}
+		}
+	}
+}

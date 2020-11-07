@@ -1,0 +1,22 @@
+{  
+   "current_period_start":"2015-05-20",
+   "current_period_end":"2016-05-20",
+   "current_month_views":0,
+   "plan":{  
+      "id":"individual-staff",
+      "name":"videopath staff account",
+      "group":"individual",
+      "payment_interval":"month",
+      "price":0,
+      "currency":"USD",
+      "currency_symbol":"$",
+      "max_views_month":10000000,
+      "max_videos":9999,
+      "feature_upload":true,
+      "feature_endscreen":true,
+      "feature_vimeo":true,
+      "feature_dev":true,
+      "feature_advanced_settings":true
+   },
+   "pending_subscription":false
+}

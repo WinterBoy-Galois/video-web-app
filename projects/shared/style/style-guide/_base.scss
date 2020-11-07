@@ -1,0 +1,48 @@
+body {
+    padding-top: $ui_size_xl;
+    background-color: $lightgray;
+    text-align: center;
+}
+
+.sg_main_header {
+    @extend .vp_nav_bar;
+
+    .sg_main_logo {
+        display: inline;
+        font-size: $font-size-h2;
+        color: $blue;
+
+        img {
+            height: 65%;
+            vertical-align: middle;
+            margin-right: $ui_margin;
+        }
+
+        a {
+            @extend .vp_clear_anchor_style;
+        }
+    }
+
+    .sg_home_button {
+        @extend .vp_btn_icon_head;
+    }
+
+    .sg_main_navigation {
+        text-align: right;
+    }
+}
+
+.sg_chapter {
+    @extend .vp_container_fluid;
+    width: $container_md;
+
+    > header {
+        @extend .vp_page_main_header;
+    }
+
+    .sg_chapter_content {
+        @extend .vp_box_content;
+        text-align: left;
+    }
+}
+

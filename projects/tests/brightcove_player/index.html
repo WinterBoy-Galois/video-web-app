@@ -1,0 +1,101 @@
+
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Brightcove test</title>
+  <script src="https://code.jquery.com/jquery-git1.min.js"></script>
+
+</head>
+
+
+<body>
+
+
+<!-- http://players.brightcove.net/4328472451001/33108374-2ef7-4447-b6d3-f0e046e0f70c_default/index.html?videoId=4332059708001 
+
+  data-player="33108374-2ef7-4447-b6d3-f0e046e0f70c"
+
+
+-->
+
+<!--
+<video
+  data-video-id="4332059708001"
+  data-account="4328472451001"
+  data-player="33108374-2ef7-4447-b6d3-f0e046e0f70c"
+  data-embed="default"
+  class="video-js" 
+  id = "videopath-test"
+  controls></video>
+  -->
+
+
+<!--
+<video
+  data-video-id="4334023184001"
+  data-account="4333019801001"
+  data-player="default"
+  data-embed="default"
+  id = "videopath-test"
+  class="video-js" controls></video>
+-->
+
+<video
+  data-video-id="4334023184001"
+  data-account="4333019801001"
+  data-player="33108374-2ef7-4447-b6d3-f0e046e0f70c"
+  data-embed="default"
+  class="video-js" 
+  id = "videopath-test"
+  controls></video>
+
+
+<script>
+
+// https://edge.api.brightcove.com/playback/v1/accounts/4328472451001/videos/4334023184001 
+
+//var url = "//players.brightcove.net/4328472451001/33108374-2ef7-4447-b6d3-f0e046e0f70c_default/index.min.js";
+//var url = "//players.brightcove.net/4333019801001/default_default/index.min.js";
+
+var url = "//players.brightcove.net/4333019801001/33108374-2ef7-4447-b6d3-f0e046e0f70c_default/index.min.js";
+
+jQuery.getScript( url ).then(function(){
+
+	var player;
+videojs("videopath-test").ready(function(){
+	player = this;
+
+	// events
+	player.on("play", function(){
+		console.log("play");
+	});
+
+	player.on("pause", function(){
+		console.log("pause");
+	});
+
+	$(document).ready(function(){
+		$(".play").click(function(){
+			player.play();
+		});
+		$(".pause").click(function(){
+			player.pause();
+		});
+	});
+});
+
+});
+
+
+
+</script>
+
+<button class ="play">Play</button>
+<button class = "pause">Pause</button>
+
+</body>
+</html>
+

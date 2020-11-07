@@ -1,0 +1,23 @@
+@import '../foundation';
+
+#vp_style {
+
+	background-color:white;
+	min-height:100%;
+	min-width:100%;
+	max-height:100%;
+	overflow-y:auto;
+	color:$blue;
+
+	.vp_menu {
+		a {
+			cursor: pointer;
+		}
+	}
+
+	.vp_demo_page {
+    	text-align: center;
+    	padding: 20px;
+	}
+
+}

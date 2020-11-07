@@ -1,0 +1,11 @@
+@import 'compass';
+
+/* global reset  */
+@include global-reset;
+
+*, *:after, *:before {
+    @include box-sizing(border-box);
+}
+
+@import 'shared';
+@import 'style-guide/style-guide';

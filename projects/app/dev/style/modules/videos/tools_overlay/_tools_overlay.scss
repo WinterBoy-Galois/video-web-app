@@ -1,0 +1,38 @@
+.vp_builder .tool_overlay {
+
+	background-color: white;
+	width: 320px;
+	border: 2px solid #aaa;
+	color: $darkblue;
+	position: absolute;
+	max-height:90%;
+	overflow:auto;
+	right: 0px;
+	padding: 20px;
+	text-align: left;
+
+	.title {
+		text-align: left;
+	}
+
+	h1 {
+		font-size: 22px;
+		line-height: 30px;
+		margin-bottom: 20px;
+		font-weight: normal;
+		margin:0px;
+		margin-bottom: 20px;
+	}
+
+	.button {
+		position: relative;
+		width:auto;
+	}
+
+}
+
+@import "choose_colors";
+@import "video_info";
+@import "end_screen";
+@import "thumbnail";
+@import "advanced_settings";

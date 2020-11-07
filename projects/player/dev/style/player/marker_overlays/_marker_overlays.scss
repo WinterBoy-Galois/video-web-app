@@ -1,0 +1,110 @@
+.vp_marker_overlays {
+	@include absolute_fullsize();
+	@include transition(opacity 0.2s ease);
+	background-color:rgba(0,0,0,0.5);
+	z-index:60;
+}
+
+.vp_marker_overlays_content {
+	@include absolute_positioning(15px,50px,15px,150px);
+    @extend .vp_player_content_typography;
+
+	@media only screen and (max-width: $screen_md_max) {
+		@include absolute_positioning($ui_margin/2, 45px, $ui_margin/2, $ui_margin/2);
+	}
+
+	@media screen and (max-aspect-ratio: 1/1) {
+        top:50px;
+        right:15px;
+    	@media only screen and (max-width: $screen_md_max) {
+    		top:45px;
+    		right:$ui_margin/2;
+    	}
+    }
+
+
+	// content area (with white background)
+	.vp_content_wrapper {
+		margin: 0 auto;
+		position: relative;
+		max-width: 700px;
+		width: 100%;
+		height: 100%;
+		background-color: white;
+		border: 3px solid black;
+		box-shadow: 1px 1px 0px rgba(0,0,0,0.3);
+	}
+}
+
+.vp_marker_overlay_content {
+	overflow: hidden;
+}
+
+.vp_marker_overlays_content {
+	@extend .vp_fast_animations_ease;
+}
+
+// animation on marker content on fade in
+.vp_marker_overlays.vp_hidden .vp_marker_overlays_content {
+	@include scale(0.98);
+}
+
+
+// in editing mode reserve more space for sidebar
+.vp_marker_overlays.vp_editing .vp_marker_overlays_content {
+	right: 95px;
+}
+// in editing mode, don't show side buttons
+.vp_marker_overlays.vp_editing .vp_small_button {
+	display:none;
+}
+
+// make overlay a bit wider for large content such as
+// web sites
+.vp_marker_overlays.vp_large_content .vp_content_wrapper {
+	max-width: $screen_lg;
+}
+
+// make the overlay narrower for small content such as the
+// social overlays. 500px is the right size for facebook etc
+.vp_marker_overlays.vp_narrow_content .vp_content_wrapper {
+	max-width: 500px;
+}
+
+// main overlay content container
+// should scroll on y axis
+.vp_marker_overlay_main {
+	@include absolute_fullsize();
+	overflow-x:hidden;
+	overflow-y:auto;
+
+	//padding: $ui_margin;
+	background-color: white;
+
+	h1.vp_overlay_title {
+		text-align: left;
+		margin: $ui_margin * 2;
+		margin-left: $ui_margin * 2 - 3;
+		margin-bottom:0px;
+	}
+}
+
+// for ios devices, we need this special
+// statement to enable scrolling properly
+.vp_mobile .vp_marker_overlay_main {
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+}
+
+
+// disable scrollbar for fullscreen content
+.vp_large_content .vp_content_wrapper .vp_marker_overlay_main {
+	overflow-y: hidden;
+	h1.vp_overlay_title {
+		display:none;
+	}
+}
+
+
+@import "view/view";
+@import "edit/edit";

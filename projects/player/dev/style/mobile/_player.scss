@@ -1,0 +1,59 @@
+@import "constants";
+@import "controls/controls";
+@import "endscreen/endscreen";
+@import "overlays/overlays";
+@import "../player/poster/poster";
+
+.vp_player {
+
+	@include absolute_fullsize();
+
+    > .vp_video_layer {
+        @include absolute_fullsize();
+        @include transition(transform, 0.5s);
+        @include translate(0, 0);
+        z-index: 1;
+    }
+
+    > .vp_content_layer {
+		@include absolute_fullsize();
+        z-index: 0;
+    }
+
+    &.vp_overlay_mode {
+	    .vp_video_layer {
+            @include translate(100%, 0);
+        }
+    }
+
+	.vp_engine_wrapper {
+		@include absolute_fullsize();
+        overflow: hidden;
+		background-color: black;
+	}
+
+	.vp_mobile_overlays_wrapper {
+		@include absolute_fullsize();
+	}
+
+    .vp_mobile_controls_wrapper {
+        height: 100%;
+    }
+
+    .vp_poster_wrapper {
+		@include absolute_fullsize();
+		pointer-events:none;
+        overflow: hidden;
+    }
+}
+
+.vp_player_app {
+	@include absolute_fullsize();
+	overflow: hidden;
+}
+
+.vp_button, .vp_social_button {
+    @extend .vp_fast_animations;
+    @extend .vp_btn_icon;
+    @extend .vp_ico_expand;
+}

@@ -1,0 +1,8 @@
+@font-face {
+	font-family: "custom-font-overlays";
+	src: url("<%= font %>") format('woff');
+}
+
+.vpp_marker_overlay {
+    font-family: "custom-font-overlays", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}

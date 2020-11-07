@@ -1,0 +1,14 @@
+@import '../foundation';
+
+.vpp_poster {
+	@include absoluteFullsize();
+	background-color:black;
+	pointer-events:none;
+	img {
+		position: absolute;
+		@include transition(opacity 0.2s ease-in-out); 
+	}
+	img.vpp_hidden {
+		opacity: 0;
+	}
+}

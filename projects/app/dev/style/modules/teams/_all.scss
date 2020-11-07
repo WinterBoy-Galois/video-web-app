@@ -1,0 +1,104 @@
+.vp_teams {
+	text-align:left;
+
+	.vp_add_button {
+		margin:0px;
+		margin-bottom: 20px;
+	}
+
+	.vp_invitemember_button {
+		float: left;
+		margin: 0px;
+		margin-bottom: 20px;
+	}
+
+	.vp_done_button {
+		margin:0px;
+		margin-bottom:20px;
+		float: right;
+		min-width: 80px;
+	}
+
+	.vp_uploadvideo_button {
+		margin-left: 20px;
+		display: inline-block;
+		border: 1px solid black;
+		height: 40px;
+		line-height: 40px;
+		padding: 0 10px;
+		border-radius: 6px;
+		text-transform: uppercase;
+		background-color: rgb(62, 137, 177);
+		color: white;
+		cursor: pointer;
+		margin-bottom: 20px;
+	}
+
+	.vp_uploadvideo_button:hover {
+		background-color: rgb(50, 109, 141);
+	}
+	
+	.vp_img_addvideo {
+		margin: 5px 0 5px 10px;
+    	float: left;
+		width: 30px;
+        height: 30px;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+
+        background-image: url('img/add_video_hover.png');
+	}
+
+	.vp_detail {
+		font-size:12px;
+		color:$blue;
+	}
+
+	tbody {
+		a {
+			text-decoration:none;
+		}
+	}
+
+	tbody tr:first-child td:first-child {
+		font-weight: bold;
+	}
+
+	tbody tr:first-child td:last-child {
+		text-align: right;
+	}
+}
+
+.team_theme {
+	.theme_color_wrapper {
+		margin: auto;
+    	width: 70%;
+	}
+
+	.team_theme_input {
+		width: 60%;
+		margin-left: 10px;
+		height: 32px;
+		display: inline-block;
+		vertical-align: bottom;
+	}
+
+	.vp_icon_background {
+		height:40px;
+		width:40px;
+		margin:20px auto;
+		position: relative;
+		background-color: rgb(39, 58, 69);
+	}
+
+	.vp_icon_preview {
+		height: 40px;
+		width: 40px;
+		-webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+	}
+}

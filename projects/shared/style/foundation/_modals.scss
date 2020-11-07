@@ -1,0 +1,214 @@
+@mixin modal_color($color) {
+    border-color: $color;
+
+    .vp_modal_header .vp_modal_close_button {
+        border-color: $color;
+        .no-touch &:hover {
+            background-color: $color;
+        }
+    }
+
+    .vp_modal_title {
+        border-color: $color;
+        color: $color;
+    }
+}
+
+.vp_modal_wrapper {
+    @extend .vp_fast_animations_opacity;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 500;
+    opacity: 1;
+
+    .vp_modal_background {
+        @include absolute-fullsize();
+        background-color: $darkblue;
+        opacity: 0.9;
+    }
+}
+
+.vp_modal_wrapper.vp_hidden .vp_modal {
+    @include translate(-50%, -60%);
+}
+
+
+.vp_modal {
+
+    .vp_modal_icon {
+        font-size: 40px;
+        margin-top:20px;
+    }
+
+    // Set standard color
+    @include modal_color($darkgray);
+    @extend .vp_fast_animations_ease;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    @include translate(-50%, -50%);
+    width: 400px;
+    max-width: 90%;
+    max-height: 90%;
+    padding: 0 $ui_margin_lg;
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 3px;
+    background-color: white;
+    text-align: center;
+    font-size: $font-size-player;
+
+    .vp_modal_header {
+        .vp_modal_title {
+            margin-top: 0;
+            padding: $ui_margin;
+            border-bottom: 2px solid;
+        }
+    }
+
+    .vp_modal_close_button {
+        @extend .vp_ico;
+        @extend .vp_ico_x;
+        position: absolute;
+        top: -12px;
+        right: -12px;
+        width: 22px;
+        height: 22px;
+        border-width: 2px;
+        border-style: solid;
+        border-radius: 11px;
+        background-color: white;
+        color: $gray;
+        font-size: 0.7rem;
+        z-index: 10;
+
+        .no-touch &:hover {
+            color: white;
+        }
+
+        &:before {
+            @extend .vp_ico_standalone;
+        }
+    }
+
+    .vp_modal_content {
+        @extend .vp_margin_block_lg;
+    }
+
+    .vp_modal_button {
+        @extend .vp_btn_label;
+        font-size: $font-size-player;
+    }
+
+    .vp_action_button {
+        @extend .vp_btn_green;
+    }
+
+    .vp_destructive_button {
+        @extend .vp_btn_red;
+    }
+
+    &.vp_modal_green {
+        @include modal_color($green);
+    }
+
+    &.vp_modal_red {
+        @include modal_color($red_active);
+    }
+
+    &.vp_modal_orange {
+        @include modal_color($orange);
+    }
+
+    &.vp_modal_fullsize, &.vp_modal_video {
+        padding: 0;
+
+        .vp_modal_content {
+            margin: 0;
+        }
+    }
+
+    &.vp_modal_video {
+        @include modal_color($gray);
+
+        .vp_modal_content {
+            > div {
+                position: relative;
+                padding-bottom: 56.25%; /* 16:9 */
+                padding-top: 25px;
+                height: 0;
+
+                > iframe {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+
+
+    // ===== Message modals =====
+
+    &.vp_modal_message {
+        width: 520px;
+        padding-top: $ui_margin;
+        padding-bottom: $ui_margin + $ui_margin_lg;
+        font-size: $font-size-lg;
+
+        h3, h4 {
+            font-size: $font-size-h2;
+            margin-bottom: $ui_margin_lg;
+        }
+
+        img {
+            height: 80px;
+            margin-top: $ui_margin_lg;
+        }
+
+        .vp_message_button {
+            margin: ($ui_margin_lg + $ui_margin) 0 0;
+        }
+
+        .vp_modal_message_text, .vp_modal_content {
+            margin: 0;
+        }
+
+        &.vp_message_icon_sticky {
+            .vp_modal_message_icon {
+                margin:0px auto;
+                height: 100px;
+                width:70px;
+                margin-top: -$ui_margin - 1px;
+                margin-bottom: -$ui_margin_lg;
+            }
+        }
+
+        &.vp_modal_green {
+            h3, h4 {
+                color: $green;
+            }
+
+            .vp_message_button {
+                @extend .vp_btn_green;
+            }
+        }
+
+        &.vp_modal_red {
+            h3, h4 {
+                color: $red;
+            }
+
+            .vp_message_button {
+                @extend .vp_btn_red;
+            }
+        }
+    }
+}

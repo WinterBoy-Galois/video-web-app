@@ -1,0 +1,10 @@
+{
+    "source": {
+        "id": "1234567890",
+        "aspect": 1.7777777777777777,
+        "duration": 110,
+        "service": "youtube",
+        "service_identifier": "a5_0-bFK4uE",
+        "allow_youtube_clickthrough": false
+    }
+}

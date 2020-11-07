@@ -1,0 +1,110 @@
+//
+// Bourbon replaces compass
+//
+@import 'bourbon';
+
+//
+// Constants
+// 
+$darkblue: #273a45;
+$blue: #32526e;
+$lightblue: #81b9c3;
+$green: #41c3ac;
+$gray: #c6c6c6;
+$lightgray: #f8f8f8;
+$darkgray: #888;
+$orange: #ff884d;
+$red: #ff6b57;
+
+//
+// UI Constants
+//
+$BUTTON_SIZE : 40px;
+$UI_MARGIN_PLAYBAR: 2px;
+$UI_MARGIN_RIGHT_BUTTONS: 10px;
+
+
+//
+// Mixins
+//
+@mixin absoluteCenter($width, $height) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: $width;
+  height: $height;
+  margin-left: -$width / 2;
+  margin-top: -$height / 2;
+}
+
+
+@mixin absolutePosition($top, $right, $bottom, $left) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin absoluteFullsize() {
+  @include absolutePosition(0, 0, 0, 0);
+}
+
+@mixin verticallyCenteredChild($name) {
+  &:before {
+    content: '';
+    display: inline-block;
+    height:100%;
+    vertical-align: middle;
+    margin-right:-0.25em;
+  }
+
+ #{$name} {
+    display: inline-block;
+    vertical-align: middle;
+ }
+
+}
+
+//
+// Calculate headers
+//
+@mixin buildHeaders($baseSize) {
+
+  h1,h2,h3,h4,h5,h6 {
+    font-weight:bold;
+    line-height: 1.5;
+  }
+
+  h1 {
+    font-size: 1.5 * $baseSize;
+    margin-top: 1 * $baseSize;
+    line-height:1.5;
+  }
+  h2 {
+    font-size: 1.4 * $baseSize;
+    margin-top: 0.9 * $baseSize;
+    line-height:1.5;
+  }
+  h3 {
+    font-size: 1.3 * $baseSize;
+    margin-top: 0.8 * $baseSize;
+    line-height:1.5;
+  }
+  h4 {
+    font-size: 1.2 * $baseSize;
+    margin-top: 0.7 * $baseSize;
+    line-height:1.5;
+  }
+  h5 {
+    font-size: 1.1 * $baseSize;
+    margin-top:0.6 * $baseSize;
+    line-height:1.5;
+  }
+  h6 {
+    font-size: 1 * $baseSize;
+    margin-top: 0.5 * $baseSize;
+    line-height:1.5;
+
+  }
+}

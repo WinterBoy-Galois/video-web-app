@@ -1,0 +1,12 @@
+.vp_box_shadow {
+    box-shadow: 0px 0px 2px #DDD;
+}
+
+.vp_box_content {
+    @extend .vp_margin_block_lg;
+    @extend .vp_centered_block;
+    @extend .vp_box_shadow;
+
+	background-color: white;
+	padding: $ui_margin_lg;
+}

@@ -1,0 +1,10 @@
+.vp_share_widget {
+    @extend .vp_btn_group;
+    @include clearfix();
+    margin: 0;
+
+    .vp_social_button {
+        @extend .vp_btn_share;
+        float: left;
+    }
+}

@@ -1,0 +1,128 @@
+.vp_playbar_area, .vp_playbar_wrapper, .vp_playbar, {
+    height: 100%;
+}
+
+.vp_playbar_area, .vp_playbar {
+    @extend .vp_fast_animations;
+    width: $ui_size;
+
+    .vp_playing:not(.vp_play_controls) & {
+        width: $ui_margin;
+    }
+
+    .vp_show_marker_menu & {
+        width: $ui_margin_lg;
+    }
+}
+
+.vp_playbar {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    .vp_time, .vp_time_total {
+        @extend .vp_fast_animations;
+        position: absolute;
+        width: $ui_size;
+        height: $ui_margin_lg;
+        line-height: $ui_margin_lg;
+        font-size: $font-size-sm;
+        color: $white;
+        text-shadow: 0 1px 1px $black;
+        text-align: center;
+        z-index: -1;
+        opacity: 0.8;
+
+        .vp_overlay_mode &,
+        .vp_playing:not(.vp_play_controls) & {
+            @extend .vp_hidden;
+        }
+    }
+
+    .vp_time_total {
+        bottom: 0;
+    }
+}
+
+.vp_bar {
+    position: absolute;
+    top: $ui_margin_lg;
+    bottom: $ui_margin_lg;
+    left: 0;
+    right: 0;
+    background-color: $color_player_theme4;
+
+    .vp_progress,
+    .vp_buffer,
+    .vp_scrubber {
+        @include transition(opacity 0.2s ease);
+        position: absolute;
+        width: 100%;
+    }
+
+    .vp_progress {
+        background-color: $color_player_theme3;
+        border: 0;
+        margin: 0;
+        border-bottom: 2px solid $color_player_theme1;
+        opacity: 0.8;
+    }
+
+    .vp_buffer {
+        @extend .vp_hidden;
+        background-color: $color_player_theme4;
+        opacity: 0.6;
+
+        .vp_playing & {
+            @extend .vp_hidden;
+        }
+    }
+
+    .vp_scrubber {
+        background-color: $color_player_theme1;
+        height: 1px;
+        opacity: 0;
+    }
+
+    .vp_capture_mouse {
+        @include absolute_fullsize();
+    }
+
+    // display scrubber if mouse over bar
+    .no-touch &:hover,
+    &:active {
+        .vp_scrubber {
+            opacity: 1;
+        }
+    }
+}
+
+.vp_indicators_wrapper {
+    width: $ui_margin;
+}
+
+.vp_indicator {
+    @extend .vp_fast_animations;
+
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    background-color: transparent;
+    border-top: 1px solid $color_player_theme1;
+    opacity: 0.9;
+
+    &.vp_active {
+        border-top-width: $ui_margin;
+        margin-top: -$ui_margin / 2;
+    }
+
+    .vp_show_marker_menu &,
+    .vp_overlay_mode & {
+        opacity: 1;
+    }
+}
+
+.vp_bar, .vp_marker_title {
+    border: 2px solid $color_player_theme1;
+    border-left: 0;
+}

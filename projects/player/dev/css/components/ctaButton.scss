@@ -1,0 +1,17 @@
+@import '../foundation';
+
+.vpp_cta_button {
+	transition: transform 0.1s cubic-bezier(0.140, 0.175, 0.420, 1.350);
+	border-radius:2px;
+	height:40px;
+	line-height:40px;
+	text-transform:uppercase;
+	cursor:pointer;
+	display:inline-block;
+	padding:0px 10px;
+	letter-spacing:1px;
+
+	&.vpp_over {
+		@include transform (scale(1.1));
+	}
+}

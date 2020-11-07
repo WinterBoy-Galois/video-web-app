@@ -1,0 +1,280 @@
+.vp_marker_wrapper {
+	position:absolute;
+	height:0px;
+	@include transition(transform 0.1s ease-in-out);
+
+
+	.vp_title {
+		@include transition(margin 0.1s ease-in-out);
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		color:$color_player_theme1;
+		font-size:12px;
+		letter-spacing: 1px;
+	}
+
+	// if marker is collapsed, hide
+	&.vp_collapsed .vp_marker {
+		opacity:0;
+	}
+
+	&.vp_opened .vp_marker,
+	&.vp_current .vp_marker {
+		opacity: 1;
+	}
+
+	// opened, hover, selected style
+	&.vp_opened,
+	&.ui-draggable-dragging,
+	&.vp_current,
+    &.vp_hover,
+	.no-touch &:hover,
+    .no-touch &:focus,
+    &:active {
+		.vp_marker_inner {
+			background-color:$color_player_theme1;
+			border:1px solid $color_player_theme5;
+			border-left:0px;
+			padding: 0px 20px 0px 15px;
+		}
+		.vp_tip_fill {
+	        fill: $color_player_theme1;
+	    }
+	    .vp_tip_stroke {
+	        stroke: $color_player_theme5;
+	    }
+	    .vp_title {
+	    	color:$color_player_theme5;
+	    }
+	    z-index:10;
+	}
+
+	&.vp_shifted {
+		.vp_title {
+			margin-left:60px;
+		}
+		z-index: 100;
+	}
+
+	.vp_temp_title {
+		position: absolute;
+		right: 3px;
+		text-align: center;
+		color: red;
+		width: 100%;
+		font-size:12px;
+	}
+}
+
+
+.vp_marker {
+	@include transition(opacity 0.2s ease);
+	cursor:pointer;
+	position:relative;
+	top:-$ui_size/2;
+	line-height: $ui_size;
+	text-align: left;
+}
+
+// min width
+.vp_marker_wrapper.vp_fixed_width .vp_title {
+	min-width:180px;
+}
+
+$branded_bg: $darkblue;
+$branded_outline: $darkgray;
+
+
+// branded marker
+.vp_marker_wrapper.vp_branded_marker {
+
+	.vp_title {
+		font-size:10px;
+	}
+
+	.vp_marker {
+		top:-$ui_size/2;
+	}
+	.vp_marker_inner {
+		line-height: 38px;
+		width:143px;
+		background-image: url('img/logo.svg');
+   		background-size:60px 15px;
+   		background-repeat:no-repeat;
+   		background-position: right 10px center;
+   		height: $ui_size;
+   		left:18px;
+   		background-color: $branded_bg !important;
+   		border-color: $branded_outline !important;
+	}
+	
+	.vp_marker_tip { 
+		height:$ui_size;
+		width:20px;
+	}
+	.vp_tip_fill {
+		fill: $branded_bg !important;
+	}
+	.vp_tip_stroke {
+		stroke:$branded_outline !important;
+	}
+
+	&.vp_hover,
+    .no-touch &:hover,
+    .no-touch &:focus,
+    &:active {
+
+    	.vp_title {
+    		color:white;
+    	}
+
+    	.vp_marker_inner {
+    		width:153px;
+			background-color:$blue !important;
+			padding: 0px 20px 0px 15px;
+			background-position: right 10px center;
+		}
+
+		.vp_tip_fill {
+			fill: $blue !important;
+		}
+
+    }
+}
+
+
+
+// the add marker marker
+// will be orange
+.vp_add_marker_wrapper .vp_marker_wrapper {
+	top:-68px;
+	z-index: 45;
+	.vp_marker_inner {
+		background-color:$orange !important;
+		border-color: white !important;
+		border-style:dashed;
+	}
+
+	.vp_tip_stroke {
+		stroke-dasharray: 3,3;
+		stroke:white !important;
+	}
+
+    .vp_tip_fill {
+		fill:$orange !important;
+	}
+
+	.vp_title {
+		color:white;
+	}
+
+    &.vp_hover,
+    .no-touch &:hover,
+    .no-touch &:focus,
+    &:active {
+
+        .vp_marker_inner {
+            background-color:$orange !important;
+            border-color:white !important;
+            border-style:dashed;
+        }
+
+        .vp_tip_stroke{
+            stroke-dasharray: 5,5;
+            stroke:white !important;
+        }
+
+        .vp_tip_fill{
+            fill:$orange!important;
+        }
+
+        .vp_title{
+            color:white;
+        }
+    }
+
+
+}
+
+// move cursor when draggable
+.ui-draggable .vp_marker {
+	cursor:move;
+}
+
+.vp_marker_inner {
+	@include transition(padding 0.2s ease, width 0.2s ease, background-position 0.2s ease);
+	position:absolute;
+	left:18px;
+	padding: 0px 10px 0px 5px;
+	height: $ui_size;
+	line-height: $ui_size - 2px;
+	background-color:$color_player_theme5;
+	border:1px solid $color_player_theme1;
+	border-left:0px;
+	overflow: hidden;
+}
+
+.vp_marker_tip {
+	overflow: hidden;
+	position: absolute;
+	height:$ui_size;
+	width:20px;
+	left:0px;
+	svg {
+		height:100%;
+	}
+}
+
+.vp_tip_stroke {
+    stroke-width: 2px;
+    stroke-linejoin: miter;
+    stroke: $color_player_theme1;
+}
+
+.vp_tip_fill {
+    stroke: none;
+    fill:$color_player_theme5;
+} 
+
+
+
+/* markers mid size */
+@media only screen and (max-height: 700px) {
+	.vp_marker {
+		top: -$ui_size_sm/2;
+		line-height: $ui_size_sm;
+	}
+	.vp_marker_tip {
+		height: $ui_size_sm;
+		width: 16px;
+	}
+	.vp_marker_inner {
+		height: $ui_size_sm;
+        line-height: $ui_size_sm - 2px;
+		left: 14px;
+	}
+}
+
+/* markers small size */
+@media only screen and (max-height: 500px) {
+	.vp_marker {
+		top: -$ui_size_xs/2;
+		line-height: $ui_size_xs;
+	}
+	.vp_marker_tip {
+		height: $ui_size_xs;
+		width: 14px;
+	}
+	.vp_marker_inner {
+		left: 12px;
+		height: $ui_size_xs;
+        line-height: $ui_size_xs - 2px;
+	}
+}
+
+/* markers disabled under 250px height*/
+@media only screen and (max-height: 200px) {
+    .vp_marker_wrapper, .vp_markers_wrapper {
+    	display: none;
+    }
+}

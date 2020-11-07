@@ -1,0 +1,74 @@
+.vp_app_page {
+
+
+	/*
+	* Header Style
+	*/
+	header {
+		text-align: center;
+
+	}
+
+	h1 {
+		border-bottom: 2px solid $darkblue;
+		margin:20px 0px;
+		display: inline-block;
+	}
+
+
+	/*
+	 *  Text above and below the app sheet
+	 */
+	.vp_app_sheet_above,
+	.vp_app_sheet_below {
+		text-align: center;
+		margin:10px 0px;
+		font-size:12px;
+	}
+
+	/*
+	*	Content area displayed as a sheet
+	*/
+	.vp_app_sheet {
+		position: relative;
+		background-color:white;
+		box-shadow: 0px 0px 2px #DDD;
+		margin:0px auto;
+		padding:20px;
+		.vp_page_loading_indicator .vp_loading_indicator_new {
+			position: absolute;
+			right:10px;
+			top:10px;
+		}
+
+	}	
+
+
+	/*
+	* Size & centering
+	*/
+	width: 560px;
+	margin:0px auto;
+	position: relative;
+
+	&.vp_small {
+		width: 430px;
+	}
+
+	&.vp_medium {
+		width: 550px;
+	}
+
+	&.vp_large {
+		width: 700px;
+	}
+
+	&.vp_xlarge {
+		width: 960px;
+	}
+
+	.vp_history_back_button {
+		top:30px;
+	}
+
+}

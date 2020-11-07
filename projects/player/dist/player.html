@@ -1,0 +1,180 @@
+<!doctype html>
+<html>
+<head>
+
+    <meta charset="UTF-8">
+
+    
+    <!-- 
+        BOOTSTRAP CONFIGURATION PLAYER
+    -->
+    <!--
+    <script>
+        document.videopath = document.videopath || {};
+        document.videopath.player = document.videopath.player || {};
+        document.videopath.player.conf = {
+            video: {{ video_data | safe }},
+            buttonColor: "{{ button_color }}",
+            buttonColorHover: "{{ button_color_hover }}",
+            arrowColor: "{{ arrow_color }}",
+            thumbnail: "{{ thumb_urls.large }}",
+            srcURL: "{{ src_url }}scripts/player.js?"
+        };
+        var sentryURL = 'https://fe454610a61543ba9f4d4e5e9aeafba1@app.getsentry.com/4610614';
+    </script>
+    -->
+
+    <!-- 
+        BOOTSTRAP CONFIGURATION PREVIEW
+    -->
+    <script>
+        document.videopath = document.videopath || {};
+        document.videopath.player = document.videopath.player || {};
+        document.videopath.player.conf = {
+            video: {"markers":[{"id":181265965,"key":"OyCyT0lQ","title":"Correct pronunciation","time":72.697074010327,"video_revision":1524971972,"contents":[{"type":"website","text":null,"ordinal":0,"data":"{}","title":"","image_url":"","url":"https://www.babbel.com/en/magazine/how-to-pronounce-these-tricky-german-words-perfectly","id":665444618,"marker":181265965,"key":"ptAEjshp","video_key":"XBPzV2po"}],"overlay_height":-1,"overlay_width":-1},{"id":588227107,"key":"jrtGdGMV","title":"Learn German","time":135.092943201377,"video_revision":1524971972,"contents":[{"type":"website","text":null,"ordinal":0,"data":"{}","title":"","image_url":"","url":"https://go.babbel.com/engmag-all/default","id":730113597,"marker":588227107,"key":"FwwRXDay","video_key":"XBPzV2po"}],"overlay_height":-1,"overlay_width":-1}],"thumbnails":{"normal":"https://i.ytimg.com/vi/GihpU5S8nHo/maxresdefault.jpg","large":"https://i.ytimg.com/vi/GihpU5S8nHo/maxresdefault.jpg"},"source":{"id":1225789323,"created":"2016-02-17T13:39:03.495245","modified":"2016-04-12T08:53:59.842681","key":"Ck8odJ0hHwcuXH8dUjIk2q0hRj09aNpA","status":"ok","service_identifier":"GihpU5S8nHo","service":"youtube","duration":171.0,"aspect":1.77777777777778,"description":"Can you pronounce these 8 German words?","thumbnail_small":"https://i.ytimg.com/vi/GihpU5S8nHo/maxresdefault.jpg","thumbnail_large":"https://i.ytimg.com/vi/GihpU5S8nHo/maxresdefault.jpg","file_mp4":"","file_webm":"","youtube_allow_clickthrough":true,"notes":"","jpg_sequence_support":false,"jpg_sequence_length":0,"sprite_support":false,"sprite_length":0,"jpg_sequence_base_url":"//az744831.vo.msecnd.net/ck8odj0hhwcuxh8dujik2q0hrj09anpa/","sprite_base_url":"//az744831.vo.msecnd.net/ck8odj0hhwcuxh8dujik2q0hrj09anpa/"},"key":"XBPzV2po","video":1115432102,"id":1524971972,"title":"Can you pronounce these 8 German words?","description":"","ui_color_1":"#ff8d15","ui_color_2":"#ffffff","ui_fit_video":false,"endscreen_url":"","endscreen_title":"Learn a Language with Babbel","endscreen_subtitle":"It's never too late to start!","endscreen_background_color":"#ffffff","endscreen_button_title":"Try it now","endscreen_button_color":"#ff8d15","endscreen_button_target":"https://go.babbel.com/engmag-all/default","ui_disable_share_buttons":false,"ui_equal_marker_lengths":false,"ui_icon":"http://misc.videopath.com/clients/babbel/icon.png","ui_icon_link_target":"https://videopath.com","custom_tracking_code":"","iphone_images":-1,"continuous_playback":false,"password":"","tracking_pixel_start":"","tracking_pixel_q1":"","tracking_pixel_q2":"","tracking_pixel_q3":"","tracking_pixel_end":"","created":"2015-03-09T14:20:15.081012","revision_type":"published","branded":false,"ui_color_marker_text":"#ffffff","ui_click_hint_color":"#ffffff","ui_color_playbar_indicators":"#ffffff","ui_language":"en","ui_click_hint_appearences":1,"modified":"2015-05-22T14:46:58.653531","ui_color_button_text":"#ffffff"},
+            buttonColor: "#333333",
+            arrowColor: "#ffffff",
+            buttonColorHover: "#555555",
+            thumbnail: "",
+            srcURL: "scripts/player.js"
+        };
+        var sentryURL = 'https://fe454610a61543ba9f4d4e5e9aeafba1@app.getsentry.com/4610614';
+    </script>
+
+
+    <!-- 
+        TITLE AND META TAGS
+    -->
+    <title>{{ title }}</title>
+    <meta name="description" content="{{ description }}" />
+
+
+    <!-- 
+        IOS TAGS
+    -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name = "viewport" content = "width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+
+    <!-- Android Tags -->
+    <meta name="theme-color" content="{{ button_color }}">
+
+    <!-- 
+        OPEN GRAPH TAGS
+    -->
+    <meta property="og:title" content="{{ title }}"/>
+    <meta property="og:image" content="{{ thumb_urls.large }}"/>
+    <meta property="og:image:url" content="{{ thumb_urls.large }}"/>
+    <meta property="og:site_name" content="Videopath - interactive video made easy"/>
+    <meta property="og:description" content="{{ description | truncatewords:20 }}"/>
+    <meta property="og:url" content="{{ video_url }}"/>
+    <meta property="og:type" content="video.movie" />
+
+    <!--
+        TWITTER TAGS
+    -->
+    <meta name="twitter:card" content="player">
+    <meta name="twitter:site" content="@videopath">
+    <meta name="twitter:url" content="https://player.videopath.com/{{ key }}/">
+    <meta name="twitter:title" content="{{ title }}">
+    <meta name="twitter:description" content="{{ description }}">
+    <meta name="twitter:image" content="{{ thumb_urls.large }}">
+    <meta name="twitter:player" content="https://player.videopath.com/{{ key }}/">
+    <meta name="twitter:player:width" content="{{ width }}">
+    <meta name="twitter:player:height" content="{{ height }}">
+
+
+    <!-- 
+        OEMBED TAGS
+    -->
+    <link rel="alternate" type="application/json+oembed"
+        href="http://api.videopath.com/oembed?url={{ video_url | urlencode}}&format=json"
+        title="{{ title }}" />
+    <link rel="alternate" type="text/xml+oembed"
+        href="http://api.videopath.com/oembed?url={{ video_url | urlencode}}&format=xml"
+        title="{{ title }}" />
+    
+
+
+    <!-- 
+        ERROR REPORTING
+    -->
+    <script src="//cdn.ravenjs.com/1.1.22/jquery,native/raven.min.js"></script>
+    <script>
+        if ( window.location.href.indexOf('localhost') == -1 ) {
+            Raven.config(sentryURL, {
+              whitelistUrls: [/.*videopath.com.*/,/.*cloudfront.net.*/]
+            }).install();
+        }
+    </script>
+    
+
+    <!-- 
+        DEV LIBS
+    -->
+    <!-- @exclude -->
+    <script src="http://127.0.0.1:9000/livereload.js"></script>
+    <!-- @endexclude -->
+
+
+</head> 
+
+
+<body style="background-color:black">
+
+
+    <!-- 
+        APP AREA
+    -->
+    <div class="vpp_player_app" id="vpp_player_app">
+    </div>
+
+    <div class="vpp_bootstrap" id="vpp_bootstrap" style = "display:none">
+        <img id="vpp_bootstrap_poster" />
+        <div id="vpp_loading_indicator" class="vpp_loading_indicator">
+            <div class="vpp_loading_indicator_cube">
+                  <div id = 'vpp_loading_indicator_background' class = 'vpp_background'></div>
+                  <div class='vpp_cube'><div class='vpp_loading_indicator_inner_cube'></div></div>
+                  <div class='vpp_cube'><div class='vpp_loading_indicator_inner_cube'></div></div>
+                  <div class='vpp_cube'><div class='vpp_loading_indicator_inner_cube'></div></div>
+                  <div class='vpp_cube'><div class='vpp_loading_indicator_inner_cube'></div></div>
+            </div>
+        </div>
+         <div id="vpp_bootstrap_playbutton">
+            <span>
+                <svg viewBox="0 0 24 24"><path id="vpp_bootstrap_arrow" d="M20.954 11.317c0.683 0.398 0.683 1.024 0 1.366l-15.081 8.764c-0.683 0.398-1.252 0.057-1.252-0.683v-17.471c0-0.74 0.569-1.081 1.252-0.683l15.081 8.707z" />
+                </svg>
+            </span>
+        </div>
+        <div id="vpp_bootstrap_message" style = "display:none">
+        </div>
+    </div>
+
+
+    <!-- 
+        SEO CONTAINER
+    -->
+    <div class = "vp_seo" style = "display:none">
+    {% for marker in markers.all %}
+      <h1>{{marker.title}}</h1>
+      {% for content in marker.contents.all %}
+        <div>{{content.text | safe}}</div>
+      {% endfor %}
+    {% endfor %}
+    </div>
+
+
+    <!-- 
+        BOOTSTRAP SCRIPTS
+    -->
+    <!-- @exclude -->
+    <script src="scripts/bootstrap6.js" async></script>
+    <!-- @endexclude -->
+    <script>
+        /* @include scripts/bootstrap6.js */
+    </script>
+
+
+</body>
+</html>
+
+

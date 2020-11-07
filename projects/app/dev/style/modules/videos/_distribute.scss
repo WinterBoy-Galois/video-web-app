@@ -1,0 +1,233 @@
+.vp_share {
+    @extend .vp_centered_block;
+    width: 980px;
+	text-align: center;
+
+	.publish_content {
+		margin-top: 50px;
+	}
+
+	.sharing_section {
+		text-align: left;
+	}
+
+	.mail_section {
+		text-align: left;
+	}
+
+	.vp_embed, .vp_thumbnail {
+		margin:0px auto;
+	}
+
+	.codecol {
+		text-align: left;
+		vertical-align: top;
+		input, textarea {
+            width: 90%;
+			color: #81B9C3;
+			font-size: 12px;
+			height: 162px;
+		}
+		textarea.code {
+			word-wrap:break-word;
+			border: 1px dashed #333;
+			font-family: "Courier New", Courier, monospace;
+			color: #666;
+			background-color: rgba($lightblue, 0.1);
+		}
+		textarea.inline {
+			height: 68px;
+		}
+		text.area.inline {
+			height: 75px;
+		}
+		.content_area {
+			// background-color: rgba($lightblue, 0.1);
+			// padding:20px;
+		}
+		.advanced {
+			margin-top:15px;
+			.row {
+				margin:5px 0px;
+			}
+		}
+		.foldbutton {
+			cursor: pointer;
+			padding-bottom: 10px;
+			font-weight: bold;
+		}
+		.foldout {
+
+		}
+		.arr_left, .arr_down {
+			color:$lightblue;
+		}
+		input.locked {
+			pointer-events:none;
+			opacity: 0.8;
+		}
+		.lock {
+			display: inline-block;
+			vertical-align: middle;
+			background-image:url("img/lock.png");
+			background-size:20px 20px;
+			height: 20px;
+			width: 20px;
+			position:relative;
+			left: -5px;
+		}
+	}
+
+	.social input {
+		border: 1px dashed #333;
+		font-family: "Courier New", Courier, monospace;
+		color: #666;
+		background-color: rgba($lightblue, 0.1);
+	}
+
+	textarea, input {
+		outline:none;
+		border: 1px solid #999;
+		height: 38px;
+		padding: 10px;
+		background-color:#fefefe;
+		color: #666;
+		font-size: 14px;
+		overflow: hidden;
+	}
+
+	input[type="checkbox"] {
+		width: 18px;
+		height: 14px;
+		padding: 0;
+	}
+
+	.row.size input {
+		width: 50px;
+		height: 20px;
+		padding: 0;
+		margin: 5px 10px 5px 0;
+		text-align: center;
+	}
+
+	input.code {
+		margin-bottom: 15px;
+	}
+
+
+
+	.previewcol {
+		margin: 0 auto;
+		text-align: left;
+
+		.preview_outer {
+			margin-right:-100%;
+			overflow: hidden;
+			height: 840px;
+			margin-bottom:-400px;
+			-webkit-transform-origin: top left;
+			-webkit-transform: scale(0.5,0.5);
+			-ms-transform-origin: top left;
+			-ms-transform: scale(0.5,0.5);
+			transform-origin: top left;
+			transform: scale(0.5,0.5);
+			padding: 20px;
+			text-align: center;
+			background-color: rgba($lightblue, 0.1);
+			border:2px dashed #999;
+			.embed_code {
+				display: inline-block;
+			}
+			p{
+				text-align: left;
+				font-size: 16px;
+				line-height: 20px;
+				color:#999;
+				.preview_text {
+					background-color:#999;
+					line-height: 24px;
+					font-size: 12px;
+
+				}
+			}
+			p:first {
+				margin-top:0px;
+			}
+			h3 {
+				text-align: left;
+				font-weight: bold;
+				font-size: 30px;
+				margin-bottom: 30px;
+			}
+		}
+	}
+
+	.lightbox .preview_container {
+		margin-right:20px;
+		margin-bottom:10px;
+	}
+
+	.tabcontent.share {
+		.col2 {
+			text-align: left;
+			input, textarea {
+                display: block;
+				margin-top: 20px;
+				width: 322px;
+			}
+            input {
+				height: 38px;
+            }
+			textarea {
+				height: 140px;
+			}
+
+			.button {
+				margin-top: 15px;
+			}
+		}
+		.col2.email {
+		}
+
+
+		.social_button {
+			@extend .vp_fast_animations;
+			cursor: pointer;
+			float: left;
+			width: 30px;
+			height: 30px;
+ 	 		margin:2px;
+ 	 		margin-top: 10px;
+			background-image: url("img/social.png");
+			background-size: 189px 31px;
+			border-radius: 2px;
+
+			&.facebook {
+				background-color: #36609f;
+				border-bottom:2px solid #305489;
+			}
+			&.facebook:hover {
+				background-color: #305489;
+			}
+
+			&.twitter {
+				background-position: -31px 0px;
+				background-color: #2aa9e0;
+				border-bottom:2px solid #2697c1;
+			}
+			&.twitter:hover {
+				background-color: #2697c1;
+			}
+
+			&.gplus {
+				background-position: -63px 0px;
+				background-color: #db5442;
+				border-bottom:2px solid #bc443b;
+			}
+			&.gplus:hover {
+				background-color: #bc443b;
+			}
+
+		}
+	}
+}

@@ -1,0 +1,9 @@
+.vp_endscreen_view_custom {
+	@include absolute_fullsize();
+	background-color:white;
+	iframe {
+		@include absolute_fullsize();
+		width:100%;
+		height:100%;
+	}
+}

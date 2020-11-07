@@ -1,0 +1,12 @@
+{
+    "source": {
+        "aspect": 1.7777777777777777,
+        "duration": 203.52,
+        "service": "brightcove",
+        "service_identifier": {
+            "video_id": "3910607401001",
+            "account": "47628783001",
+            "player": "76465553-2316-409e-b590-120f3a029e98"
+        }
+    }
+}

@@ -1,0 +1,57 @@
+
+
+STEP 3 ANALYTICS AND SPECIAL STUFF
+* Bootstrap integration + 
+
+STEP 4 NOT NEEDED FOR DEMO
+* Tests
+* Endscreen logo
+* Language setting
+
+TEST
+* google analytics
+
+NICE TO HAVE
+* Inspect websites
+* Info that project is not fully mobile enabled
+
+BUGS:
+* Twitter scrolling iOS
+* Facebook scrolling iOS
+
+
+KIND OF DONE
+* Performance optimizations
+* Finalize support controller
+* Test all platforms and engines
+
+DONE
+* Clickthrough support for non enabled mobile projects
+* Share buttons should work again
+* Complete theme support (w custom colors and icon)
+* Poster / Thumbnail
+* Fix play button size
+* Finish endscreen
+* Endable cta buttons and endscreen buttons
+* Babbel annotations support
+* Platform compatibility
+* iPhone landscape layout
+* iOS scrolling issues
+* fastclick?
+* Exception middleware
+* Scrubber for mobile
+* Icon click support
+* Custom font support
+* automatic http https switching in website
+* Add mailchimp form back in
+* Unruly
+* Info arrow
+* Branded player
+* Same lengths markers
+* autoplay
+* better marker clicking
+
+
+
+
+

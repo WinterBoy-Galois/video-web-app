@@ -1,0 +1,42 @@
+
+
+<!doctype html>
+
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <title>YT Test</title>
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script>
+
+ 	var player;
+
+ 	// on youtube iframe api src loaded this gets called
+    window.onYouTubeIframeAPIReady = function() {
+    	player = new window.YT.Player('player', {
+            height: '600px',
+            width: '400px',
+            videoId: 'hdSrT4yjS1g',
+            playerVars: {
+            	controls:'0',
+            },
+            events: {
+                onReady: onReady
+            }
+        });
+    }
+
+    // when player is ready, this callback is fired
+    // does not seem to work on http on safari
+    function onReady() {
+    	console.log('EVERYTHING IS WORKING!');
+    }
+
+  </script>
+</head>
+<body>
+<iframe id = 'player' src='//www.youtube.com/embed/hdSrT4yjS1g/?enablejsapi=1'></div>
+</body>
+</html>
+

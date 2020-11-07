@@ -1,0 +1,8 @@
+@font-face {
+	font-family: "custom-font-markers";
+	src: url("<%= font %>") format('woff');
+}
+
+.vpp_marker {
+    font-family: "custom-font-markers", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}

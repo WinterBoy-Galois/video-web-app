@@ -1,0 +1,17 @@
+.vp_marker_overlay_social {
+	@extend .vp_fast_animations;
+	iframe, .vp_frame_wrapper {
+		@include absolute_positioning(0,0,0,0);
+		height: 100%;
+		width: 100%;
+		position: absolute !important;
+	}
+
+	.vp_spinning_coq_big {
+        position: absolute;
+        left:50%;
+        top:50%;
+        margin-left:-20px;
+        margin-top:-20px;
+    }
+}

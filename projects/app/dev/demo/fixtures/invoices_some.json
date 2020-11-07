@@ -1,0 +1,29 @@
+[{
+		"amount_due": 34900,
+		"date": "2016-01-01T00:31:19.189182",
+		"paid": false,
+		"number": 32116,
+		"download_url": "https://docs.videopath.com/public/invoices/1376365451",
+		"currency": "EUR"
+	}, {
+		"amount_due": 34900,
+		"date": "2015-12-01T00:31:33.213543",
+		"paid": false,
+		"number": 32110,
+		"download_url": "https://docs.videopath.com/public/invoices/454238841",
+		"currency": "EUR"
+	}, {
+		"amount_due": 34900,
+		"date": "2015-11-01T00:32:09.018547",
+		"paid": false,
+		"number": 32104,
+		"download_url": "https://docs.videopath.com/public/invoices/631385905",
+		"currency": "EUR"
+	}, {
+		"amount_due": 34900,
+		"date": "2015-10-01T00:32:10.274469",
+		"paid": false,
+		"number": 32098,
+		"download_url": "https://docs.videopath.com/public/invoices/1469433096",
+		"currency": "EUR"
+	}]

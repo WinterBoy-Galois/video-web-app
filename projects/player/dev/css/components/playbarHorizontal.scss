@@ -1,0 +1,69 @@
+@import '../foundation';
+
+.vpp_playbar_horizontal {
+	height:40px;
+	position: relative;
+
+	transition: height 0.1s linear;
+	.vpp_background {
+		@include absolutePosition(2px, 2px, 2px, 2px);
+		transition: top 0.1s linear, bottom 0.1s linear, left 0.1s linear, right 0.1s linear;
+	}
+
+	.vpp_buffer_bar, .vpp_progress_bar {
+
+		@include absoluteFullsize();
+		width:100%;
+	}
+
+	.vpp_time {
+		position: absolute;
+		top:-26px;
+		bottom:0px;
+		line-height: 16px;
+		font-size:12px;
+		padding:0px 5px;
+		transition: opacity 0.1s linear;
+		height:16px;
+		background-color: rgba(0,0,0,0.2);
+		color:white;
+	}
+
+
+	$DIAMOND_SIZE:10px;
+	.vp_marker_indicator {
+		position:absolute;
+		top:50%;
+		top:calc( 50% - 1px );
+		opacity: 0.6;
+
+		svg {
+			transition: transform 0.3s cubic-bezier(0.140, 0.175, 0.420, 1.650);
+			left:50%;
+			margin-left:-$DIAMOND_SIZE/2;
+			top:-($DIAMOND_SIZE/2-1);
+			position:absolute;
+			width:$DIAMOND_SIZE;
+			height:$DIAMOND_SIZE;
+		}
+
+		&.vpp_highlighted {
+			svg {
+				@include transform (rotate(90deg) scale(1.3));
+			}
+		}
+	}
+
+	&.vpp_collapsed {
+		height:16px;
+		.vpp_background {
+			border:0px;
+		}
+		.vpp_time {
+			opacity: 0;
+		}
+		.vp_marker_indicator {
+			// top:5px;
+		}
+	}
+}

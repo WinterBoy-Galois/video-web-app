@@ -1,0 +1,71 @@
+/* working indicator*/
+
+.vp_spinning_coq_small {
+    width: 20px;
+    height: 20px;
+    @include vp_sprite_all(-180px,-60px);
+
+    @include animation(vp_spin 3s linear infinite);
+
+    &.vp_dark {
+        @include vp_sprite_all(-160px,-60px);
+    }
+}
+
+.vp_spinning_coq_big {
+    width: 30px;
+    height: 30px;
+    @include vp_sprite_all(-160px,-30px);
+
+    @include animation(vp_spin_rev 4s linear infinite);
+
+    &.vp_dark {
+        @include vp_sprite_all(-160px,0px);
+    }
+}
+
+.vp_loading_indicator {
+    @include absolute_fullsize();
+    width: 80px;
+    height: 80px;
+    margin: auto;
+    @include vp_sprite_all(0px,0px);
+
+    &.vp_dark {
+        opacity: 0.8;
+        @include vp_sprite_all(-80px,0px);
+
+        &:before {
+            @include vp_sprite_all(-160px,-60px);
+        }
+
+        &:after {
+             @include vp_sprite_all(-160px,0px);
+        }
+    }
+
+    &:before {
+        @extend .vp_spinning_coq_small;
+        content: " ";
+        position: absolute;
+        left: 45px;
+        top: 47px;
+        margin: -6px 0 0 -6px;
+    }
+
+    &:after {
+        @extend .vp_spinning_coq_big;
+        content: " ";
+        position: absolute;
+        left: 32px;
+        top: 32px;
+        margin: -12px 0 0 -12px;
+    }
+
+    &.vp_stopped {
+        &:after, &:before{
+            @include animation(none);
+        }
+    }
+}
+

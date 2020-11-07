@@ -1,0 +1,21 @@
+
+.vp_plans {
+
+	.vp_clearfix {
+		clear:both;
+	}
+
+	.vp_plan_info {
+		margin-bottom:20px;
+	}
+	text-align:center;
+	.vp_more_link {
+		display: block;
+		background-color:#eee;
+		cursor: pointer;
+		color:black;
+	}
+	.vp_plan_blocks:not(.vp_expanded) .vp_features div:nth-child(n+7){
+		display: none;
+	}
+}

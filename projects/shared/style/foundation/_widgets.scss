@@ -1,0 +1,33 @@
+.vp_cta_button_widget {
+    @extend .vp_btn_label;
+    @extend .vp_btn_shadow;
+    @include transition(all 0s);
+    height: $ui_size + $btn_border_height;
+    line-height: $ui_size + $btn_border_height;
+    padding: 0 $ui_margin_lg;
+
+    &.vp_light_bg {
+        color: $black;
+    }
+
+    &.vp_cta_large {
+        @extend .vp_btn_label_lg;
+        @include transition(all 0s);
+    }
+
+    @media only screen and (max-width: $screen_xs_max) {
+        font-size: $font-size;
+        padding: 0 $ui_margin;
+    }
+}
+
+.vp_share_widget {
+    @extend .vp_btn_group;
+    @include clearfix();
+    margin: 0;
+
+    .vp_social_button {
+        @extend .vp_btn_share;
+        float: left;
+    }
+}

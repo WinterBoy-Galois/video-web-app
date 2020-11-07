@@ -1,0 +1,34 @@
+@import '../foundation';
+
+.vpp_control_button_play {
+	width:180px;
+	height:120px;
+
+	.vpp_icon {
+		@include absoluteCenter(60px, 60px);
+	}
+
+	&.vpp_medium {
+		width:120px;
+		height:80px;
+		.vpp_icon {
+			@include absoluteCenter(40px, 40px);
+		}
+	}
+
+	&.vpp_small {
+		width:80px;
+		height:80px;
+		.vpp_icon {
+			@include absoluteCenter(40px, 40px);
+		}
+	}
+
+	&.vpp_tiny {
+		width:60px;
+		height:60px;
+		.vpp_icon {
+			@include absoluteCenter(30px, 30px);
+		}
+	}
+}

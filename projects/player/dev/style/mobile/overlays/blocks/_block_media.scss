@@ -1,0 +1,40 @@
+
+.vp_media_absolute_iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* base config */
+.vp_media_iframe_wrapper {
+	position: relative;
+} 
+
+/* sound cloud embed */
+.vp_media_iframe_wrapper.vp_media_soundcloud {
+	height:115px;
+	iframe {
+		@extend .vp_media_absolute_iframe;
+	}
+}
+
+/* instagram embed */
+.vp_media_iframe_wrapper.vp_media_instagram {
+	
+}
+
+/* video embeds*/
+.vp_media_iframe_wrapper.vp_media_youtube,
+.vp_media_iframe_wrapper.vp_media_vimeo {
+	padding-bottom: 56.25%; // provides 16 / 9 aspect ratio
+	padding-top: 30px;
+	height: 0;
+	overflow: hidden;
+
+	iframe {
+		@extend .vp_media_absolute_iframe;
+	}
+}
+

@@ -1,0 +1,39 @@
+
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta property="fb:admins" content="1043166880"/>
+  <meta property="fb:app_id" content="1597846647106700" />
+
+</head>
+
+
+
+<body>
+<div id="fb-root"></div>
+
+Testing
+
+<script type="text/javascript" async defer src="//assets.pinterest.com/js/pinit_main.js"></script>
+<div id = "pin">
+</div>
+
+<script>
+var interval = setInterval(function(){
+	for ( key in window ) {
+		if (key.indexOf("PIN_") === 0 ) {
+			var pinterest = window[key];
+			document.getElementById("pin").insertAdjacentHTML('beforeend', '<a data-pin-do="embedPin" href="http://www.pinterest.com/pin/99360735500167749/"></a>');
+			pinterest.f.build();
+		}
+		clearInterval(interval);
+	}
+},500);
+
+</script>
+
+</body>
+</html>
+

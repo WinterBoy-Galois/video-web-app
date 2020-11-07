@@ -1,0 +1,66 @@
+#vp_app_modals {
+
+	.vp_modal_background {
+		@include transition(opacity 0.2s ease);
+
+
+		// fill out the complete screen
+		z-index: 1000;
+		position: fixed;
+		top:0px;
+		bottom:0px;
+		left:0px;
+		right:0px;
+		background-color: rgba(0,0,0,.9);
+
+		// empty modals are not visible
+		&:empty {	
+			opacity: 0;
+			@include transition(opacity 0.2s ease, bottom 0.2s ease 1s);
+			bottom:2000px;
+		}
+		
+	}
+
+	.vp_app_modal_container {
+
+		@include transition(all 0.2s ease);
+
+		// fill the whole background area
+		position: fixed;
+		bottom:10px;
+		left:0px;
+		right:0px;
+		top:0px;
+
+		// align modals: https://css-tricks.com/centering-in-the-unknown/
+		text-align: center;
+		white-space: nowrap;
+		&:before {
+			content: '';
+		    display: inline-block;
+		    height: 100%;
+		    vertical-align: middle;
+		    margin-right: -0.25em;
+		}
+
+		// only the last modal should always be full yvisible
+		opacity: 0;
+		&:last-child {
+			bottom:0px;
+			opacity: 1;
+			pointer-events: auto;
+		}	
+
+	}
+
+	// also part of aligning the modal in the center
+	.vp_app_modal {
+		display: inline-block;
+  		vertical-align: middle;
+  		max-width:90%;
+  		white-space: normal;
+  		position: relative;
+	}
+
+}

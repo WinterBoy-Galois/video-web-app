@@ -1,0 +1,30 @@
+@import "compass";
+
+/* global reset  */
+@include global-reset;
+
+*, *:after, *:before {
+    @include box-sizing(border-box);
+}
+
+
+/* foundation */
+@import "../../../shared/style/foundation/foundation";
+@import "foundation/all";
+
+/* components */
+@import "components/all";
+
+/* app */
+@import "modals/all";
+@import "app/all";
+
+/* modules */
+@import "modules/videos/all";
+@import "modules/settings/all";
+@import "modules/dashboard/all";
+@import "modules/teams/all";
+
+/* misc */
+@import "lib/all";
+@import "demo/all";

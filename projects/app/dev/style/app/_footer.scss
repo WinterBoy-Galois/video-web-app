@@ -1,0 +1,26 @@
+#footer {
+	background-color: white;
+	left:0px;
+	bottom:0px;
+	height: 20px;
+	position: fixed;
+	min-width: 512px;
+	width: 100%;
+	color: $blue;
+	text-align: center;
+	line-height: 20px;
+	font-size: 12px;
+	border-top: 1px solid #eee;
+	a {
+		@extend .vp_fast_animations;
+		text-decoration: none;
+		color: $darkblue;
+		&:hover {
+			color:$lightblue;
+		}
+	}
+
+	.no_footer & {
+		display: none;
+	}
+}

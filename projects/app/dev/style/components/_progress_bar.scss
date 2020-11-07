@@ -1,0 +1,23 @@
+.vp_progressbar {
+	position: relative;
+	height:30px;
+	background-color:$lightgray;
+	border:1px solid $blue;
+	.vp_progressbar_inner {
+		background-color:$blue;
+		position: absolute;
+		top:0px;
+		left:0px;
+		bottom:0px;
+	}
+	.vp_progress_text {
+		position: relative;
+		line-height: 28px;
+		text-align: center;
+		color:$darkblue;
+		&.vp_light {
+			color:$lightgray;
+		}
+	}
+}
+

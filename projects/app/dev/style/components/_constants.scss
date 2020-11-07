@@ -1,0 +1,79 @@
+
+/*
+ * Map classes to colors
+ * 'classname' normal_color hightlihted_color suggested_text_color
+ */
+$color_classes: "vp_blue" $blue $blue_active $lightgray,
+				"vp_lightblue" $lightblue $lightblue_active $lightgray,
+				"vp_darkblue" $darkblue $darkblue_active $lightgray,
+				"vp_green" $green $green_active $lightgray,
+				"vp_red" $red $red_active $lightgray,
+				"vp_orange" $orange $orange_active $lightgray,
+				"vp_gray" $gray $gray_active $darkblue;
+
+
+/*
+ * Map classes to icon character codes
+ */
+$icon_classes: 	"vp_icon_diamond" 			"\e62c",
+				"vp_icon_arrow_left" 		"\e094",
+				"vp_icon_arrow_right" 		"\e095",
+				"vp_icon_x" 				"\e629",
+				"vp_icon_menu" 				"\e62a",
+				"vp_icon_dropdown" 			"\e62b",
+				"vp_icon_endscreen" 		"\e625",
+				"vp_icon_info_light" 		"\e626",
+				"vp_icon_info" 				"\e627",
+				"vp_icon_view"	 			"\e628",
+				"vp_icon_home" 				"\e624",
+				"vp_icon_social_email" 		"\e600",
+				"vp_icon_replay" 			"\e602",
+				"vp_icon_bucket" 			"\e607",
+				"vp_icon_analytics" 		"\e60c",
+				"vp_icon_checkmark" 		"\e60d",
+				"vp_icon_color_theme" 		"\e60e",
+				"vp_icon_edit" 				"\e601",
+				"vp_icon_embed_inline" 		"\e60f",
+				"vp_icon_embed_lightbox" 	"\e610",
+				"vp_icon_social_embed" 		"\e603",
+				"vp_icon_exit_fullscreen" 	"\e611",
+				"vp_icon_social_facebook" 	"\e604",
+				"vp_icon_flag" 				"\e612",
+				"vp_icon_fullscreen" 		"\e613",
+				"vp_icon_social_gplus" 		"\e605",
+				"vp_icon_social_link" 		"\e608",
+				"vp_icon_lock" 				"\e614",
+				"vp_icon_marker_shape" 		"\e615",
+				"vp_icon_marker" 			"\e616",
+				"vp_icon_msg" 				"\e617",
+				"vp_icon_sound_mute" 		"\e618",
+				"vp_icon_pause" 			"\e619",
+				"vp_icon_play" 				"\e61a",
+				"vp_icon_player_share" 		"\e61b",
+				"vp_icon_preview" 			"\e61c",
+				"vp_icon_share_dashboard" 	"\e61d",
+				"vp_icon_share_video" 		"\e61e",
+				"vp_icon_thumbnail" 		"\e609",
+				"vp_icon_time" 				"\e60a",
+				"vp_icon_trash" 			"\e60b",
+				"vp_icon_social_twitter" 	"\e606",
+				"vp_icon_unlock" 			"\e61f",
+				"vp_icon_video_info" 		"\e620",
+				"vp_icon_videopath" 		"\e621",
+				"vp_icon_sound_volume" 		"\e622",
+				"vp_icon_social_youtube" 	"\e623",
+				"vp_icon_circle_plus" 		"\e040",
+				"vp_icon_circle_cross" 		"\e043",
+				"vp_icon_expand" 			"\e052",
+				"vp_icon_search" 			"\e802",
+				"vp_icon_source" 			"\e800",
+				"vp_icon_copy" 				"\e801",
+				"vp_icon_permissions" 		"\e803",
+				"vp_icon_delete" 			"\e804",
+				"vp_icon_iphone" 			"\e805",
+				"vp_icon_users" 			"\e900",
+				"vp_icon_exit" 				"\e901",
+				"vp_icon_books"				"\e902";
+
+
+

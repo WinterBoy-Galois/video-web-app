@@ -1,0 +1,13 @@
+@import '../foundation';
+
+.vpp_share_buttons {
+	position:relative;
+	width:40px;
+	height:40px;
+	.vpp_control_button {
+		transition: transform 0.2s ease-in-out;
+		position:absolute;
+		right:0px;
+		top:0px;
+	}
+}

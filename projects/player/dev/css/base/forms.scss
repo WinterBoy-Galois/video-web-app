@@ -1,0 +1,30 @@
+/* form elements */
+input, textarea, select {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: white;
+    font-size: 14px;
+    outline: none;
+}
+
+input[type=checkbox], input[type=selectbox] {
+    width: auto;
+}
+
+input, textarea, select, .vp_input_group {
+    border: 1px solid #333;
+
+    &:focus, &.vp_focus {
+        border-color: $lightblue !important;
+    }
+}
+
+textarea {
+    padding: 10px;
+}
+
+input, select {
+    height: 40px;
+    border-radius:2px;
+}

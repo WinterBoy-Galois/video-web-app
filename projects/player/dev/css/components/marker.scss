@@ -1,0 +1,139 @@
+@import '../foundation';
+
+$MARKER_HEIGHT: 40px;
+$MARKER_HEIGHT_MEDIUM: 35px;
+$MARKER_HEIGHT_SMALL: 30px;
+$MARKER_HEIGHT_TINY: 20px;
+
+
+
+$MARKERS: (
+	normal: (
+		className: 'vp_size_normal',
+		height: 40px,
+		lineHeight: 38px,
+		tipSize:20px,
+		fontSize:12px,
+		bodyPaddingNormal: 0px 10px 0px 5px,
+		bodyPaddingHighlighted:  0px 10px 0px 5px
+	),
+	medium: (
+		className: 'vp_size_medium',
+		height: 34px,
+		lineHeight: 32px,
+		tipSize:17px,
+		fontSize:12px,
+		bodyPaddingNormal: 0px 8px 0px 6px,
+		bodyPaddingHighlighted: 0px 8px 0px 6px
+	),
+	small: (
+		className: 'vp_size_small',
+		height: 30px,
+		lineHeight: 28px,
+		tipSize:15px,
+		fontSize:11px,
+		bodyPaddingNormal: 0px 5px 0px 3px,
+		bodyPaddingHighlighted: 0px 5px 0px 3px
+	),
+	tiny: (
+		className: 'vp_size_tiny',
+		height: 20px,
+		lineHeight: 17px,
+		tipSize:10px,
+		fontSize:10px,
+		bodyPaddingNormal: 0px 4px 0px 2px,
+		bodyPaddingHighlighted: 0px 4px 0px 2px
+	),
+
+);
+
+
+
+.vpp_marker {
+
+	position: relative;
+	cursor: pointer;
+
+	.vp_marker_tip {
+		z-index:10;
+		position:absolute;
+		left:0px;
+		overflow:hidden;
+		svg {
+			width:100%;
+			height:100%;
+		}
+		polyline {
+			fill:none;
+			stroke-width:2px;
+			stroke-linejoin: miter;
+		}
+		polygon {
+			stroke:none;
+		}
+	}
+
+	.vp_marker_body {
+		@include transition(padding 0.2s cubic-bezier(0.140, 0.175, 0.420, 1.650));
+		height:100%;
+		width:auto;
+		border:1px solid;
+		border-left:0px;
+		z-index:20;
+		position:relative;
+		border-bottom-right-radius:2px;
+		border-top-right-radius:2px;
+	}
+
+	.vp_title {
+		font-size:12px;
+		letter-spacing: 1px;
+		width:auto;
+		white-space: nowrap;
+		overflow: hidden;
+  		text-overflow: ellipsis;
+  		text-align:left;
+	}
+
+	.vpp_click_hint {
+		position:absolute;
+	    bottom: -53px;
+    	right: -175px;
+    	pointer-events:none;
+	}
+}
+
+
+/*
+ * Sizes
+ */
+@each $id, $marker in $MARKERS {
+	.vpp_marker.#{map-get($marker,className)} {
+		height:map-get($marker, height);
+
+		.vp_marker_tip {
+			width: map-get($marker, tipSize);
+			height:map-get($marker, height);;
+		}
+		.vp_marker_body {
+			line-height: map-get($marker, lineHeight);
+			margin-left: map-get($marker, tipSize) - 2px;
+			padding: map-get($marker, bodyPaddingNormal);
+		}
+		.vp_title {
+			font-size:map-get($marker, fontSize);
+		}
+		&.vp_hover {
+			// margin-left: 5px;
+		}
+		&:not(.vp_down) .vp_title {
+			transition: transform 0.1s cubic-bezier(0.140, 0.175, 0.420, 1.350);
+		}
+		&.vp_down .vp_title{
+			@include transform (scale(1.05));
+		}
+
+	}
+}
+
+

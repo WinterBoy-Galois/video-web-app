@@ -1,0 +1,9 @@
+.react-tagsinput {
+    flex: 1;
+    .react-tagsinput-tag, .react-tagsinput-input {
+        height: 30px;
+    }
+    .react-tagsinput-tag a {
+        text-decoration: none;
+    }
+}

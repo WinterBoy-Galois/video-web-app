@@ -1,0 +1,24 @@
+@charset 'UTF-8';
+/*jslint white: true, maxerr: 50 */
+
+@import 'compass';
+
+/* global reset */
+@include global-reset;
+
+*, *:after, *:before {
+    @include box-sizing(border-box);
+}
+
+// foundation files
+@import '../../../shared/style/foundation/foundation';
+
+// third party css files
+@import 'lib/lib';
+
+// some base settings
+@import 'base';
+
+// player
+@import 'mobile/player';
+@import 'misc/tooltipster';

@@ -1,0 +1,33 @@
+@mixin font_smoothing($value: antialiased) {
+  @if $value == antialiased {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  @else {
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+  }
+}
+
+
+@mixin absolute_positioning($top, $right, $bottom, $left) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin absolute_fullsize() {
+    @include absolute_positioning(0, 0, 0, 0);
+}
+
+@mixin absolute_centering($width, $height) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: $width;
+  height: $height;
+  margin-left: -$width / 2;
+  margin-top: -$height / 2;
+}

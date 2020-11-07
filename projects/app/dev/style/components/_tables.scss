@@ -1,0 +1,20 @@
+.vp_table {
+
+	width:100%;
+	th {
+		font-size: 14px;
+		font-weight: bold;
+	}
+
+	tbody:before {
+	  content: '';
+	  display: block;
+	  height: 10px;
+	}
+	tbody:after {
+	  content: '';
+	  display: block;
+	  height: 10px;
+	}
+	
+}
